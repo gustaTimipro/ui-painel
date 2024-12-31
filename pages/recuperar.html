@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="../css/_variables.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/inputs.css">
+
+    <link rel="stylesheet" href="../css/page/login.css">
+</head>
+
+<body>
+    <main class="main">
+        <div class="recovery-background"></div>
+
+        <div class="login recovery">
+            <div class="header">
+                <div class="header-icon">
+                    <i class="uil uil-lock title-large"></i>
+                </div>
+                <div class="header-text d-flex-column">
+                    <h2 class="headline-small bold">Esqueceu sua senha?</h2>
+                    <span class="body-medium">Informe o seu e-mail para resetar sua senha.</span>
+                </div>
+            </div>
+            <form action="" class="form">
+                <div class="input-container">
+                    <div class="input-label">
+                        <label class="label-large" for="email">E-mail</label>
+                    </div>
+                    <div class="input-sufix">
+                        <input type="email" id="email" class="input-field input-lg body-large" required />
+                        <i class="uil uil-envelope"></i>
+                    </div>
+                    <span class="error-message label-large">O e-mail está incorreto</span>
+                </div>
+
+                <div class="d-flex-column">
+                    <button class="btn btn-lg btn-accent bold">Recuperar senha
+                        <i class="uil uil-arrow-right"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-lg btn-accent btn-outlined">
+                        <i class="uil uil-arrow-left"></i>
+                        Voltar para Login
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const inputs = document.querySelectorAll('.input-field');
+
+        inputs.forEach((input) => {
+            input.addEventListener('blur', function () {
+                const errorMessage = input.closest('.input-container').querySelector('.error-message');
+
+                if (input.value.trim() === '') {
+                    input.classList.add('error');
+                    errorMessage.style.display = 'block';
+                } else {
+                    input.classList.remove('error');
+                    errorMessage.style.display = 'none';
+                }
+            });
+        });
+
+        const form = document.querySelector('.form'); // Seleciona o formulário
+        const loginDiv = document.querySelector('.login'); // Seleciona a div de login
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Impede o envio do formulário para uma página
+
+            // Novo conteúdo de sucesso
+            const successMessage = `
+            <div class="header">
+                <div class="header-icon">
+                    <i class="uil uil-check-circle title-large"></i>
+                </div>
+                <div class="header-text d-flex-column">
+                    <h2 class="headline-small bold">Enviamos um e-mail pra você</h2>
+                    <span class="body-medium">Verifique seu e-mail com instruções para a redefinição da sua senha.</span>
+                </div>
+            </div>
+            <div class="d-flex-column">
+                <a href="login.html" class="btn btn-lg btn-accent bold">
+                    <i class="uil uil-arrow-left"></i>
+                    Voltar para Login
+                </a>
+            </div>
+            <div class="legal-text">
+                <span class="label-medium">Se você não receber o e-mail, verifique a caixa de Spam ou se o e-mail informado para a recuperação de senha está correto.</span>
+            </div>
+        `;
+
+            // Substitui o conteúdo da div.login
+            loginDiv.innerHTML = successMessage;
+        });
+
+    </script>
+</body>
+
+
+</html>

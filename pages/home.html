@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Kit</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="stylesheet" href="../css/page/home.css">
+</head>
+
+<body>
+    <main class="main empty">
+        <div class="container">
+            <!-- Menu Lateral -->
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="menu-brand">
+                        <img src="../assets/brand-logo.svg" alt="Logo">
+                    </div>
+                    <button class="btn btn-icon-md btn-accent btn-standart">
+                        <i class="uil uil-angle-double-left"></i>
+                    </button>
+                </div>
+
+                <div class="menu-items">
+                    <a href="home.html" class="menu-item simple active label-large">
+                        <i class="uil uil-dashboard"></i>
+                        <span>Painel</span>
+                    </a>
+                    <a href="home-empty.html" class="menu-item simple label-large">
+                        <i class="uil uil-dashboard"></i>
+                        <span>Painel Vazio</span>
+                    </a>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-building"></i>
+                            <span>Imóveis</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <a href="imoveis.html" class="menu-item secondary label-large">
+                                <span>Meus Imóveis</span>
+                            </a>
+                            <div class="menu-item secondary label-large">
+                                <span>Qualidade dos Anúncios</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-users-alt"></i>
+                            <span>Relacionamento</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <div class="menu-item secondary label-large">
+                                <span>Clientes</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Atendimentos</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Visitas</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Negociações</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Integração de Clientes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-file-graph"></i>
+                        <span>Relatórios</span>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-robot"></i>
+                        <span>Análise de Mercado</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-briefcase-alt"></i>
+                            <span>Minha Imobiliária</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <div class="menu-item secondary label-large">
+                                <span>Site</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Corretores</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Funcionários</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Faturas</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Integração com Portais</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Sobre minha Imobiliária</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-question-circle"></i>
+                            <span>Suporte</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <div class="menu-item secondary label-large">
+                                <span>Falar com Suporte</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Ajuda</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-user-square"></i>
+                        <span>Meu Perfil</span>
+                    </div>
+                </div>
+
+                <div class="menu-bottom menu-items">
+                    <a href="login.html" class="menu-item simple label-large">
+                        <i class="uil uil-signout"></i>
+                        <span>Fazer logout</span>
+                    </a>
+                    <div class="version">
+                        <div class="version-brand">
+                            <img src="../assets/timipro-brand.svg" alt="Logo">
+                        </div>
+                        <p class="label-medium">Powered by <a href="#" class="link">TimiPro</a> © Todos os direitos
+                            reservados 2017 - 2024
+                            Versão 2.108</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resto Container -->
+            <div class="content">
+                <!-- Menu Superior -->
+                <div class="header-content">
+                    <div class="input-container search-bar">
+                        <div class="input-sufix">
+                            <input type="email" id="email" placeholder="Busque um imóvel, cliente ou código"
+                                class="input-field input-lg body-medium" required />
+                            <i class="uil uil-search"></i>
+                        </div>
+                    </div>
+                    <div class="notify-icon dropdown">
+                        <button class="btn btn-dropdown btn-accent btn-outlined">
+                            <i class="uil uil-bell"></i>
+                        </button>
+                        <ul class="dropdown-group notify-result">
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Visita</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Cliente</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Imóvel</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Visita</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Cliente</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Imóvel</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conteúdo do Centro -->
+                <div class="middle-content">
+                    <!-- Left Content -->
+                    <div class="left-column">
+                        <!-- Header Inicial -->
+                        <div class="header-main">
+                            <h2 class="title-large">Olá Maria</h2>
+                            <div class="filter">
+                                <span class="body-medium">Esses são seus resultados:</span>
+                                <div class="dropdown">
+                                    <button class="btn btn-dropdown btn-accent btn-outlined bold">
+                                        <div class="btn-label btn-sm">Nessa semana</div>
+                                        <div class="btn-icon btn-icon-sm"><i class="uil uil-angle-down"></i></div>
+                                    </button>
+                                    <ul class="dropdown-group">
+                                        <li><span class="item item-sm body-small" href="#">Nessa semana</span></li>
+                                        <li><span class="item item-sm body-small" href="#">Nesse mês</span></li>
+                                        <li><span class="item item-sm body-small" href="#">Nessa semestre</span></li>
+                                        <li><span class="item item-sm body-small" href="#">Nessa ano</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resultados Principais -->
+                        <div class="main-results">
+                            <div class="indicator result">
+                                <div class="indic-top">
+                                    <div class="icons">
+                                        <i class="uil uil-user-plus"></i>
+                                        <i class="uil uil-arrow-right"></i>
+                                    </div>
+                                    <span class="label-medium">Novos leads</span>
+                                </div>
+                                <div class="indic-text">
+                                    <span class="headline-medium">12</span>
+                                    <span class="comparative label-small">+12%</span>
+                                </div>
+                            </div>
+
+                            <div class="indicator result">
+                                <div class="indic-top">
+                                    <div class="icons">
+                                        <i class="uil uil-comment-alt-message"></i>
+                                        <i class="uil uil-arrow-right"></i>
+                                    </div>
+                                    <span class="label-medium">Novas Mensagens</span>
+                                </div>
+                                <div class="indic-text">
+                                    <span class="headline-medium">165</span>
+                                    <span class="comparative label-small">+12%</span>
+                                </div>
+                            </div>
+
+                            <div class="indicator result">
+                                <div class="indic-top">
+                                    <div class="icons">
+                                        <i class="uil uil-building"></i>
+                                        <i class="uil uil-arrow-right"></i>
+                                    </div>
+                                    <span class="label-medium">Imóveis Ativos</span>
+                                </div>
+                                <div class="indic-text">
+                                    <span class="headline-medium">12</span>
+                                    <span class="comparative label-small">+12%</span>
+                                </div>
+                            </div>
+
+                            <div class="indicator result">
+                                <div class="indic-top">
+                                    <div class="icons">
+                                        <i class="uil uil-desktop"></i>
+                                        <i class="uil uil-arrow-right"></i>
+                                    </div>
+                                    <span class="label-medium">Acessos à Página</span>
+                                </div>
+                                <div class="indic-text">
+                                    <span class="headline-medium">650</span>
+                                    <span class="comparative label-small">+12%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Estágio das Propostas -->
+                        <div class="indicator">
+                            <div class="indicator-title">
+                                <span class="title-small">Estágios das Propostas</span>
+                                <button class="btn btn-accent btn-outlined btn-sm">
+                                    Ver Propostas
+                                    <i class="uil uil-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progressBar"></div>
+                            </div>
+
+                            <div class="labels-container">
+                                <div class="indicator label-medium contact">
+                                    <span>Contatos</span>
+                                    <span class="value bold" id="contatosValue">0</span>
+                                </div>
+                                <div class="indicator label-medium visit">
+                                    <span>Visitas</span>
+                                    <span class="value bold" id="visitasValue">0</span>
+                                </div>
+                                <div class="indicator label-medium propose">
+                                    <span>Propostas</span>
+                                    <span class="value bold" id="propostasValue">0</span>
+                                </div>
+                                <div class="indicator label-medium done">
+                                    <span>Concluídas</span>
+                                    <span class="value bold" id="concluidasValue">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Anuncios -->
+                        <div class="indicator">
+                            <div class="indicator-title">
+                                <span class="title-small">Anúncios</span>
+                                <div class="vision-complete">
+                                    <label class="switch switch-sm">
+                                        <input type="checkbox" id="switch-sm" checked />
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span class="label-large">Visão Completa</span>
+                                </div>
+                                <button class="btn btn-accent btn-outlined btn-sm">
+                                    Ver todos os Imóveis
+                                    <i class="uil uil-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="block anuncios">
+                                <div class="d-flex-row body-medium">
+                                    <span class="block-title">Qualidade média dos anúncios</span>
+                                    <i class="uil uil-info-circle"></i>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%;">
+                                        <span class="label-medium progress-value">7,5</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="group-btn gp-accent action-anunciar">
+                                <button class="btn btn-accent btn-md">Acessos</button>
+                                <button class="btn btn-accent btn-md btn-standart">Cliques</button>
+                                <button class="btn btn-accent btn-md btn-standart">Compartilhamentos</button>
+                                <button class="btn btn-accent btn-md btn-standart">Mensagens</button>
+                            </div>
+
+                            <div class="access-div">
+                                <span class="neutral-text body-medium">
+                                    Número de visitantes únicos que acessaram os anúncios dos seus imóveis. Cada
+                                    visitante é contabilizado apenas uma vez, independentemente do número de visitas ao
+                                    anúncio.
+                                </span>
+
+                                <div class="imovels-list d-flex-column">
+                                    <div class="imovel-list-top">
+                                        <div class="imovel-card">
+                                            <div class="imovel-head d-flex-row">
+                                                <div class="image">
+                                                    <div class="avatar large avatar-number bold">1°</div>
+                                                    <div class="avatar large avatar-img">
+                                                        <img src="https://img.dfimoveis.com.br/fotos/1067497/02833bca3d4d2aea7f8bf5aa86b01935.jpg?format=webp"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <span class="label-medium">30564</span>
+                                            </div>
+                                            <span class="title-medium ellipse-text">SQN 209 Bloco G - Asa Norte -
+                                                Brasília -
+                                                DF</span>
+                                            <div class="indicator bg-white imovel-detail">
+                                                <span class="d-flex-row label-medium">
+                                                    <i class="uil uil-sign-in-alt"></i> 4 Acessos
+                                                </span>
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 75%;">
+                                                        <div class="label-small progress-value">7,5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="imovel-card">
+                                            <div class="imovel-head d-flex-row">
+                                                <div class="image">
+                                                    <div class="avatar large avatar-number bold">2°</div>
+                                                    <div class="avatar large avatar-img">
+                                                        <img src="https://img.dfimoveis.com.br/fotos/1067497/02833bca3d4d2aea7f8bf5aa86b01935.jpg?format=webp"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <span class="label-medium">30564</span>
+                                            </div>
+                                            <span class="title-medium ellipse-text">SQN 209 Bloco G - Asa Norte -
+                                                Brasília -
+                                                DF</span>
+                                            <div class="indicator bg-white imovel-detail">
+                                                <span class="d-flex-row label-medium">
+                                                    <i class="uil uil-sign-in-alt"></i> 4 Acessos
+                                                </span>
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 75%;">
+                                                        <div class="label-small progress-value">7,5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="imovel-card">
+                                            <div class="imovel-head d-flex-row">
+                                                <div class="image">
+                                                    <div class="avatar large avatar-number bold">3°</div>
+                                                    <div class="avatar large avatar-img">
+                                                        <img src="https://img.dfimoveis.com.br/fotos/1067497/02833bca3d4d2aea7f8bf5aa86b01935.jpg?format=webp"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <span class="label-medium">30564</span>
+                                            </div>
+                                            <span class="title-medium ellipse-text">SQN 209 Bloco G - Asa Norte -
+                                                Brasília -
+                                                DF</span>
+                                            <div class="indicator bg-white imovel-detail">
+                                                <span class="d-flex-row label-medium">
+                                                    <i class="uil uil-sign-in-alt"></i> 4 Acessos
+                                                </span>
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 75%;">
+                                                        <div class="label-small progress-value">7,5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imovel-list-bottom">
+                                        <div class="imovel-card">
+                                            <div class="imovel-head d-flex-row">
+                                                <div class="image">
+                                                    <div class="avatar large avatar-number bold">58°</div>
+                                                    <div class="avatar large avatar-img">
+                                                        <img src="https://img.dfimoveis.com.br/fotos/1067497/02833bca3d4d2aea7f8bf5aa86b01935.jpg?format=webp"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <span class="label-medium">30564</span>
+                                            </div>
+                                            <span class="title-medium ellipse-text">SQN 209 Bloco G - Asa Norte -
+                                                Brasília -
+                                                DF</span>
+                                            <div class="indicator bg-white imovel-detail">
+                                                <span class="d-flex-row label-medium">
+                                                    <i class="uil uil-sign-in-alt"></i> 4 Acessos
+                                                </span>
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 75%;">
+                                                        <div class="label-small progress-value">7,5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="imovel-card">
+                                            <div class="imovel-head d-flex-row">
+                                                <div class="image">
+                                                    <div class="avatar large avatar-number bold">59°</div>
+                                                    <div class="avatar large avatar-img">
+                                                        <img src="https://img.dfimoveis.com.br/fotos/1067497/02833bca3d4d2aea7f8bf5aa86b01935.jpg?format=webp"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <span class="label-medium">30564</span>
+                                            </div>
+                                            <span class="title-medium ellipse-text">SQN 209 Bloco G - Asa Norte -
+                                                Brasília -
+                                                DF</span>
+                                            <div class="indicator bg-white imovel-detail">
+                                                <span class="d-flex-row label-medium">
+                                                    <i class="uil uil-sign-in-alt"></i> 4 Acessos
+                                                </span>
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 75%;">
+                                                        <div class="label-small progress-value">7,5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="imovel-card">
+                                            <div class="imovel-head d-flex-row">
+                                                <div class="image">
+                                                    <div class="avatar large avatar-number bold">60°</div>
+                                                    <div class="avatar large avatar-img">
+                                                        <img src="https://img.dfimoveis.com.br/fotos/1067497/02833bca3d4d2aea7f8bf5aa86b01935.jpg?format=webp"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <span class="label-medium">30564</span>
+                                            </div>
+                                            <span class="title-medium ellipse-text">SQN 209 Bloco G - Asa Norte -
+                                                Brasília -
+                                                DF</span>
+                                            <div class="indicator bg-white imovel-detail">
+                                                <span class="d-flex-row label-medium">
+                                                    <i class="uil uil-sign-in-alt"></i> 4 Acessos
+                                                </span>
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 75%;">
+                                                        <div class="label-small progress-value">7,5</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="indicator bg-white">
+                                    <img src="../assets/chart.png" alt="chart">
+                                </div>
+
+                                <div class="info-block">
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Acessos aos anúncios</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">165</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Visitas agendadas</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">12</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Propostas recebidas</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">650</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="right-column">
+                        <!-- Acesso Rápido -->
+                        <div class="indicator">
+                            <div class="indicator-title">
+                                <span class="title-small">
+                                    <i class="uil uil-location-arrow"></i>
+                                    Acesso Rápido
+                                </span>
+                            </div>
+
+                            <div class="list">
+                                <a class="list-item">
+                                    <i class="uil uil-building"></i>
+                                    <span class="list-text body-medium">Adicionar novo Imóvel</span>
+                                    <i class="uil uil-arrow-right ft-sm"></i>
+                                </a>
+
+                                <a class="list-item">
+                                    <i class="uil uil-users-alt"></i>
+                                    <span class="list-text body-medium">Gerenciar Clientes</span>
+                                    <i class="uil uil-arrow-right ft-sm"></i>
+                                </a>
+
+                                <a class="list-item">
+                                    <i class="uil uil-comment-alt-message"></i>
+                                    <span class="list-text body-medium">Gerenciar Mensagens</span>
+                                    <i class="uil uil-arrow-right ft-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Eventos de Hoje -->
+                        <div class="indicator rg-side events">
+                            <div class="indicator-title">
+                                <span class="title-small">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Eventos de hoje
+                                </span>
+
+                                <button class="btn btn-accent btn-sm">
+                                    Ver todos
+                                    <i class="uil uil-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="list">
+                                <a class="list-item event">
+                                    <div class="hour">
+                                        <span class="hour-text label-small">09:00</span>
+                                    </div>
+
+                                    <div class="event-detail">
+                                        <p class="body-medium bold">Letícia Aguiar Teixeira</p>
+                                        <span class="list-text label-medium">3025 - SQN 209 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                </a>
+
+                                <a class="list-item event">
+                                    <div class="hour">
+                                        <span class="hour-text label-small">09:00</span>
+                                    </div>
+
+                                    <div class="event-detail">
+                                        <p class="body-medium bold">Letícia Aguiar Teixeira</p>
+                                        <span class="list-text label-medium">3025 - SQN 209 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                </a>
+
+                                <a class="list-item event">
+                                    <div class="hour">
+                                        <span class="hour-text label-small">09:00</span>
+                                    </div>
+
+                                    <div class="event-detail">
+                                        <p class="body-medium bold">Letícia Aguiar Teixeira</p>
+                                        <span class="list-text label-medium">3025 - SQN 209 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Selos Especialista -->
+                        <div class="indicator rg-side seal">
+                            <div class="indicator-title">
+                                <span class="title-small">
+                                    <i class="uil uil-medal"></i>
+                                    Selos de Especialista
+                                </span>
+
+                                <button class="btn btn-primary btn-sm">
+                                    Acessar
+                                    <i class="uil uil-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="list">
+                                <a class="list-item seal">
+                                    <div class="seal-icon">
+                                        <i class="uil uil-medal"></i>
+                                    </div>
+                                    <p class="body-medium bold">Asa Norte</p>
+                                </a>
+                                <a class="list-item seal">
+                                    <div class="seal-icon">
+                                        <i class="uil uil-medal"></i>
+                                    </div>
+                                    <p class="body-medium bold">Venda</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/menu.js"></script>
+
+    <script>
+        function monitorVisaoCompleta(switchId, targets) {
+            const checkbox = document.getElementById(switchId);
+
+            function updateVisibility() {
+                targets.forEach(target => {
+                    const element = document.querySelector(`.${target}`);
+                    if (element) {
+                        if (checkbox.checked) {
+                            element.style.display = 'flex'; // Exibe o elemento primeiro
+                            setTimeout(() => {
+                                element.classList.remove('hidden');
+                                element.classList.add('visible');
+                            }, 10); // Permite que a transição seja aplicada
+                        } else {
+                            element.classList.remove('visible');
+                            element.classList.add('hidden');
+                            setTimeout(() => {
+                                element.style.display = 'none'; // Oculta após a transição
+                            }, 300); // Aguarda o tempo da animação (0.3s)
+                        }
+                    }
+                });
+            }
+
+            checkbox.addEventListener('change', updateVisibility);
+            updateVisibility(); // Aplica a lógica inicial
+        }
+
+        // Aplicar ao switch
+        monitorVisaoCompleta('switch-sm', ['imovels-list', 'info-block']);
+
+
+
+        // função para dropdowns
+        document.addEventListener('click', function (event) {
+            const clickedDropdownButton = event.target.closest('.btn-dropdown');
+            let isGroupOpen = false;
+
+            document.querySelectorAll('.dropdown-group').forEach(group => {
+                const relatedButton = group.previousElementSibling;
+
+                if (clickedDropdownButton === relatedButton) {
+                    isGroupOpen = group.style.display === 'flex';
+                    group.style.display = isGroupOpen ? 'none' : 'flex';
+                } else {
+                    group.style.display = 'none';
+                }
+            });
+
+            if (!clickedDropdownButton) {
+                document.querySelectorAll('.dropdown-group').forEach(group => {
+                    group.style.display = 'none';
+                });
+            }
+        });
+
+        // Seleciona todos os containers com a classe group-btn
+        const groupContainers = document.querySelectorAll('.group-btn');
+
+        // Itera sobre cada container
+        groupContainers.forEach((group) => {
+            // Seleciona todos os botões dentro do container atual
+            const buttons = group.querySelectorAll('button');
+
+            // Adiciona um evento de clique para cada botão no grupo
+            buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    // Remove a classe 'btn-standart' de todos os botões no grupo
+                    buttons.forEach((btn) => btn.classList.add('btn-standart'));
+
+                    // Remove a classe 'btn-standart' apenas do botão clicado
+                    button.classList.remove('btn-standart');
+                });
+            });
+        });
+
+        // Dados iniciais
+        const data = {
+            contatos: 100,
+            visitas: 78,
+            propostas: 151,
+            concluidas: 300,
+        };
+
+        function updateProgressBar() {
+            const total = Object.values(data).reduce((sum, val) => sum + val, 0);
+
+            // Atualizar os valores
+            document.getElementById("contatosValue").textContent = data.contatos;
+            document.getElementById("visitasValue").textContent = data.visitas;
+            document.getElementById("propostasValue").textContent = data.propostas;
+            document.getElementById("concluidasValue").textContent = data.concluidas;
+
+            // Atualizar barra de progresso
+            const progressBar = document.getElementById("progressBar");
+            progressBar.innerHTML = ""; // Limpa conteúdo existente
+
+            const colors = ["var(--color-neutral-pure)", "var(--color-warning-pure)", "var(--color-secondary-pure)", "var(--color-primary-pure)"];
+            const stages = [data.contatos, data.visitas, data.propostas, data.concluidas];
+
+            stages.forEach((stage, index) => {
+                const percentage = (stage / total) * 100;
+                const segment = document.createElement("div");
+                segment.style.width = `${percentage}%`;
+                segment.style.backgroundColor = colors[index];
+                segment.classList.add("progress-segment");
+                progressBar.appendChild(segment);
+            });
+        }
+
+        // Inicializar progress bar ao carregar a página
+        document.addEventListener("DOMContentLoaded", updateProgressBar);
+    </script>
+</body>
+
+</html>

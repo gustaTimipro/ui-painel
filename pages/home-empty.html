@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Kit</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="stylesheet" href="../css/page/home.css">
+</head>
+
+<body>
+    <main class="main empty">
+        <div class="container">
+            <!-- Menu Lateral -->
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="menu-brand">
+                        <img src="../assets/brand-logo.svg" alt="Logo">
+                    </div>
+                    <button class="btn btn-icon-md btn-accent btn-standart">
+                        <i class="uil uil-angle-double-left"></i>
+                    </button>
+                </div>
+
+                <div class="menu-items">
+                    <a href="home.html" class="menu-item simple label-large">
+                        <i class="uil uil-dashboard"></i>
+                        <span>Painel</span>
+                    </a>
+                    <a href="home-empty.html" class="menu-item simple label-large active">
+                        <i class="uil uil-dashboard"></i>
+                        <span>Painel Vazio</span>
+                    </a>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-building"></i>
+                            <span>Imóveis</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <a href="imoveis.html" class="menu-item secondary label-large">
+                                <span>Meus Imóveis</span>
+                            </a>
+                            <div class="menu-item secondary label-large">
+                                <span>Qualidade dos Anúncios</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-users-alt"></i>
+                            <span>Relacionamento</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <div class="menu-item secondary label-large">
+                                <span>Clientes</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Atendimentos</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Visitas</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Negociações</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Integração de Clientes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-file-graph"></i>
+                        <span>Relatórios</span>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-robot"></i>
+                        <span>Análise de Mercado</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-briefcase-alt"></i>
+                            <span>Minha Imobiliária</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <div class="menu-item secondary label-large">
+                                <span>Site</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Corretores</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Funcionários</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Faturas</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Integração com Portais</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Sobre minha Imobiliária</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-question-circle"></i>
+                            <span>Suporte</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <div class="menu-item secondary label-large">
+                                <span>Falar com Suporte</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Ajuda</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-user-square"></i>
+                        <span>Meu Perfil</span>
+                    </div>
+                </div>
+
+                <div class="menu-bottom menu-items">
+                    <a href="login.html" class="menu-item simple label-large">
+                        <i class="uil uil-signout"></i>
+                        <span>Fazer logout</span>
+                    </a>
+                    <div class="version">
+                        <div class="version-brand">
+                            <img src="../assets/timipro-brand.svg" alt="Logo">
+                        </div>
+                        <p class="label-medium">Powered by <a href="#" class="link">TimiPro</a> © Todos os direitos
+                            reservados 2017 - 2024
+                            Versão 2.108</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <!-- Menu Superior -->
+                <div class="header-content">
+                    <div class="input-container search-bar">
+                        <div class="input-sufix">
+                            <input type="email" id="email" placeholder="Busque um imóvel, cliente ou código"
+                                class="input-field input-lg body-medium" required />
+                            <i class="uil uil-search"></i>
+                        </div>
+                    </div>
+                    <div class="notify-icon dropdown">
+                        <button class="btn btn-dropdown btn-accent btn-outlined">
+                            <i class="uil uil-bell"></i>
+                        </button>
+                        <ul class="dropdown-group notify-result">
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Visita</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Cliente</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Imóvel</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Visita</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Cliente</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Imóvel</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="middle-content">
+                    <div class="left-column">
+                        <div class="header-main">
+                            <h2 class="title-large">Olá Maria</h2>
+                            <div class="filter">
+                                <span class="body-medium">Esses são seus resultados:</span>
+                                <div class="dropdown">
+                                    <button class="btn btn-dropdown btn-accent btn-outlined bold">
+                                        <div class="btn-label btn-sm">Nessa semana</div>
+                                        <div class="btn-icon btn-icon-sm"><i class="uil uil-angle-down"></i></div>
+                                    </button>
+                                    <ul class="dropdown-group">
+                                        <li><span class="item item-sm body-small" href="#">Nessa semana</span></li>
+                                        <li><span class="item item-sm body-small" href="#">Nesse mês</span></li>
+                                        <li><span class="item item-sm body-small" href="#">Nessa semestre</span></li>
+                                        <li><span class="item item-sm body-small" href="#">Nessa ano</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="indicator">
+                            <span class="empty-text label-large">
+                                <i class="uil uil-eye"></i>
+                                Nenhum dado para apresentar aqui
+                            </span>
+                            <button class="btn btn-accent btn-outlined btn-sm">
+                                Ver meus imóveis
+                                <i class="uil uil-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="indicator">
+                            <div class="indicator-title">
+                                <span class="title-small">Funil de Negociações</span>
+                                <button class="btn btn-accent btn-outlined btn-sm">
+                                    Ver Propostas
+                                    <i class="uil uil-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="indicator bg-white">
+                                <span class="empty-text label-large">
+                                    <i class="uil uil-eye"></i>
+                                    Nenhum dado para apresentar aqui
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="indicator">
+                            <div class="indicator-title">
+                                <span class="title-small">Anúncios</span>
+                                <div class="vision-complete">
+                                    <label class="switch switch-sm">
+                                        <input type="checkbox" />
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span class="label-large">Visão Completa</span>
+                                </div>
+                                <button class="btn btn-accent btn-outlined btn-sm">
+                                    Ver todos os Imóveis
+                                    <i class="uil uil-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="group-btn gp-accent action-anunciar">
+                                <button class="btn btn-accent btn-md">Acessos</button>
+                                <button class="btn btn-accent btn-md btn-standart">Cliques</button>
+                                <button class="btn btn-accent btn-md btn-standart">Compartilhamentos</button>
+                                <button class="btn btn-accent btn-md btn-standart">Mensagens</button>
+                            </div>
+
+                            <span class="neutral-text body-medium">
+                                Número de visitantes únicos que acessaram os anúncios dos seus imóveis. Cada visitante é
+                                contabilizado apenas uma vez, independentemente do número de visitas ao anúncio.
+                            </span>
+
+                            <div class="indicator bg-white">
+                                <span class="empty-text label-large">
+                                    <i class="uil uil-eye"></i>
+                                    Nenhum dado sobre os acessos aos anúncios para apresentar aqui
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-column">
+                        <div class="indicator">
+                            <div class="indicator-title">
+                                <span class="title-small">
+                                    <i class="uil uil-location-arrow"></i>
+                                    Acesso Rápido
+                                </span>
+                            </div>
+
+                            <div class="list">
+                                <a class="list-item">
+                                    <i class="uil uil-building"></i>
+                                    <span class="list-text body-medium">Adicionar novo Imóvel</span>
+                                    <i class="uil uil-arrow-right ft-sm"></i>
+                                </a>
+
+                                <a class="list-item">
+                                    <i class="uil uil-users-alt"></i>
+                                    <span class="list-text body-medium">Gerenciar Clientes</span>
+                                    <i class="uil uil-arrow-right ft-sm"></i>
+                                </a>
+
+                                <a class="list-item">
+                                    <i class="uil uil-comment-alt-message"></i>
+                                    <span class="list-text body-medium">Gerenciar Mensagens</span>
+                                    <i class="uil uil-arrow-right ft-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="indicator rg-side events">
+                            <div class="indicator-title">
+                                <span class="title-small">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Eventos de hoje
+                                </span>
+
+                                <button class="btn btn-accent btn-sm">
+                                    Ver todos
+                                    <i class="uil uil-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="list">
+                                <a class="list-item event empty">
+                                    <div class="event-detail">
+                                        <i class="uil uil-check"></i>
+                                        <span class="list-text body-medium">Nenhum evento para hoje</span>
+                                    </div>
+                                </a>
+
+                                <!-- <a class="list-item event">
+                                    <div class="hour">
+                                        <span class="hour-text label-small">09:00</span>
+                                    </div>
+
+                                    <div class="event-detail">
+                                        <p class="body-medium bold">Letícia Aguiar Teixeira</p>
+                                        <span class="list-text label-medium">3025 - SQN 209 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                </a> -->
+                            </div>
+                        </div>
+
+                        <div class="indicator rg-side seal">
+                            <div class="indicator-title">
+                                <span class="title-small">
+                                    <i class="uil uil-medal"></i>
+                                    Selos de Especialista
+                                </span>
+
+                                <button class="btn btn-primary btn-sm">
+                                    Acessar
+                                    <i class="uil uil-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="list">
+                                <div class="indicator bg-white">
+                                    <span class="empty-text label-large">
+                                        <i class="uil uil-eye"></i>
+                                        Você ainda não possui Selos de Especialista
+                                    </span>
+                                    <button class="btn btn-primary btn-outlined btn-sm">
+                                        Como conseguir 1º Selo?
+                                        <i class="uil uil-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/menu.js"></script>
+
+    <script>
+        // função para dropdowns
+        document.addEventListener('click', function (event) {
+            const clickedDropdownButton = event.target.closest('.btn-dropdown');
+            let isGroupOpen = false;
+
+            document.querySelectorAll('.dropdown-group').forEach(group => {
+                const relatedButton = group.previousElementSibling;
+
+                if (clickedDropdownButton === relatedButton) {
+                    isGroupOpen = group.style.display === 'flex';
+                    group.style.display = isGroupOpen ? 'none' : 'flex';
+                } else {
+                    group.style.display = 'none';
+                }
+            });
+
+            if (!clickedDropdownButton) {
+                document.querySelectorAll('.dropdown-group').forEach(group => {
+                    group.style.display = 'none';
+                });
+            }
+        });
+
+        // Seleciona todos os containers com a classe group-btn
+        const groupContainers = document.querySelectorAll('.group-btn');
+
+        // Itera sobre cada container
+        groupContainers.forEach((group) => {
+            // Seleciona todos os botões dentro do container atual
+            const buttons = group.querySelectorAll('button');
+
+            // Adiciona um evento de clique para cada botão no grupo
+            buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    // Remove a classe 'btn-standart' de todos os botões no grupo
+                    buttons.forEach((btn) => btn.classList.add('btn-standart'));
+
+                    // Remove a classe 'btn-standart' apenas do botão clicado
+                    button.classList.remove('btn-standart');
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

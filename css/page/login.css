@@ -1,0 +1,93 @@
+/* Login Page */
+.login-background {
+    background: linear-gradient(0deg, rgba(0, 0, 0, var(--opacity-intense)) 0%, rgba(0, 0, 0, var(--opacity-intense)) 100%), url("../../assets/login-background.png") lightgray 80% / cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    max-width: 448px;
+    padding: var(--padding-md, 24px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--margin-md, 24px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+
+    border-radius: var(--border-radius-xs, 16px);
+    background: var(--color-essence-ivory, #FFF);
+
+    box-shadow: var(--shadow-level-3);
+}
+
+.login.recovery {
+    padding: var(--padding-huge, 64px) var(--padding-md, 24px) var(--padding-md, 24px) var(--padding-md, 24px);
+}
+
+.login .header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-xs, 16px);
+    align-items: center;
+    text-align: center;
+}
+
+.header .header-icon {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    padding: var(--padding-nano, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--margin-nano, 8px);
+
+    border-radius: var(--border-radius-xs, 16px);
+    background: var(--color-neutral-pure, #A8A8A8);
+
+    box-shadow: var(--shadow-level-3);
+}
+
+.header .header-icon i {
+    color: var(--color-essence-ivory);
+}
+
+.header .header-icon {
+    position: absolute;
+    top: -35px;
+}
+
+.login .form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-xs, 16px);
+    align-self: stretch;
+}
+
+.form .input-label.password {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.legal-text {
+    color: var(--color-neutral-pure, #A8A8A8);
+    text-align: center;
+}
+
+/* Recovery Page */
+.recovery-background {
+    background: linear-gradient(135deg, var(--color-secondary-soft) 0%, var(--color-secondary-pure) 50%, var(--color-secondary-dark) 100%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
