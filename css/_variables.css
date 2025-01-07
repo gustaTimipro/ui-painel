@@ -353,6 +353,10 @@ img {
     align-items: center;
 }
 
+.align-end {
+    align-items: flex-end;
+}
+
 .flex-grow {
     flex: 1 0 0;
 }
@@ -361,8 +365,16 @@ img {
     flex: 2.07 0 0;
 }
 
+.pd-bt {
+    padding-bottom: var(--padding-quark);
+}
+
 .w-100 {
     width: 100%;
+}
+
+.w-200 {
+    width: 214px;
 }
 
 .gap-xs {

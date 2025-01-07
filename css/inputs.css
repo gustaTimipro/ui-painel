@@ -47,17 +47,26 @@
     position: relative;
 }
 
-.input-sufix i {
+.input-sufix i,
+.input-sufix span {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translate(-50%, -50%);
     color: var(--color-neutral-darker);
+}
+
+.input-sufix i {
     font-size: 24px;
 }
 
 .input-sufix .input-field {
     padding: var(--padding-quark, 4px) var(--padding-xl, 40px) var(--padding-quark, 4px) var(--padding-nano, 8px);
+}
+
+.input-sufix textarea.input-field {
+    padding: var(--padding-nano, 8px) var(--padding-xxl, 48px) var(--padding-nano, 8px) var(--padding-nano, 8px);
+    resize: none;
 }
 
 .input-sufix .input-field.error+i {
@@ -95,7 +104,7 @@
 }
 
 .input-twofix .input-field {
-    padding: var(--padding-quark, 4px)var(--padding-xxl, 40px)  var(--padding-quark, 4px) var(--padding-lx, 36px);
+    padding: var(--padding-quark, 4px)var(--padding-xxl, 40px) var(--padding-quark, 4px) var(--padding-lx, 36px);
 }
 
 /* Input Checkbox */
@@ -399,4 +408,8 @@ input:checked+.slider::before {
 .custom-select option:hover {
     background-color: #007bff;
     color: #fff;
+}
+
+.custom-select option:disabled {
+    color: var(--color-neutral-deep);
 }
