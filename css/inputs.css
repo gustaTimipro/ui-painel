@@ -52,12 +52,16 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-30%, -50%);
     color: var(--color-neutral-darker);
 }
 
 .input-sufix i {
     font-size: 24px;
+}
+
+.input-sufix.textarea span {
+    top: 20px;
 }
 
 .input-sufix .input-field {
@@ -111,7 +115,7 @@
 .input-options {
     gap: var(--margin-md, 24px);
     display: flex;
-    padding: var(--padding-xs, 16px);
+    padding: var(--padding-nano, 8px) var(--padding-xs, 16px);
     align-items: center;
     border-radius: var(--border-radius-quark, 4px);
     border: var(--border-width-hairline, 1px) solid var(--color-neutral-darker, #7F7F7F);
@@ -120,9 +124,9 @@
 }
 
 .option {
-    gap: 5px;
     display: flex;
     align-items: center;
+    gap: var(--margin-nano, 8px);
 }
 
 /* Tamanho do Input */

@@ -251,13 +251,13 @@ img {
 .title-large {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-sm);
-    line-height: var(--line-height-md);
+    line-height: var(--line-height-lg);
 }
 
 .title-medium {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-xs);
-    line-height: var(--line-height-lg);
+    line-height: var(--line-height-md);
 }
 
 .title-small {
@@ -323,6 +323,23 @@ img {
     height: 40px;
 }
 
+/* Alertas */
+.alert {
+    display: flex;
+    padding: var(--padding-nano, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--margin-md, 24px);
+    border-radius: var(--border-radius-xs, 16px);
+}
+
+.alert.warning {
+    border: var(--border-width-hairline, 1px) solid var(--color-warning-pure, #FF8A00);
+    background: var(--color-warning-tinted, #FFECD9);
+    box-shadow: var(--shadow-level-1);
+    color: var(--color-warning-deep);
+}
+
 /* Stylization */
 .link {
     text-decoration: underline;
@@ -357,12 +374,22 @@ img {
     align-items: flex-end;
 }
 
+.align-center {
+    align-items: center;
+}
+
 .flex-grow {
     flex: 1 0 0;
 }
 
 .flex-two-grow {
     flex: 2.07 0 0;
+}
+
+.divisor {
+    background: rgba(0, 0, 0, 0.32);
+    width: 1px;
+    height: 100%;
 }
 
 .pd-bt {
@@ -375,6 +402,18 @@ img {
 
 .w-200 {
     width: 214px;
+}
+
+.w-300 {
+    width: 310px;
+}
+
+.gap-quark {
+    gap: var(--margin-quark, 4px);
+}
+
+.gap-nano {
+    gap: var(--margin-nano, 8px) !important;
 }
 
 .gap-xs {
@@ -398,8 +437,28 @@ img {
     background: var(--color-essence-ivory, #FFF) !important;
 }
 
+.bg-shadow {
+    border-radius: var(--border-radius-nano, 8px);
+    border: 1px solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-essence-ivory, #FFF);
+    padding: var(--padding-xs, 16px);
+    box-shadow: var(--shadow-level-3);
+}
+
+.bg-neutral {
+    border-radius: var(--border-radius-nano, 8px);
+    border: 1px solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-neutral-tinted, #FAFAFA);
+    padding: var(--padding-xs, 16px);
+    box-shadow: var(--shadow-level-3);
+}
+
 .ft-sm {
     font-size: var(--font-size-sm, 20px) !important;
+}
+
+.ft-md {
+    font-size: var(--font-size-md, 24px) !important;
 }
 
 .success {

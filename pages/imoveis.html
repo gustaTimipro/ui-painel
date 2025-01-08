@@ -2808,7 +2808,7 @@
                                                     Empresas e/ou Profissionais que Assinam o Projeto
                                                 </label>
                                             </div>
-                                            <div class="input-sufix">
+                                            <div class="input-sufix textarea">
                                                 <textarea class="input-field body-medium" name="descricaoAssinatura"
                                                     id="descricaoAssinatura" cols="50" rows="5"
                                                     placeholder="Descreva aqui uma breve observação dos Projetos e os Nomes das Empresas ou Profissionais que assinam este imóvel assinado para ser exibido no Portal DFimoveis, Projetos e Nomes: Arquitetura e/ou Construção, Reforma e/ou Retrofit; Decoração; Armários e Móveis Planejados; Iluminação; Paisagismo; Outros"
@@ -2832,6 +2832,14 @@
                                         inscrição de IPTU e certidão de ônus, garantindo mais confiança e segurança para
                                         compradores e vendedores.
                                     </span>
+
+                                    <div class="alert warning">
+                                        <div class="alert-text d-flex-column flex-grow gap-quark">
+                                            <span class="label-large">É de responsabilidade do Anunciante informar
+                                                corretamente o endereço completo do imóvel anunciado para verificação do
+                                                cartório.</span>
+                                        </div>
+                                    </div>
 
                                     <div class="info-column d-flex-column gap-xs flex-grow bg-neutral">
                                         <span class="title-small flex-grow neutral-color">Informações dos
@@ -2946,43 +2954,63 @@
                                         </span>
 
                                         <div class="info-row d-flex-row align-end">
-                                            <div class="input-container w-200">
-                                                <div class="input-label">
-                                                    <label class="label-large" for="tipoDocumento">Tipo de Documento
-                                                    </label>
+                                            <div class="upload-area d-flex-column align-center gap-xs" id="upload-area">
+                                                <i class="uil uil-file-plus ft-md neutral-text"></i>
+                                                <div class="action-upload d-flex-row">
+                                                    <button class="btn btn-accent btn-sm btn-outlined"
+                                                        id="select-file-button">Selecione o
+                                                        arquivo
+                                                    </button>
+                                                    <span class="label-large accent-color">ou arraste para cá</span>
                                                 </div>
-                                                <div class="input-select input-sufix">
-                                                    <select id="tipoDocumento"
-                                                        class="custom-select body-medium input-md">
-                                                        <option value="" disabled selected>Selecione</option>
-                                                        <option value="apartamento">Apartamento</option>
-                                                        <option value="casa">Casa</option>
-                                                        <option value="casa-condominio">Casa Condomínio</option>
-                                                        <option value="galpao">Galpão</option>
-                                                        <option value="garagem">Garagem</option>
-                                                        <option value="hotel-flat">Hotel Flat</option>
-                                                    </select>
-                                                    <i class="uil uil-angle-down"></i>
-                                                </div>
+                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20MB)</p>
+                                                <input type="file" id="file-input" class="hidden-input" multiple>
                                             </div>
+                                        </div>
 
-                                            <div class="input-container flex-grow">
-                                                <div class="input-label">
-                                                    <label class="label-large" for="document">Documento
-                                                    </label>
-                                                </div>
-                                                <input type="text" id="document"
-                                                    class="input-field input-md body-medium" required
-                                                    placeholder="Informe o número do documento" />
+                                        <div class="input-container w-300">
+                                            <div class="input-label">
+                                                <label class="label-large" for="vencimentoOnus">Data Venc. Cert. Ônus
+                                                </label>
                                             </div>
+                                            <div class="input-select input-sufix">
+                                                <select id="vencimentoOnus" class="custom-select body-medium input-md">
+                                                    <option value="" disabled selected>Selecione</option>
+                                                    <option value="apartamento">Apartamento</option>
+                                                    <option value="casa">Casa</option>
+                                                    <option value="casa-condominio">Casa Condomínio</option>
+                                                    <option value="galpao">Galpão</option>
+                                                    <option value="garagem">Garagem</option>
+                                                    <option value="hotel-flat">Hotel Flat</option>
+                                                </select>
+                                                <i class="uil uil-calender"></i>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                            <div class="info-actions pd-bt">
-                                                <button class="btn btn-icon-md btn-destructive btn-standart">
-                                                    <i class="uil uil-trash"></i>
-                                                </button>
-                                                <button class="btn btn-accent btn-md btn-outlined">Adicionar
-                                                    <i class="uil uil-plus"></i>
-                                                </button>
+                                    <div class="info-column d-flex-column gap-xs flex-grow bg-neutral">
+                                        <span class="title-small flex-grow neutral-color">Certidão de Casamento
+                                            <span class="label-medium neutral-text">(opcional)</span>
+                                        </span>
+
+                                        <span class="body-small">
+                                            Somente necessária caso o estado civil dos proprietários não conste na
+                                            certidão de ônus do imóvel.
+                                        </span>
+
+                                        <div class="info-row d-flex-row align-end">
+                                            <div class="upload-area d-flex-column align-center gap-xs"
+                                                id="upload-casamento">
+                                                <i class="uil uil-file-plus ft-md neutral-text"></i>
+                                                <div class="action-upload d-flex-row">
+                                                    <button class="btn btn-accent btn-sm btn-outlined"
+                                                        id="select-casamento-button">Selecione o
+                                                        arquivo
+                                                    </button>
+                                                    <span class="label-large accent-color">ou arraste para cá</span>
+                                                </div>
+                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20MB)</p>
+                                                <input type="file" id="casamento-input" class="hidden-input" multiple>
                                             </div>
                                         </div>
                                     </div>
@@ -2995,6 +3023,22 @@
                                     <span class="title-small flex-grow">Fotos</span>
                                     <i class="uil uil-angle-down"></i>
                                 </div>
+
+                                <div class="info-row d-flex-row align-end">
+                                    <div class="upload-area d-flex-column align-center gap-xs" id="upload-fotos">
+                                        <i class="uil uil-camera ft-md neutral-text"></i>
+                                        <div class="action-upload d-flex-row">
+                                            <button class="btn btn-accent btn-sm btn-outlined"
+                                                id="select-fotos-button">Selecione o
+                                                arquivo
+                                            </button>
+                                            <span class="label-large accent-color">ou arraste para cá</span>
+                                        </div>
+                                        <p class="label-medium neutral-text">Para uma melhor apresentação, opte por
+                                            imagens na horizontal, de melhor resolução (16:9) com até 2mb.</p>
+                                        <input type="file" id="fotos-input" class="hidden-input" multiple>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="info-content disabled">
@@ -3003,6 +3047,51 @@
                                     <span class="title-small flex-grow">Configurações de Publicação</span>
                                     <i class="uil uil-angle-down"></i>
                                 </div>
+
+                                <div class="info-column d-flex-column gap-xs bg-shadow">
+                                    <img src="../assets/brand-logo.svg" alt="Logo" class="config-brand">
+
+                                    <div class="info-column d-flex-column gap-xs">
+                                        <div class="input-container w-100">
+                                            <div class="input-options input-md config-options">
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="portal"
+                                                        name="portal">
+                                                    <label class="body-medium bold" for="portal">Publicar no
+                                                        Portal</label>
+                                                </div>
+                                                <div class="divisor"></div>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="destaque"
+                                                        name="destaque">
+                                                    <i class="uil uil-bright"></i>
+                                                    <label class="body-medium" for="destaque">Super Destaque</label>
+                                                    <button class="btn btn-sm btn-outlined btn-accent">
+                                                        Solicitar Funcionalidade
+                                                        <i class="uil uil-arrow-up-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-container w-100">
+                                            <div class="input-options input-md config-options">
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="portal"
+                                                        name="portal">
+                                                    <label class="body-medium bold" for="portal">Publicar no
+                                                        Meu Site</label>
+                                                </div>
+                                                <div class="divisor"></div>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="portal"
+                                                        name="portal">
+                                                    <label class="body-medium" for="portal">Destaque no Meu Site</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="info-content disabled">
@@ -3010,6 +3099,44 @@
                                     <i class="uil uil-star"></i>
                                     <span class="title-small flex-grow">Informações</span>
                                     <i class="uil uil-angle-down"></i>
+                                </div>
+
+                                <div class="info-column d-flex-column gap-md">
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="descPortal">Descrição para o Portal
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="input-sufix textarea">
+                                            <textarea class="input-field body-medium" name="descricaoPortal"
+                                                id="descricaoPortal" cols="50" rows="5" placeholder="Descreva"
+                                                required></textarea>
+                                            <span class="rg-span body-medium">0/5000</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="descPortal">Descrição para o Meu Site
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                            <div class="option">
+                                                <input type="checkbox" class="imovel-checkbox" id="exibirPortal"
+                                                    name="exibirPortal">
+                                                <label class="label-medium" for="exibirPortal">Usar mesma do
+                                                    Portal</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-sufix textarea">
+                                            <textarea class="input-field body-medium" name="descricaoPortal"
+                                                id="descricaoPortal" cols="50" rows="5" placeholder="Descreva"
+                                                required></textarea>
+                                            <span class="rg-span body-medium">0/5000</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -3201,7 +3328,7 @@
                 });
             }
         }
-        document.querySelector('#imoveisTodos').addEventListener('change', handleImoveisTodosCheckbox);
+        document.querySelector('#imoveisTodos').addEventListener('change', handleImoveisTodosCheckbox)
 
         // Modal - Alternar checkbox Padrao e Empreendimento (Adicionar)
         function initializeToggleDisable(options) {
@@ -3249,18 +3376,100 @@
             });
         });
 
+        // Modal - Função incluir arquivo
+        function createUploadArea({
+            uploadAreaId,
+            fileInputId,
+            buttonId,
+            validExtensions = ["jpg", "jpeg", "docx", "pdf"],
+            maxFileSize = 20 * 1024 * 1024, // 20MB
+            onValidFile = (file) => console.log(`Arquivo válido: ${file.name}`),
+            onInvalidFile = (file, reason) => console.log(`Arquivo inválido: ${file.name} (${reason})`),
+        }) {
+            const uploadArea = document.getElementById(uploadAreaId);
+            const fileInput = document.getElementById(fileInputId);
+            const selectFileButton = document.getElementById(buttonId);
+
+            if (!uploadArea || !fileInput || !selectFileButton) {
+                console.error("Upload area, file input, or button not found.");
+                return;
+            }
+
+            // Evento de clique no botão para abrir o seletor de arquivos
+            selectFileButton.addEventListener("click", (event) => {
+                event.preventDefault(); // Evita a recarga da página, caso seja um botão dentro de um formulário
+                fileInput.click();
+            });
+
+            // Evento para manipular a seleção de arquivos
+            fileInput.addEventListener("change", (event) => handleFiles(event.target.files));
+
+            // Eventos para arrastar e soltar arquivos
+            uploadArea.addEventListener("dragover", (event) => {
+                event.preventDefault();
+                uploadArea.classList.add("dragover");
+            });
+
+            uploadArea.addEventListener("dragleave", () => {
+                uploadArea.classList.remove("dragover");
+            });
+
+            uploadArea.addEventListener("drop", (event) => {
+                event.preventDefault();
+                uploadArea.classList.remove("dragover");
+                handleFiles(event.dataTransfer.files);
+            });
+
+            // Função para validar e manipular arquivos
+            function handleFiles(files) {
+                for (const file of files) {
+                    const fileExtension = file.name.split(".").pop().toLowerCase();
+                    if (!validExtensions.includes(fileExtension)) {
+                        onInvalidFile(file, "Extensão inválida");
+                        continue;
+                    }
+                    if (file.size > maxFileSize) {
+                        onInvalidFile(file, "Tamanho excedido");
+                        continue;
+                    }
+                    onValidFile(file);
+                }
+            }
+        }
+        createUploadArea({
+            uploadAreaId: "upload-area",
+            fileInputId: "file-input",
+            buttonId: "select-file-button",
+            validExtensions: ["jpg", "jpeg", "png", "pdf"], // Personalizar extensões
+            maxFileSize: 10 * 1024 * 1024, // Limite de 10MB
+            onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
+            onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
+        });
+        createUploadArea({
+            uploadAreaId: "upload-casamento",
+            fileInputId: "casamento-input",
+            buttonId: "select-casamento-button",
+            validExtensions: ["jpg", "jpeg", "png", "pdf"], // Personalizar extensões
+            maxFileSize: 10 * 1024 * 1024, // Limite de 10MB
+            onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
+            onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
+        });
+        createUploadArea({
+            uploadAreaId: "upload-fotos",
+            fileInputId: "fotos-input",
+            buttonId: "select-fotos-button",
+            validExtensions: ["jpg", "jpeg", "png", "pdf"], // Personalizar extensões
+            maxFileSize: 10 * 1024 * 1024, // Limite de 10MB
+            onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
+            onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
+        });
+
         // Modal - Função inicial
         function initModal() {
-            // Seleciona todos os elementos de cards de imóveis
             const cards = document.querySelectorAll('[data-modal="open"]');
-
-            // Seleciona o container do modal
             const modalContainer = document.querySelector('[data-modal="container"]');
-
-            // Seleciona o botão de fechar
             const closeButton = document.querySelector('[data-modal="close"]');
 
-            // Verifica se os elementos existem para evitar erros
             if (!modalContainer) {
                 console.error('Elemento com atributo data-modal="container" não encontrado.');
                 return;
@@ -3270,14 +3479,12 @@
                 console.warn('Nenhum elemento com atributo data-modal="open" encontrado.');
             }
 
-            // Adiciona o evento de clique nos cards
             cards.forEach(card => {
                 card.addEventListener('click', () => {
                     modalContainer.classList.add('active');
                 });
             });
 
-            // Adiciona o evento de clique no botão de fechar
             if (closeButton) {
                 closeButton.addEventListener('click', () => {
                     modalContainer.classList.remove('active');
