@@ -469,6 +469,10 @@ img {
     color: var(--color-neutral-darker) !important;
 }
 
+.neutral-pure {
+    color: var(--color-neutral-pure) !important;
+}
+
 .accent-color {
     color: var(--color-secondary-pure, #163867);
 }

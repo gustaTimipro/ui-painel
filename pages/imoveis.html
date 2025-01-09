@@ -3154,6 +3154,70 @@
                                     <span class="title-small flex-grow">Integração de Leads</span>
                                     <i class="uil uil-angle-down"></i>
                                 </div>
+
+                                <div class="info-column d-flex-column gap-md">
+                                    <span class="body-small">
+                                        Centralize todos os seus contatos em um só lugar! O Integrador de Leads organiza
+                                        automaticamente os leads de diferentes portais, permitindo respostas rápidas e
+                                        acompanhamento eficiente. Aumente suas chances de conversão com uma gestão
+                                        prática e
+                                        centralizada!
+                                    </span>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="integradores">Integradores
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <div class="input-select input-sufix">
+                                                <select id="integradores" class="custom-select body-medium input-md">
+                                                    <option value="" disabled selected>Selecione</option>
+                                                    <option value="apartamento">Apartamento</option>
+                                                    <option value="casa">Casa</option>
+                                                    <option value="casa-condominio">Casa Condomínio</option>
+                                                    <option value="galpao">Galpão</option>
+                                                    <option value="garagem">Garagem</option>
+                                                    <option value="hotel-flat">Hotel Flat</option>
+                                                </select>
+                                                <i class="uil uil-angle-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="urlChat">URL do chat
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <input type="text" id="urlChat" class="input-field input-md body-medium"
+                                                required />
+                                            <span class="helper-text label-large neutral-pure">Ex:
+                                                https://SuaEmpresa.housecrm.com.br/chat/?empreendimento=0001&origem=dfimoveis</span>
+                                            <span class="helper-text label-large neutral-pure">Ex:
+                                                https://SuaEmpresa.bitrix24.com.br/online/chat/?emp=9999&fonte=99</span>
+                                            <span class="helper-text label-large neutral-pure">Ex:
+                                                https://SuaEmpresa.hypnobox.com.br/?controle=Atendimento&acao=index&produto=01</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="linkEmail">Link do E-mail
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <input type="text" id="linkEmail" class="input-field input-md body-medium"
+                                                required />
+                                            <span class="helper-text label-large neutral-pure">Ex:
+                                                https://SuaEmpresa.housecrm.com.br/chat/?empreendimento=0001&origem=dfimoveis</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -3494,6 +3558,41 @@
             }
         }
         initModal();
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const infoContents = document.querySelectorAll(".info-content");
+
+            infoContents.forEach((content) => {
+                const header = content.querySelector(".info-header");
+
+                header.addEventListener("click", () => {
+                    if (content.classList.contains("disabled")) {
+                        return;
+                    }
+
+                    const columnsAndRows = content.querySelectorAll(".info-column, .info-row");
+
+                    columnsAndRows.forEach((element) => {
+                        if (element.classList.contains("hidden")) {
+                            element.classList.remove("hidden");
+                            element.classList.add("visible");
+                        } else {
+                            element.classList.remove("visible");
+                            element.classList.add("hidden");
+                        }
+                    });
+
+                    const icon = header.querySelector("i:last-child");
+                    if (icon) {
+                        icon.classList.toggle("uil-angle-down");
+                        icon.classList.toggle("uil-angle-up");
+                    }
+                });
+            });
+        });
+
+
     </script>
 </body>
 

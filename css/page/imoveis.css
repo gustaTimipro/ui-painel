@@ -344,6 +344,7 @@
     align-items: center;
     gap: var(--margin-nano, 8px);
     align-self: stretch;
+    cursor: pointer;
 }
 
 .info-content .info-row {
@@ -352,8 +353,18 @@
 
 .info-content.disabled .info-row,
 .info-content.disabled .info-column {
+    display: none !important;
+}
+
+/* .info-content .info-row.hidden,
+.info-content .info-column.hidden {
     display: none;
 }
+
+.info-content .info-row.visible,
+.info-content .info-column.visible {
+    display: flex;
+} */
 
 .imovel-modal .adress-content {
     width: 100%;
