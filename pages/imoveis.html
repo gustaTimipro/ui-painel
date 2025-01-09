@@ -3535,14 +3535,8 @@
             const closeButton = document.querySelector('[data-modal="close"]');
 
             if (!modalContainer) {
-                console.error('Elemento com atributo data-modal="container" não encontrado.');
                 return;
             }
-
-            if (cards.length === 0) {
-                console.warn('Nenhum elemento com atributo data-modal="open" encontrado.');
-            }
-
             cards.forEach(card => {
                 card.addEventListener('click', () => {
                     modalContainer.classList.add('active');
@@ -3553,8 +3547,6 @@
                 closeButton.addEventListener('click', () => {
                     modalContainer.classList.remove('active');
                 });
-            } else {
-                console.warn('Elemento com atributo data-modal="close" não encontrado.');
             }
         }
         initModal();
@@ -3575,24 +3567,29 @@
 
                     columnsAndRows.forEach((element) => {
                         if (element.classList.contains("hidden")) {
-                            element.classList.remove("hidden");
-                            element.classList.add("visible");
+                            element.style.display = 'flex';
+                            setTimeout(() => {
+                                element.classList.remove('hidden');
+                                element.classList.add('visible');
+                            }, 10);
+
                         } else {
                             element.classList.remove("visible");
                             element.classList.add("hidden");
+                            setTimeout(() => {
+                                element.style.display = 'none';
+                            }, 300);
                         }
                     });
 
                     const icon = header.querySelector("i:last-child");
                     if (icon) {
-                        icon.classList.toggle("uil-angle-down");
                         icon.classList.toggle("uil-angle-up");
+                        icon.classList.toggle("uil-angle-down");
                     }
                 });
             });
         });
-
-
     </script>
 </body>
 
