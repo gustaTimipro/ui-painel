@@ -223,7 +223,7 @@
                             <button class="btn btn-accent btn-sm btn-standart bold">Upgrade de Plano</button>
                         </div>
 
-                        <button class="btn btn-primary btn-md" data-modal="open">Adicionar Novo imóvel
+                        <button class="btn btn-primary btn-md" data-new-imovel="open">Adicionar Novo imóvel
                             <i class="uil uil-plus"></i>
                         </button>
                     </div>
@@ -499,7 +499,7 @@
 
                             <!-- Lista de Imóveis -->
                             <div class="list-card-imovel d-flex-column gap-xs">
-                                <div class="imovel-card">
+                                <div class="imovel-card" data-imovel="open">
                                     <div class="row-imovel">
                                         <input type="checkbox" class="imovel-checkbox" id="imovel1" name="imovel1">
                                         <div class="imovel-image visible item-visible">
@@ -2051,9 +2051,204 @@
                         </div>
                     </div>
 
+                    <!-- Modal de Imóvel Cadastrado -->
+                    <div class="modal imovel-modal" data-imovel="container">
+                        <div class="modal-header">
+                            <div class="center-modal">
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://img.dfimoveis.com.br/fotos/1067497/02833bca3d4d2aea7f8bf5aa86b01935.jpg?format=webp"
+                                        alt="">
+                                </div>
+                                <span class="title-large flex-grow">SQN 210 Bloco A - Asa Norte - Brasília - DF</span>
+                                <div class="actions d-flex-row">
+                                    <button class="btn btn-destructive btn-outlined btn-md">Excluir Imóvel
+                                        <i class="uil uil-trash"></i>
+                                    </button>
+
+                                    <div class="dropdown select">
+                                        <button class="btn btn-dropdown btn-accent btn-outlined">
+                                            <div class="btn-label btn-md">Trocar Status</div>
+                                            <div class="btn-icon btn-icon-md"><i class="uil uil-angle-down"></i></div>
+                                        </button>
+                                        <ul class="dropdown-group">
+                                            <li>
+                                                <label class="item item-sm body-medium bold" for="filterTodosTipos">
+                                                    <input type="checkbox" name="filterTodosTipos"
+                                                        id="filterTodosTipos">
+                                                    Todos os Tipos
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="item item-sm body-medium" for="filterApartamento">
+                                                    <input type="checkbox" name="filterApartamento"
+                                                        id="filterApartamento">
+                                                    Apartamento
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="item item-sm body-medium" for="filterCasa">
+                                                    <input type="checkbox" name="filterCasa" id="filterCasa">
+                                                    Casa Condomínio
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button class="btn btn-accent btn-md">Salvar Alterações
+                                        <i class="uil uil-check"></i>
+                                    </button>
+                                </div>
+                                <button data-imovel="close" class="btn btn-neutral btn-standart btn-icon-md">
+                                    <i class="uil uil-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <div class="group-btn gp-accent tabs-imovel">
+                                <button class="btn btn-accent btn-md">
+                                    <i class="uil uil-building"></i>Informações
+                                </button>
+                                <button class="btn btn-accent btn-md btn-standart">
+                                    <i class="uil uil-users-alt"></i>Clientes
+                                </button>
+                                <button class="btn btn-accent btn-md btn-standart">
+                                    <i class="uil uil-comment-alt-message"></i>Mensagens
+                                </button>
+                                <button class="btn btn-accent btn-md btn-standart">
+                                    <i class="uil uil-map-pin"></i>Visitas
+                                </button>
+                                <button class="btn btn-accent btn-md btn-standart">
+                                    <i class="uil uil-handshake"></i>Propostas
+                                </button>
+                                <button class="btn btn-accent btn-md btn-standart">
+                                    <i class="uil uil-file-check"></i>Documentos
+                                </button>
+                                <button class="btn btn-accent btn-md btn-standart">
+                                    <i class="uil uil-history"></i>Histórico
+                                </button>
+                            </div>
+
+                            <div class="imovel-card">
+                                <div class="row-imovel">
+                                    <div class="imovel-image visible item-visible">
+                                        <img src="https://img.dfimoveis.com.br/fotos/1074922/5f3a211267072ca719438e31986fe1e4.jpg?format=webp"
+                                            alt="imovel-card">
+                                    </div>
+                                    <div class="imovel-info d-flex-column">
+                                        <div class="title-container d-flex-row">
+                                            <span class="number label-small bold">3254</span>
+                                            <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
+                                                Norte -
+                                                Brasília -
+                                                DF</span>
+                                        </div>
+                                        <div class="price-container d-flex-row">
+                                            <div class="price label-large">
+                                                <span class="tipo">Venda</span>
+                                                <span class="price-item bold">R$ 500.000,00</span>
+                                            </div>
+                                            <div class="price aluguel label-large">
+                                                <span class="tipo">Aluguel</span>
+                                                <span class="price-item bold">R$ 10.000,00</span>
+                                            </div>
+                                        </div>
+                                        <div class="description-container visible item-visible d-flex-row">
+                                            <div class="description">
+                                                <i class="uil uil-bed"></i>
+                                                <span class="label-small bold">3</span>
+                                            </div>
+                                            <div class="description">
+                                                <i class="uil uil-car"></i>
+                                                <span class="label-small bold">3</span>
+                                            </div>
+                                            <div class="description">
+                                                <i class="uil uil-expand-alt"></i>
+                                                <span class="label-small bold">250,00m²</span>
+                                            </div>
+                                            <div class="description">
+                                                <i class="uil uil-dollar-sign"></i>
+                                                <span class="label-small bold">R$ 15.000/m²</span>
+                                            </div>
+                                        </div>
+                                        <div class="description-container visible item-visible d-flex-row selos">
+                                            <div class="description selo">
+                                                <i class="uil uil-bright"></i>
+                                                <span class="label-small bold">Super Destaque</span>
+                                            </div>
+                                            <div class="description selo">
+                                                <i class="uil uil-rocket"></i>
+                                                <span class="label-small bold">Lançamento</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-imovel table-middle">
+                                    <div class="item-container d-flex-column">
+                                        <div class="item body-medium">
+                                            <span class="item-label">Status</span>
+                                            <span class="item-result bold success">Ativo</span>
+                                        </div>
+
+                                        <div class="item body-medium visible item-visible">
+                                            <span class="item-label">Atualizado em </span>
+                                            <span class="item-result bold"> 05/11/2024</span>
+                                        </div>
+
+                                        <div class="item body-medium visible item-visible d-flex-row">
+                                            <span class="item-label">Publicado em</span>
+                                            <div class="description-container d-flex-row">
+                                                <div class="description">
+                                                    <span class="label-small bold">Meu Site</span>
+                                                </div>
+                                                <div class="description">
+                                                    <span class="label-small bold">DF Imóveis</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item body-medium visible item-visible">
+                                            <span class="item-label">No DF Imóveis há</span>
+                                            <span class="item-result bold">1 dia</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-imovel table-last">
+                                    <div class="item-container d-flex-column">
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 75%;">
+                                                <span class="label-medium progress-value">7,5</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="item body-medium visible item-visible d-flex-row">
+                                            <i class="uil uil-comment-alt-lines"></i>
+                                            <span class="item-label">Mensagens</span>
+                                            <span class="item-result bold">12</span>
+                                        </div>
+
+                                        <div class="item body-medium visible item-visible d-flex-row">
+                                            <i class="uil uil-mouse"></i>
+                                            <span class="item-label">Cliques</span>
+                                            <span class="item-result bold">120</span>
+                                        </div>
+
+                                        <div class="item body-medium visible item-visible d-flex-row">
+                                            <i class="uil uil-sign-in-alt"></i>
+                                            <span class="item-label">Acessos</span>
+                                            <span class="item-result bold">650</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                     <!-- Modal de Adicionar Imóvel -->
-                    <div class="modal imovel-modal" data-modal="container">
-                        <div class="header">
+                    <div class="modal new-imovel-modal" data-new-imovel="container">
+                        <div class="modal-header">
                             <div class="center-modal">
                                 <span class="title-large flex-grow">Adicionar novo Imóvel</span>
                                 <div class="actions d-flex-row">
@@ -2065,13 +2260,14 @@
                                         <i class="uil uil-message"></i>
                                     </button>
                                 </div>
-                                <button data-modal="close" class="btn btn-neutral btn-standart btn-icon-md">
+                                <button data-new-imovel="close" class="btn btn-neutral btn-standart btn-icon-md">
                                     <i class="uil uil-times"></i>
                                 </button>
                             </div>
                         </div>
 
                         <form class="content center-modal">
+                            <!-- Modalidade -->
                             <div class="info-content">
                                 <div class="info-header">
                                     <i class="uil uil-building"></i>
@@ -2103,6 +2299,7 @@
                                 </div>
                             </div>
 
+                            <!-- Info Básicas -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-info-circle"></i>
@@ -2234,6 +2431,7 @@
                                 </div>
                             </div>
 
+                            <!-- Endereço -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-map-pin"></i>
@@ -2389,6 +2587,7 @@
                                 </div>
                             </div>
 
+                            <!-- Valores -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-dollar-sign"></i>
@@ -2541,6 +2740,7 @@
                                 </div>
                             </div>
 
+                            <!-- Características -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-plus-circle"></i>
@@ -3017,6 +3217,7 @@
                                 </div>
                             </div>
 
+                            <!-- Fotos -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-camera"></i>
@@ -3041,6 +3242,7 @@
                                 </div>
                             </div>
 
+                            <!--  Config de Publicação -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-shop"></i>
@@ -3094,6 +3296,7 @@
                                 </div>
                             </div>
 
+                            <!-- Info -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-star"></i>
@@ -3140,6 +3343,7 @@
                                 </div>
                             </div>
 
+                            <!-- Horario de Visita -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-calender"></i>
@@ -3148,6 +3352,7 @@
                                 </div>
                             </div>
 
+                            <!-- Integração Lead -->
                             <div class="info-content disabled">
                                 <div class="info-header">
                                     <i class="uil uil-plug"></i>
@@ -3220,6 +3425,31 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+
+                    <!-- Modal Cancelar Criação -->
+                    <div class="modal cancel-modal" data-cancel="container">
+                        <div class="modal-container gap-xs align-self d-flex-column">
+                            <div class="header">
+                                <div class="header-icon destructive">
+                                    <i class="uil uil-lock title-large"></i>
+                                </div>
+                                <div class="header-text d-flex-column">
+                                    <h2 class="headline-small bold">Você tem certeza que deseja cancelar a criação do
+                                        imóvel?</h2>
+                                    <span class="body-medium">Essa ação não poderá ser desfeita.</span>
+                                </div>
+                            </div>
+                            <form action="" class="form">
+                                <div class="d-flex-column">
+                                    <button class="btn btn-lg btn-destructive bold">Cancelar criação do imóvel
+                                    </button>
+                                    <button class="btn btn-lg btn-neutral btn-standart">
+                                        Cancelar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3401,7 +3631,7 @@
             const checkboxes = document.querySelectorAll(checkboxSelector);
             const contentElements = document.querySelectorAll(contentSelector);
 
-            // Function to ensure only one checkbox is selected
+            // seleciona UMA checkbox
             const enforceSingleSelection = (currentCheckbox) => {
                 if (allowSingleSelection) {
                     checkboxes.forEach(checkbox => {
@@ -3412,7 +3642,7 @@
                 }
             };
 
-            // Function to update the 'disabled' class
+            // Atualiza a classe 'disabled' nos elementos de conteúdo
             const updateDisabledState = () => {
                 const isAnyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
                 contentElements.forEach(content => {
@@ -3420,7 +3650,7 @@
                 });
             };
 
-            // Add event listeners to checkboxes
+            // Adiciona eventos de alteração nas checkboxes
             checkboxes.forEach(checkbox => {
                 checkbox.addEventListener("change", () => {
                     enforceSingleSelection(checkbox);
@@ -3428,7 +3658,7 @@
                 });
             });
 
-            // Initial state update
+            // Atualiza o estado inicial
             updateDisabledState();
         }
         document.addEventListener("DOMContentLoaded", () => {
@@ -3436,7 +3666,7 @@
                 checkboxSelector: ".modality-option .imovel-checkbox",
                 contentSelector: ".info-content:not(:first-child)",
                 disabledClass: "disabled",
-                allowSingleSelection: true, // Ensure only one checkbox can be selected
+                allowSingleSelection: true, // Apenas uma checkbox pode ser selecionada
             });
         });
 
@@ -3459,16 +3689,16 @@
                 return;
             }
 
-            // Evento de clique no botão para abrir o seletor de arquivos
+            // Abrir seletor
             selectFileButton.addEventListener("click", (event) => {
-                event.preventDefault(); // Evita a recarga da página, caso seja um botão dentro de um formulário
+                event.preventDefault();
                 fileInput.click();
             });
 
-            // Evento para manipular a seleção de arquivos
+            // Manipular arquivo
             fileInput.addEventListener("change", (event) => handleFiles(event.target.files));
 
-            // Eventos para arrastar e soltar arquivos
+            // Drag/Drop
             uploadArea.addEventListener("dragover", (event) => {
                 event.preventDefault();
                 uploadArea.classList.add("dragover");
@@ -3484,7 +3714,7 @@
                 handleFiles(event.dataTransfer.files);
             });
 
-            // Função para validar e manipular arquivos
+            // Validar arquivo
             function handleFiles(files) {
                 for (const file of files) {
                     const fileExtension = file.name.split(".").pop().toLowerCase();
@@ -3504,8 +3734,8 @@
             uploadAreaId: "upload-area",
             fileInputId: "file-input",
             buttonId: "select-file-button",
-            validExtensions: ["jpg", "jpeg", "png", "pdf"], // Personalizar extensões
-            maxFileSize: 10 * 1024 * 1024, // Limite de 10MB
+            validExtensions: ["jpg", "jpeg", "png", "pdf"],
+            maxFileSize: 10 * 1024 * 1024,
             onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
             onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
         });
@@ -3513,8 +3743,8 @@
             uploadAreaId: "upload-casamento",
             fileInputId: "casamento-input",
             buttonId: "select-casamento-button",
-            validExtensions: ["jpg", "jpeg", "png", "pdf"], // Personalizar extensões
-            maxFileSize: 10 * 1024 * 1024, // Limite de 10MB
+            validExtensions: ["jpg", "jpeg", "png", "pdf"],
+            maxFileSize: 10 * 1024 * 1024,
             onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
             onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
         });
@@ -3522,36 +3752,79 @@
             uploadAreaId: "upload-fotos",
             fileInputId: "fotos-input",
             buttonId: "select-fotos-button",
-            validExtensions: ["jpg", "jpeg", "png", "pdf"], // Personalizar extensões
-            maxFileSize: 10 * 1024 * 1024, // Limite de 10MB
+            validExtensions: ["jpg", "jpeg", "png", "pdf"],
+            maxFileSize: 10 * 1024 * 1024,
             onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
             onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
         });
 
         // Modal - Função inicial
-        function initModal() {
-            const cards = document.querySelectorAll('[data-modal="open"]');
-            const modalContainer = document.querySelector('[data-modal="container"]');
-            const closeButton = document.querySelector('[data-modal="close"]');
+        function initModal(triggerSelector, modalSelector, closeSelector, activeClass = 'active', confirmClose = false, confirmModalSelector = null) {
+            const triggers = document.querySelectorAll(triggerSelector);
+            const modalContainer = document.querySelector(modalSelector);
+            const closeButton = modalContainer?.querySelector(closeSelector);
+
+            let confirmModalContainer = null;
+            let confirmCloseButtons = null;
+
+            if (confirmClose && confirmModalSelector) {
+                confirmModalContainer = document.querySelector(confirmModalSelector);
+                confirmCloseButtons = confirmModalContainer?.querySelectorAll('button');
+            }
 
             if (!modalContainer) {
                 return;
             }
-            cards.forEach(card => {
-                card.addEventListener('click', () => {
-                    modalContainer.classList.add('active');
+
+            // Abrir
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    modalContainer.classList.add(activeClass);
                 });
             });
 
+            // Fechar
             if (closeButton) {
                 closeButton.addEventListener('click', () => {
-                    modalContainer.classList.remove('active');
+                    if (confirmClose && confirmModalContainer) {
+                        confirmModalContainer.classList.add(activeClass);
+                    } else {
+                        modalContainer.classList.remove(activeClass);
+                    }
+                });
+            }
+
+            // Confirmar/Fechar
+            if (confirmModalContainer && confirmCloseButtons) {
+                confirmCloseButtons.forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        if (button.classList.contains('btn-destructive')) {
+                            modalContainer.classList.remove(activeClass);
+                        }
+                        confirmModalContainer.classList.remove(activeClass);
+                    });
                 });
             }
         }
-        initModal();
+        initModal(
+            '[data-new-imovel="open"]',
+            '[data-new-imovel="container"]',
+            '[data-new-imovel="close"]',
+            'active',
+            true,
+            '[data-cancel="container"]'
+        );
+        initModal(
+            '[data-imovel="open"]',
+            '[data-imovel="container"]',
+            '[data-imovel="close"]',
+            'active',
+            true,
+            '[data-cancel="container"]'
+        );
 
-
+        // Modal - Abrir e fechar seções
         document.addEventListener("DOMContentLoaded", () => {
             const infoContents = document.querySelectorAll(".info-content");
 

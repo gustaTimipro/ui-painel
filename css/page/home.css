@@ -315,9 +315,6 @@
 }
 
 .imovel-head .image .avatar-img {
-    padding: var(--padding-none, 0px);
-    overflow: hidden;
-    position: relative;
     left: -10px;
 }
 
