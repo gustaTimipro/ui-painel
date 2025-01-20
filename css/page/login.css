@@ -10,11 +10,6 @@
 
 .login {
     display: flex;
-    max-width: 448px;
-    padding: var(--padding-md, 24px);
-    flex-direction: column;
-    align-items: center;
-    gap: var(--margin-md, 24px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,7 +19,6 @@
 
     border-radius: var(--border-radius-xs, 16px);
     background: var(--color-essence-ivory, #FFF);
-
     box-shadow: var(--shadow-level-3);
 }
 
@@ -38,30 +32,6 @@
     gap: var(--margin-xs, 16px);
     align-items: center;
     text-align: center;
-}
-
-.header .header-icon {
-    display: flex;
-    width: 80px;
-    height: 80px;
-    padding: var(--padding-nano, 8px);
-    justify-content: center;
-    align-items: center;
-    gap: var(--margin-nano, 8px);
-
-    border-radius: var(--border-radius-xs, 16px);
-    background: var(--color-neutral-pure, #A8A8A8);
-
-    box-shadow: var(--shadow-level-3);
-}
-
-.header .header-icon i {
-    color: var(--color-essence-ivory);
-}
-
-.header .header-icon {
-    position: absolute;
-    top: -35px;
 }
 
 .login .form {

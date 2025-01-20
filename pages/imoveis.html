@@ -2073,22 +2073,17 @@
                                         <ul class="dropdown-group">
                                             <li>
                                                 <label class="item item-sm body-medium bold" for="filterTodosTipos">
-                                                    <input type="checkbox" name="filterTodosTipos"
-                                                        id="filterTodosTipos">
-                                                    Todos os Tipos
+                                                    Ativo
                                                 </label>
                                             </li>
                                             <li>
-                                                <label class="item item-sm body-medium" for="filterApartamento">
-                                                    <input type="checkbox" name="filterApartamento"
-                                                        id="filterApartamento">
-                                                    Apartamento
+                                                <label class="item item-sm body-medium">
+                                                    Em Rascunho
                                                 </label>
                                             </li>
                                             <li>
                                                 <label class="item item-sm body-medium" for="filterCasa">
-                                                    <input type="checkbox" name="filterCasa" id="filterCasa">
-                                                    Casa Condomínio
+                                                    Arquivado
                                                 </label>
                                             </li>
                                         </ul>
@@ -2105,6 +2100,7 @@
                         </div>
 
                         <div class="content">
+                            <!-- Tabs para Navegação -->
                             <div class="group-btn gp-accent tabs-imovel">
                                 <button class="btn btn-accent btn-md">
                                     <i class="uil uil-building"></i>Informações
@@ -2129,11 +2125,15 @@
                                 </button>
                             </div>
 
-                            <div class="imovel-card">
-                                <div class="row-imovel">
-                                    <div class="imovel-image visible item-visible">
-                                        <img src="https://img.dfimoveis.com.br/fotos/1074922/5f3a211267072ca719438e31986fe1e4.jpg?format=webp"
-                                            alt="imovel-card">
+                            <!-- Card do Imóvel -->
+                            <div class="imovel-card first">
+                                <div class="row-imovel gap-md">
+                                    <div class="d-flex-row gap-none">
+                                        <div class="avatar large avatar-number bold">1°</div>
+                                        <div class="imovel-image visible item-visible">
+                                            <img src="https://img.dfimoveis.com.br/fotos/1074922/5f3a211267072ca719438e31986fe1e4.jpg?format=webp"
+                                                alt="imovel-card">
+                                        </div>
                                     </div>
                                     <div class="imovel-info d-flex-column">
                                         <div class="title-container d-flex-row">
@@ -2213,37 +2213,139 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row-imovel table-last">
-                                    <div class="item-container d-flex-column">
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 75%;">
-                                                <span class="label-medium progress-value">7,5</span>
-                                            </div>
+                                <div class="row-imovel table-last w-300">
+                                    <div class="item-container d-flex-column list-info pd-nano">
+                                        <div class="list-item d-flex-column">
+                                            <span class="body-medium">Cadastrado em</span>
+                                            <span class="title-small">06/11/2024 - 10:10:47</span>
                                         </div>
-
-                                        <div class="item body-medium visible item-visible d-flex-row">
-                                            <i class="uil uil-comment-alt-lines"></i>
-                                            <span class="item-label">Mensagens</span>
-                                            <span class="item-result bold">12</span>
-                                        </div>
-
-                                        <div class="item body-medium visible item-visible d-flex-row">
-                                            <i class="uil uil-mouse"></i>
-                                            <span class="item-label">Cliques</span>
-                                            <span class="item-result bold">120</span>
-                                        </div>
-
-                                        <div class="item body-medium visible item-visible d-flex-row">
-                                            <i class="uil uil-sign-in-alt"></i>
-                                            <span class="item-label">Acessos</span>
-                                            <span class="item-result bold">650</span>
+                                        <div class="line"></div>
+                                        <div class="list-item d-flex-column">
+                                            <span class="body-medium">Última Atualização em</span>
+                                            <span class="title-small">06/11/2024 - 10:10:47</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Info Básicas -->
+                            <div class="info-content">
+                                <div class="d-flex-row gap-md">
+                                    <span class="title-small flex-grow">Ações Básicas</span>
+                                    <div class="d-flex-row">
+                                        <label class="switch switch-sm">
+                                            <input type="checkbox" id="switch-sm" checked />
+                                            <span class="slider"></span>
+                                        </label>
+                                        <span class="title-small">Anúncio Desativado</span>
+                                    </div>
+                                    <button class="btn btn-neutral btn-outlined btn-md">
+                                        Acessar no Portal <i class="uil uil-arrow-up-right"></i>
+                                    </button>
+                                    <button class="btn btn-neutral btn-outlined btn-md">
+                                        Acessar no Meu Site <i class="uil uil-arrow-up-right"></i>
+                                    </button>
+                                    <button class="btn btn-neutral btn-outlined btn-md">
+                                        Termo de Visita <i class="uil uil-cloud-download"></i>
+                                    </button>
+                                    <button class="btn btn-neutral btn-outlined btn-md">
+                                        Folder do Imóvel <i class="uil uil-cloud-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Resultados do Anúncio -->
+                            <div class="info-content">
+                                <div class="d-flex-row">
+                                    <i class="uil uil-graph-bar"></i>
+                                    <span class="title-small flex-grow">Resultados do Anúncio</span>
+                                </div>
+                                <div class="block anuncios">
+                                    <div class="d-flex-row body-medium">
+                                        <span class="block-title">Qualidade média dos anúncios</span>
+                                        <i class="uil uil-info-circle"></i>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 75%;">
+                                            <span class="label-medium progress-value">7,5</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="info-block">
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Acessos aos anúncios</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">165</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Visitas agendadas</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">12</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Propostas recebidas</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">650</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Propostas recebidas</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">650</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Propostas recebidas</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">650</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Cliques</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">39.460</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="indicator result">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Compartilhamentos</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">6.980</span>
+                                            <span class="comparative label-small">+12%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-
-
                     </div>
 
                     <!-- Modal de Adicionar Imóvel -->
@@ -2291,7 +2393,8 @@
                                         <div class="modality-text d-flex-column">
                                             <span class="body-large bold">Empreendimento</span>
                                             <span class="body-large">
-                                                Para projetos de construtoras, como imóveis na planta, em construção ou
+                                                Para projetos de construtoras, como imóveis na planta, em construção
+                                                ou
                                                 recém-concluídos.
                                             </span>
                                         </div>
@@ -3029,14 +3132,16 @@
 
                                     <span class="body-small">
                                         Imóveis Seguros são os imóveis validados com documentação completa, como
-                                        inscrição de IPTU e certidão de ônus, garantindo mais confiança e segurança para
+                                        inscrição de IPTU e certidão de ônus, garantindo mais confiança e segurança
+                                        para
                                         compradores e vendedores.
                                     </span>
 
                                     <div class="alert warning">
                                         <div class="alert-text d-flex-column flex-grow gap-quark">
                                             <span class="label-large">É de responsabilidade do Anunciante informar
-                                                corretamente o endereço completo do imóvel anunciado para verificação do
+                                                corretamente o endereço completo do imóvel anunciado para
+                                                verificação do
                                                 cartório.</span>
                                         </div>
                                     </div>
@@ -3087,7 +3192,8 @@
                                     </div>
 
                                     <div class="info-column d-flex-column gap-xs flex-grow bg-neutral">
-                                        <span class="title-small flex-grow neutral-color">Informações do Imóvel</span>
+                                        <span class="title-small flex-grow neutral-color">Informações do
+                                            Imóvel</span>
                                         <div class="info-row d-flex-row">
                                             <div class="input-container flex-grow">
                                                 <div class="input-label">
@@ -3119,7 +3225,8 @@
                                             </div>
                                             <div class="input-container flex-grow">
                                                 <div class="input-label">
-                                                    <label class="label-large" for="corretor">Corretor Responsável pelo
+                                                    <label class="label-large" for="corretor">Corretor Responsável
+                                                        pelo
                                                         Imóvel </label>
                                                 </div>
                                                 <input type="text" id="corretor"
@@ -3127,7 +3234,8 @@
                                             </div>
                                             <div class="input-container flex-grow">
                                                 <div class="input-label">
-                                                    <label class="label-large" for="celularCorretor">Celular do Corretor
+                                                    <label class="label-large" for="celularCorretor">Celular do
+                                                        Corretor
                                                     </label>
                                                 </div>
                                                 <input type="text" id="celularCorretor"
@@ -3163,14 +3271,16 @@
                                                     </button>
                                                     <span class="label-large accent-color">ou arraste para cá</span>
                                                 </div>
-                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20MB)</p>
+                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20MB)
+                                                </p>
                                                 <input type="file" id="file-input" class="hidden-input" multiple>
                                             </div>
                                         </div>
 
                                         <div class="input-container w-300">
                                             <div class="input-label">
-                                                <label class="label-large" for="vencimentoOnus">Data Venc. Cert. Ônus
+                                                <label class="label-large" for="vencimentoOnus">Data Venc. Cert.
+                                                    Ônus
                                                 </label>
                                             </div>
                                             <div class="input-select input-sufix">
@@ -3209,7 +3319,8 @@
                                                     </button>
                                                     <span class="label-large accent-color">ou arraste para cá</span>
                                                 </div>
-                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20MB)</p>
+                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20MB)
+                                                </p>
                                                 <input type="file" id="casamento-input" class="hidden-input" multiple>
                                             </div>
                                         </div>
@@ -3288,7 +3399,8 @@
                                                 <div class="option">
                                                     <input type="checkbox" class="imovel-checkbox" id="portal"
                                                         name="portal">
-                                                    <label class="body-medium" for="portal">Destaque no Meu Site</label>
+                                                    <label class="body-medium" for="portal">Destaque no Meu
+                                                        Site</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -3362,8 +3474,10 @@
 
                                 <div class="info-column d-flex-column gap-md">
                                     <span class="body-small">
-                                        Centralize todos os seus contatos em um só lugar! O Integrador de Leads organiza
-                                        automaticamente os leads de diferentes portais, permitindo respostas rápidas e
+                                        Centralize todos os seus contatos em um só lugar! O Integrador de Leads
+                                        organiza
+                                        automaticamente os leads de diferentes portais, permitindo respostas rápidas
+                                        e
                                         acompanhamento eficiente. Aumente suas chances de conversão com uma gestão
                                         prática e
                                         centralizada!
@@ -3435,7 +3549,8 @@
                                     <i class="uil uil-lock title-large"></i>
                                 </div>
                                 <div class="header-text d-flex-column">
-                                    <h2 class="headline-small bold">Você tem certeza que deseja cancelar a criação do
+                                    <h2 class="headline-small bold">Você tem certeza que deseja cancelar a criação
+                                        do
                                         imóvel?</h2>
                                     <span class="body-medium">Essa ação não poderá ser desfeita.</span>
                                 </div>
@@ -3453,7 +3568,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <script src="../js/menu.js"></script>
@@ -3664,7 +3778,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             initializeToggleDisable({
                 checkboxSelector: ".modality-option .imovel-checkbox",
-                contentSelector: ".info-content:not(:first-child)",
+                contentSelector: ".new-imovel-modal .info-content:not(:first-child)",
                 disabledClass: "disabled",
                 allowSingleSelection: true, // Apenas uma checkbox pode ser selecionada
             });
