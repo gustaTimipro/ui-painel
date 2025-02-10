@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/main.css">
 
     <link rel="stylesheet" href="../css/page/imoveis.css">
+    <link rel="stylesheet" href="../css/page/modal.css">
 </head>
 
 <body>
@@ -351,81 +352,172 @@
                                     </ul>
                                 </div>
 
-                                <button class="btn btn-accent btn-md btn-outlined">Mais Filtros
-                                    <i class="uil uil-filter"></i>
-                                </button>
-
-                                <!-- <div class="dropdown select more-filter">
+                                <div class="dropdown select more-filter">
                                     <button class="btn btn-accent btn-md btn-dropdown btn-outlined">Mais Filtros &nbsp;
                                         <i class="uil uil-filter"></i>
                                     </button>
                                     <div class="dropdown-group more-filter-content">
-                                        <ul class="more-content">
-                                            <li>
-                                                <div class="input-container">
-                                                    <div class="input-label">
-                                                        <label class="label-large" for="negocio">Negócio</label>
-                                                    </div>
-                                                    <select type="text" id="negocio"
-                                                        class="input-field input-md body-medium">
-                                                        <option value="todosNegocios">Todos os Negócios</option>
-                                                    </select>
+                                        <form class="d-flex-column gap-xs">
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="negocio">Negócio</label>
                                                 </div>
-                                            </li>
-
-                                            <li>
-                                                <div class="input-container">
-                                                    <div class="input-label">
-                                                        <label class="label-large" for="username">Tipo</label>
-                                                    </div>
-                                                    <select type="text" id="username"
-                                                        class="input-field input-md body-medium">
-                                                        <option value="todosNegocios">Todos os Tipos</option>
-                                                    </select>
+                                                <select required type="text" id="negocio"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos os Negócios</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Tipo</label>
                                                 </div>
-                                            </li>
-
-                                            <li>
-                                                <div class="input-container">
-                                                    <div class="input-label">
-                                                        <label class="label-large" for="username">Subtipo</label>
-                                                    </div>
-                                                    <select type="text" id="username"
-                                                        class="input-field input-md body-medium">
-                                                        <option value="todosNegocios">Todos os Subtipos</option>
-                                                    </select>
+                                                <select required type="text" id="username"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos os Tipos</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Subtipo</label>
                                                 </div>
-                                            </li>
-
-                                            <li>
-                                                <div class="input-container">
-                                                    <div class="input-label">
-                                                        <label class="label-large" for="username">UF</label>
-                                                    </div>
-                                                    <select type="text" id="username"
-                                                        class="input-field input-md body-medium">
-                                                        <option value="todosNegocios">Todos as UFs</option>
-                                                    </select>
+                                                <select required type="text" id="username"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos os Subtipos</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">UF</label>
                                                 </div>
-                                            </li>
-
-                                            <li>
-                                                <div class="input-container">
-                                                    <div class="input-label">
-                                                        <label class="label-large" for="username">Cidade</label>
-                                                    </div>
-                                                    <select type="text" id="username"
-                                                        class="input-field input-md body-medium">
-                                                        <option value="todosNegocios">Todos as Cidades</option>
-                                                    </select>
+                                                <select required type="text" id="username"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos as UFs</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Cidade</label>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                        <div class="more-btns">
-
+                                                <select required type="text" id="username"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos as Cidades</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Cidade</label>
+                                                </div>
+                                                <select required type="text" id="username"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos as Cidades</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Bairros</label>
+                                                </div>
+                                                <select required type="text" id="username"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos as Cidades</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="saldo">Quartos</label>
+                                                </div>
+                                                <div class="group-btn gp-accent">
+                                                    <button class="btn btn-accent btn-md btn-standart">1</button>
+                                                    <button class="btn btn-accent btn-md btn-standart">2</button>
+                                                    <button class="btn btn-accent btn-md btn-standart">3</button>
+                                                    <button class="btn btn-accent btn-md btn-standart">4+</button>
+                                                </div>
+                                                <span class="error-message label-medium">error</span>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Corretor</label>
+                                                </div>
+                                                <select required type="text" id="username"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos os Corretores</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Grupo de Parceria</label>
+                                                </div>
+                                                <select required type="text" id="username"
+                                                    class="input-field input-md body-medium">
+                                                    <option value="todosNegocios">Todos os Parceiros</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Publicado no
+                                                        Portal</label>
+                                                </div>
+                                                <div class="group-btn gp-accent">
+                                                    <button
+                                                        class="btn btn-accent btn-md btn-standart">Publicado</button>
+                                                    <button class="btn btn-accent btn-md btn-standart">Não
+                                                        Publicado</button>
+                                                </div>
+                                                <span class="error-message label-medium">error</span>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Publicado no Meu
+                                                        Site</label>
+                                                </div>
+                                                <div class="group-btn gp-accent">
+                                                    <button
+                                                        class="btn btn-accent btn-md btn-standart">Publicado</button>
+                                                    <button class="btn btn-accent btn-md btn-standart">Não
+                                                        Publicado</button>
+                                                </div>
+                                                <span class="error-message label-medium">error</span>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Destaque no
+                                                        Portal</label>
+                                                </div>
+                                                <div class="group-btn gp-accent">
+                                                    <button class="btn btn-accent btn-md btn-standart">Sim</button>
+                                                    <button class="btn btn-accent btn-md btn-standart">Não</button>
+                                                </div>
+                                                <span class="error-message label-medium">error</span>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Possui Video</label>
+                                                </div>
+                                                <div class="group-btn gp-accent">
+                                                    <button class="btn btn-accent btn-md btn-standart">Sim</button>
+                                                    <button class="btn btn-accent btn-md btn-standart">Não</button>
+                                                </div>
+                                                <span class="error-message label-medium">error</span>
+                                            </div>
+                                            <div class="input-container">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="username">Imóvel Seguro</label>
+                                                </div>
+                                                <div class="group-btn gp-accent">
+                                                    <button class="btn btn-accent btn-md btn-standart">Sim</button>
+                                                    <button class="btn btn-accent btn-md btn-standart">Não</button>
+                                                </div>
+                                                <span class="error-message label-medium">error</span>
+                                            </div>
+                                        </form>
+                                        <div class="more-btns d-flex-column">
+                                            <button class="btn btn-accent btn-md">Ver Resultados
+                                                <i class="uil uil-check"></i>
+                                            </button>
+                                            <button class="btn btn-neutral btn-md btn-standart">Limpar todos os
+                                                Filtros</button>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
 
                             <!-- Ações e Quantidade -->
@@ -2409,7 +2501,7 @@
                                     <span class="title-small flex-grow">Informações Basicas</span>
                                     <i class="uil uil-angle-down"></i>
                                 </div>
-                                <div class="info-row d-flex-row">
+                                <div class="info-column d-flex-row">
                                     <div class="input-container">
                                         <div class="input-label">
                                             <label class="label-large" for="email">Código de Busca
@@ -2481,7 +2573,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="info-row d-flex-row">
+                                <div class="info-column d-flex-row">
                                     <div class="input-container flex-grow">
                                         <div class="input-label">
                                             <label class="label-large" for="tipo">Status do Imóvel</label>
@@ -2541,7 +2633,7 @@
                                     <span class="title-small flex-grow">Endereço</span>
                                     <i class="uil uil-angle-down"></i>
                                 </div>
-                                <div class="info-row d-flex-row">
+                                <div class="info-column d-flex-row">
                                     <div class="input-container w-100">
                                         <div class="input-label">
                                             <label class="label-large" for="cep">CEP</label>
@@ -2553,7 +2645,7 @@
                                         <span class="error-message label-medium">O e-mail está incorreto</span>
                                     </div>
                                 </div>
-                                <div class="info-row d-flex-row">
+                                <div class="info-column d-flex-row">
                                     <div class="info-column d-flex-column gap-md adress-content">
                                         <div class="input-container w-100">
                                             <div class="input-label">
@@ -2793,7 +2885,7 @@
                                     </div>
                                 </div>
 
-                                <div class="info-row d-flex-row gap-xs">
+                                <div class="info-column d-flex-row gap-xs">
                                     <div class="info-column d-flex-column gap-xs bg-shadow">
                                         <span class="title-small flex-grow primary-color">Valores de Venda</span>
                                         <div class="input-container flex-grow">
@@ -3333,23 +3425,44 @@
                                 <div class="info-header">
                                     <i class="uil uil-camera"></i>
                                     <span class="title-small flex-grow">Fotos</span>
+
+                                    <div class="right-acts d-flex-row d-none">
+                                        <div class="water-mark d-flex-row">
+                                            <label class="switch switch-sm">
+                                                <input type="checkbox" checked />
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="title-small">Marca D'Água</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-destructive btn-outlined bold">Excluir
+                                            Todas</button>
+                                        <button class="btn btn-sm btn-accent btn-outlined bold">Desativar Todas</button>
+                                        <button class="btn btn-sm btn-accent bold">Ativar Todas</button>
+                                        <button class="btn btn-sm btn-primary bold" id="select-fotos-button">Adicionar
+                                            <i class="uil uil-plus"></i>
+                                        </button>
+                                    </div>
                                     <i class="uil uil-angle-down"></i>
                                 </div>
 
-                                <div class="info-row d-flex-row align-end">
-                                    <div class="upload-area d-flex-column align-center gap-xs" id="upload-fotos">
-                                        <i class="uil uil-camera ft-md neutral-text"></i>
-                                        <div class="action-upload d-flex-row">
-                                            <button class="btn btn-accent btn-sm btn-outlined"
-                                                id="select-fotos-button">Selecione o
-                                                arquivo
-                                            </button>
-                                            <span class="label-large accent-color">ou arraste para cá</span>
+                                <div class="info-column d-flex-column align-end">
+                                    <div class="d-flex-row align-end" id="upload-fotos">
+                                        <div class="upload-area d-flex-column align-center gap-xs">
+                                            <i class="uil uil-camera ft-md neutral-text"></i>
+                                            <div class="action-upload d-flex-row">
+                                                <button class="btn btn-accent btn-sm btn-outlined"
+                                                    id="select-fotos-button">Selecione o
+                                                    arquivo
+                                                </button>
+                                                <span class="label-large accent-color">ou arraste para cá</span>
+                                            </div>
+                                            <p class="label-medium neutral-text">Para uma melhor apresentação, opte por
+                                                imagens na horizontal, de melhor resolução (16:9) com até 2mb.</p>
+                                            <input type="file" id="fotos-input" class="hidden-input" multiple>
                                         </div>
-                                        <p class="label-medium neutral-text">Para uma melhor apresentação, opte por
-                                            imagens na horizontal, de melhor resolução (16:9) com até 2mb.</p>
-                                        <input type="file" id="fotos-input" class="hidden-input" multiple>
                                     </div>
+
+                                    <div class="d-flex-row gap-nano" id="fotos-content"></div>
                                 </div>
                             </div>
 
@@ -3571,413 +3684,7 @@
     </main>
 
     <script src="../js/menu.js"></script>
-
-    <script>
-        // Dropdowns
-        document.addEventListener('click', function (event) {
-            const clickedDropdownButton = event.target.closest('.btn-dropdown');
-            const allDropdownGroups = document.querySelectorAll('.dropdown-group');
-
-            if (clickedDropdownButton) {
-                const dropdownGroup = clickedDropdownButton.nextElementSibling;
-
-                allDropdownGroups.forEach(group => {
-                    group.style.display = group === dropdownGroup && group.style.display !== 'flex' ? 'flex' : 'none';
-                });
-            } else {
-                const clickedItem = event.target.closest('.dropdown-group .item');
-                if (clickedItem) {
-                    const dropdown = clickedItem.closest('.dropdown');
-                    const btnLabel = dropdown.querySelector('.btn-label');
-                    const newValue = clickedItem.getAttribute('data-value');
-                    const newText = clickedItem.textContent;
-
-                    btnLabel.textContent = newText;
-                    btnLabel.classList.add('bold');
-
-                    const dropdownGroup = dropdown.querySelector('.dropdown-group');
-                    dropdownGroup.style.display = 'none';
-                } else {
-                    allDropdownGroups.forEach(group => (group.style.display = 'none'));
-                }
-            }
-        });
-
-        // Completo/Simplificado - Ações no Imóvel
-        function configureVisibilityActions(btnVisibleId, btnHiddenId, targetClass) {
-            const btnVisible = document.querySelector(`.${btnVisibleId}`);
-            const btnHidden = document.querySelector(`.${btnHiddenId}`);
-
-            // mostrar elementos
-            function showElements() {
-                const elements = document.querySelectorAll(`.${targetClass}`);
-                elements.forEach((element) => {
-                    element.style.display = 'flex';
-                    setTimeout(() => {
-                        element.classList.remove('hidden');
-                        element.classList.add('visible');
-                    }, 10);
-                });
-
-                btnVisible.classList.remove('btn-standart');
-                btnHidden.classList.add('btn-standart');
-            }
-
-            // esconder elementos
-            function hideElements() {
-                const elements = document.querySelectorAll(`.${targetClass}`);
-                elements.forEach((element) => {
-                    element.classList.remove('visible');
-                    element.classList.add('hidden');
-                    setTimeout(() => {
-                        element.style.display = 'none';
-                    }, 300);
-                });
-
-                btnHidden.classList.remove('btn-standart');
-                btnVisible.classList.add('btn-standart');
-            }
-
-            btnVisible.addEventListener('click', showElements);
-            btnHidden.addEventListener('click', hideElements);
-        }
-        configureVisibilityActions('btn-visible', 'btn-hidden', 'item-visible');
-
-        // Tabs para Imoveis
-        function configurarBotoesDeGrupoComTabs(groupSelector, btnClass, contentSelector, activeClass) {
-            const groupContainers = document.querySelectorAll(groupSelector);
-            const tabContents = document.querySelectorAll(contentSelector);
-
-            groupContainers.forEach((group) => {
-                const buttons = group.querySelectorAll('button');
-
-                buttons.forEach((button, index) => {
-                    button.addEventListener('click', () => {
-                        buttons.forEach((btn) => btn.classList.add(btnClass));
-
-                        button.classList.remove(btnClass);
-
-                        tabContents.forEach((content, contentIndex) => {
-                            if (contentIndex === index) {
-                                content.classList.add(activeClass);
-                            } else {
-                                content.classList.remove(activeClass);
-                            }
-                        });
-                    });
-                });
-            });
-        }
-        configurarBotoesDeGrupoComTabs('.action-imovel', 'btn-standart', '.tabs-container > .table', 'active');
-
-        // Selecionar imovel pelo checkbox altera buttons na table action
-        function setupToggleVisibility(listCardSelector, btnOrderSelector, btnImvSelector) {
-            const listCardImovel = document.querySelector(listCardSelector);
-            const btnOrder = document.querySelector(btnOrderSelector);
-            const btnImv = document.querySelectorAll(btnImvSelector);
-
-            const updateVisibility = () => {
-                const checkboxes = listCardImovel.querySelectorAll('.imovel-card input[type="checkbox"]:checked');
-                const hasChecked = checkboxes.length > 0;
-
-                if (hasChecked) {
-                    btnOrder.classList.add('hidden');
-                    btnOrder.classList.remove('visible');
-                    btnImv.forEach(btn => {
-                        btn.classList.add('visible');
-                        btn.classList.remove('hidden');
-                    });
-                } else {
-                    btnOrder.classList.add('visible');
-                    btnOrder.classList.remove('hidden');
-                    btnImv.forEach(btn => {
-                        btn.classList.add('hidden');
-                        btn.classList.remove('visible');
-                    });
-                }
-            };
-
-            listCardImovel.addEventListener('change', (event) => {
-                if (event.target.type === 'checkbox') {
-                    updateVisibility();
-                }
-            });
-
-            updateVisibility();
-        }
-        setupToggleVisibility('.list-card-imovel', '.btn-order', '.btn-imv');
-
-        // Função para alternar a seleção de todos os checkboxes e as classes dos botões
-        function handleImoveisTodosCheckbox() {
-            const imoveisTodos = document.querySelector('#imoveisTodos');
-            const checkboxes = document.querySelectorAll('.imovel-card input[type="checkbox"]');
-            const btnOrder = document.querySelector('.btn-order');
-            const btnImv = document.querySelectorAll('.btn-imv');
-
-            const isChecked = imoveisTodos.checked;
-
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = isChecked;
-            });
-
-            if (isChecked) {
-                btnOrder.classList.add('hidden');
-                btnOrder.classList.remove('visible');
-                btnImv.forEach(btn => {
-                    btn.classList.add('visible');
-                    btn.classList.remove('hidden');
-                });
-            } else {
-                btnOrder.classList.add('visible');
-                btnOrder.classList.remove('hidden');
-                btnImv.forEach(btn => {
-                    btn.classList.add('hidden');
-                    btn.classList.remove('visible');
-                });
-            }
-        }
-        document.querySelector('#imoveisTodos').addEventListener('change', handleImoveisTodosCheckbox)
-
-        // Modal - Alternar checkbox Padrao e Empreendimento (Adicionar)
-        function initializeToggleDisable(options) {
-            const { checkboxSelector, contentSelector, disabledClass = "disabled", allowSingleSelection = false } = options;
-
-            const checkboxes = document.querySelectorAll(checkboxSelector);
-            const contentElements = document.querySelectorAll(contentSelector);
-
-            // seleciona UMA checkbox
-            const enforceSingleSelection = (currentCheckbox) => {
-                if (allowSingleSelection) {
-                    checkboxes.forEach(checkbox => {
-                        if (checkbox !== currentCheckbox) {
-                            checkbox.checked = false;
-                        }
-                    });
-                }
-            };
-
-            // Atualiza a classe 'disabled' nos elementos de conteúdo
-            const updateDisabledState = () => {
-                const isAnyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-                contentElements.forEach(content => {
-                    content.classList.toggle(disabledClass, !isAnyChecked);
-                });
-            };
-
-            // Adiciona eventos de alteração nas checkboxes
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener("change", () => {
-                    enforceSingleSelection(checkbox);
-                    updateDisabledState();
-                });
-            });
-
-            // Atualiza o estado inicial
-            updateDisabledState();
-        }
-        document.addEventListener("DOMContentLoaded", () => {
-            initializeToggleDisable({
-                checkboxSelector: ".modality-option .imovel-checkbox",
-                contentSelector: ".new-imovel-modal .info-content:not(:first-child)",
-                disabledClass: "disabled",
-                allowSingleSelection: true, // Apenas uma checkbox pode ser selecionada
-            });
-        });
-
-        // Modal - Função incluir arquivo
-        function createUploadArea({
-            uploadAreaId,
-            fileInputId,
-            buttonId,
-            validExtensions = ["jpg", "jpeg", "docx", "pdf"],
-            maxFileSize = 20 * 1024 * 1024, // 20MB
-            onValidFile = (file) => console.log(`Arquivo válido: ${file.name}`),
-            onInvalidFile = (file, reason) => console.log(`Arquivo inválido: ${file.name} (${reason})`),
-        }) {
-            const uploadArea = document.getElementById(uploadAreaId);
-            const fileInput = document.getElementById(fileInputId);
-            const selectFileButton = document.getElementById(buttonId);
-
-            if (!uploadArea || !fileInput || !selectFileButton) {
-                console.error("Upload area, file input, or button not found.");
-                return;
-            }
-
-            // Abrir seletor
-            selectFileButton.addEventListener("click", (event) => {
-                event.preventDefault();
-                fileInput.click();
-            });
-
-            // Manipular arquivo
-            fileInput.addEventListener("change", (event) => handleFiles(event.target.files));
-
-            // Drag/Drop
-            uploadArea.addEventListener("dragover", (event) => {
-                event.preventDefault();
-                uploadArea.classList.add("dragover");
-            });
-
-            uploadArea.addEventListener("dragleave", () => {
-                uploadArea.classList.remove("dragover");
-            });
-
-            uploadArea.addEventListener("drop", (event) => {
-                event.preventDefault();
-                uploadArea.classList.remove("dragover");
-                handleFiles(event.dataTransfer.files);
-            });
-
-            // Validar arquivo
-            function handleFiles(files) {
-                for (const file of files) {
-                    const fileExtension = file.name.split(".").pop().toLowerCase();
-                    if (!validExtensions.includes(fileExtension)) {
-                        onInvalidFile(file, "Extensão inválida");
-                        continue;
-                    }
-                    if (file.size > maxFileSize) {
-                        onInvalidFile(file, "Tamanho excedido");
-                        continue;
-                    }
-                    onValidFile(file);
-                }
-            }
-        }
-        createUploadArea({
-            uploadAreaId: "upload-area",
-            fileInputId: "file-input",
-            buttonId: "select-file-button",
-            validExtensions: ["jpg", "jpeg", "png", "pdf"],
-            maxFileSize: 10 * 1024 * 1024,
-            onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
-            onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
-        });
-        createUploadArea({
-            uploadAreaId: "upload-casamento",
-            fileInputId: "casamento-input",
-            buttonId: "select-casamento-button",
-            validExtensions: ["jpg", "jpeg", "png", "pdf"],
-            maxFileSize: 10 * 1024 * 1024,
-            onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
-            onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
-        });
-        createUploadArea({
-            uploadAreaId: "upload-fotos",
-            fileInputId: "fotos-input",
-            buttonId: "select-fotos-button",
-            validExtensions: ["jpg", "jpeg", "png", "pdf"],
-            maxFileSize: 10 * 1024 * 1024,
-            onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
-            onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
-        });
-
-        // Modal - Função inicial
-        function initModal(triggerSelector, modalSelector, closeSelector, activeClass = 'active', confirmClose = false, confirmModalSelector = null) {
-            const triggers = document.querySelectorAll(triggerSelector);
-            const modalContainer = document.querySelector(modalSelector);
-            const closeButton = modalContainer?.querySelector(closeSelector);
-
-            let confirmModalContainer = null;
-            let confirmCloseButtons = null;
-
-            if (confirmClose && confirmModalSelector) {
-                confirmModalContainer = document.querySelector(confirmModalSelector);
-                confirmCloseButtons = confirmModalContainer?.querySelectorAll('button');
-            }
-
-            if (!modalContainer) {
-                return;
-            }
-
-            // Abrir
-            triggers.forEach(trigger => {
-                trigger.addEventListener('click', () => {
-                    modalContainer.classList.add(activeClass);
-                });
-            });
-
-            // Fechar
-            if (closeButton) {
-                closeButton.addEventListener('click', () => {
-                    if (confirmClose && confirmModalContainer) {
-                        confirmModalContainer.classList.add(activeClass);
-                    } else {
-                        modalContainer.classList.remove(activeClass);
-                    }
-                });
-            }
-
-            // Confirmar/Fechar
-            if (confirmModalContainer && confirmCloseButtons) {
-                confirmCloseButtons.forEach(button => {
-                    button.addEventListener('click', (event) => {
-                        event.preventDefault();
-                        if (button.classList.contains('btn-destructive')) {
-                            modalContainer.classList.remove(activeClass);
-                        }
-                        confirmModalContainer.classList.remove(activeClass);
-                    });
-                });
-            }
-        }
-        initModal(
-            '[data-new-imovel="open"]',
-            '[data-new-imovel="container"]',
-            '[data-new-imovel="close"]',
-            'active',
-            true,
-            '[data-cancel="container"]'
-        );
-        initModal(
-            '[data-imovel="open"]',
-            '[data-imovel="container"]',
-            '[data-imovel="close"]',
-            'active',
-            true,
-            '[data-cancel="container"]'
-        );
-
-        // Modal - Abrir e fechar seções
-        document.addEventListener("DOMContentLoaded", () => {
-            const infoContents = document.querySelectorAll(".info-content");
-
-            infoContents.forEach((content) => {
-                const header = content.querySelector(".info-header");
-
-                header.addEventListener("click", () => {
-                    if (content.classList.contains("disabled")) {
-                        return;
-                    }
-
-                    const columnsAndRows = content.querySelectorAll(".info-column, .info-row");
-
-                    columnsAndRows.forEach((element) => {
-                        if (element.classList.contains("hidden")) {
-                            element.style.display = 'flex';
-                            setTimeout(() => {
-                                element.classList.remove('hidden');
-                                element.classList.add('visible');
-                            }, 10);
-
-                        } else {
-                            element.classList.remove("visible");
-                            element.classList.add("hidden");
-                            setTimeout(() => {
-                                element.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-
-                    const icon = header.querySelector("i:last-child");
-                    if (icon) {
-                        icon.classList.toggle("uil-angle-up");
-                        icon.classList.toggle("uil-angle-down");
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="../js/imoveis.js"></script>
 </body>
 
 </html>

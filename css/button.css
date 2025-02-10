@@ -42,6 +42,10 @@
     font-size: var(--font-size-sm, 20px);
 }
 
+.btn-sm i {
+    font-size: var(--font-size-xs, 16px);
+}
+
 /* Botão Azul - Accent */
 .btn-accent {
     border: var(--border-width-none, 0px) solid var(--color-secondary-pure, #163867);

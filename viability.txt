@@ -1,0 +1,27 @@
+Análise de Viabilidade de Funcionalidades
+
+Login/Recuperar Senha
+    - Autenticação e manipulação das mensagens de erro
+    - Texto após envio de Recuperação (opcional)
+
+Painel 1 Acesso
+    - Validar Importação de imoveis
+    - Link de Rota para Adicionar Imovel
+    - Nova Pagina
+
+Painel Logado
+    - Menu Lateral 
+    - Barra de Pesquisa
+    - Lista de Notificação
+
+Home
+    - Análise de Mercado (reformulação da blyk)
+    - Anúncios (qualidade média dos anuncios e grafico)
+    - Eventos do Dia (agenda)
+    - Selo de Especialista (retirado)
+
+Imóveis
+    - Filtros
+    - Planos Utilizados
+    - Editar Imóvel
+    - Sistema de Modais

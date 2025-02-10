@@ -159,12 +159,12 @@
 }
 
 /* Input Preenchido e Válido */
-.input-field:valid:not(:placeholder-shown) {
+input.input-field:valid:not(:placeholder-shown) {
     border: var(--border-width-hairline, 1px) solid var(--color-success-pure, #29CC5F);
     background-color: var(--color-essence-ivory, #FFF);
 }
 
-.input-container:has(.input-field:valid) .input-label label {
+.input-container:has(input.input-field:valid) .input-label label {
     color: var(--color-essence-charcoal, #000);
 }
 
