@@ -15,23 +15,14 @@ document.addEventListener('click', function (event) {
         const clickedLabel = event.target.closest('.dropdown-group label'); // Verifica se clicou em um <label>
 
         if (clickedItem) {
-            const dropdown = clickedItem.closest('.dropdown');
-            const btnLabel = dropdown.querySelector('.btn-label');
-            const newValue = clickedItem.getAttribute('data-value');
-            const newText = clickedItem.textContent;
-
-            btnLabel.textContent = newText;
-            btnLabel.classList.add('bold');
-
-            const dropdownGroup = dropdown.querySelector('.dropdown-group');
-            dropdownGroup.style.display = 'none';
+            // Não atualiza o texto do botão
+            // Não fecha o dropdown-group
         } else if (!clickedInsideDropdownGroup || clickedLabel) {
             // Fecha apenas se o clique for fora do dropdown-group e não for em um label
             allDropdownGroups.forEach(group => (group.style.display = 'none'));
         }
     }
 });
-
 
 // Completo/Simplificado - Ações no Imóvel
 function configureVisibilityActions(btnVisibleId, btnHiddenId, targetClass) {
@@ -534,3 +525,49 @@ createUploadFoto({
     onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
     onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
 });
+
+// Modal - Horario Switch 
+function switchHorarioVisita() {
+    document.addEventListener('change', function (event) {
+        if (event.target.matches('.hour-visit .switch-sm input[type="checkbox"]')) {
+            const checkbox = event.target; // O checkbox clicado
+            const hourVisit = checkbox.closest('.hour-visit'); // Encontra o hour-visit correspondente
+            const hourElement = hourVisit.querySelector('.hour'); // Encontra o elemento .hour dentro do hour-visit
+
+            if (hourElement) {
+                if (checkbox.checked) {
+                    hourElement.style.display = 'flex'; // Exibe o elemento primeiro
+                    setTimeout(() => {
+                        hourElement.classList.remove('hidden-x');
+                        hourElement.classList.add('visible-x');
+                    }, 10); // Permite que a transição seja aplicada
+                } else {
+                    hourElement.classList.remove('visible-x');
+                    hourElement.classList.add('hidden-x');
+                    setTimeout(() => {
+                        hourElement.style.display = 'none'; // Oculta após a transição
+                    }, 300); // Aguarda o tempo da animação (0.3s)
+                }
+            }
+        }
+    });
+
+    document.querySelectorAll('.hour-visit .switch-sm input[type="checkbox"]').forEach(checkbox => {
+        const hourVisit = checkbox.closest('.hour-visit');
+        const hourElement = hourVisit.querySelector('.hour');
+
+        if (hourElement) {
+            if (checkbox.checked) {
+                hourElement.style.display = 'flex';
+                hourElement.classList.remove('hidden-x');
+                hourElement.classList.add('visible-x');
+            } else {
+                hourElement.classList.remove('visible-x');
+                hourElement.classList.add('hidden-x');
+                hourElement.style.display = 'none';
+            }
+        }
+    });
+}
+
+switchHorarioVisita();

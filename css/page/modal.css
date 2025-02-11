@@ -342,7 +342,7 @@
     justify-content: space-between;
 }
 
-/* Fotos Modal Content */
+/* Fotos - Modal Content */
 .foto-card {
     border-radius: var(--border-radius-xs, 16px);
     border: 1px solid var(--color-neutral-pale, #E5E5E5);
@@ -367,4 +367,42 @@
         border: var(--border-width-hairline, 1px) solid var(--Colors-Neutral-Pale, #E5E5E5);
         background: var(--color-essence-ivory, #FFF);
     }
+}
+
+/* Horario de Visita -  Modal Content */
+.hour-visit {
+    align-items: flex-start !important;
+
+    & .day {
+        height: 32px;
+        width: 190px;
+    }
+
+    & .hour {
+        & .time-content {
+            & .input-field {
+                max-width: 60px;
+            }
+        }
+
+        & .dropdown-group {
+            width: 100% !important;
+            max-height: fit-content;
+        }
+    }
+
+
+}
+
+/* Visivel e escondido */
+.hidden-x {
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.visible-x {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: auto;
 }
