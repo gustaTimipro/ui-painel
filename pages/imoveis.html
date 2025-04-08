@@ -600,7 +600,7 @@
                                         </div>
                                         <div class="imovel-info d-flex-column">
                                             <div class="title-container d-flex-row">
-                                                <span class="number label-small bold">3254</span>
+                                                <span class="code label-small bold">3254</span>
                                                 <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                     Norte -
                                                     Brasília -
@@ -714,7 +714,7 @@
                                         </div>
                                         <div class="imovel-info d-flex-column">
                                             <div class="title-container d-flex-row">
-                                                <span class="number label-small bold">3254</span>
+                                                <span class="code label-small bold">3254</span>
                                                 <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                     Norte -
                                                     Brasília -
@@ -1016,7 +1016,7 @@
                                         </div>
                                         <div class="imovel-info d-flex-column">
                                             <div class="title-container d-flex-row">
-                                                <span class="number label-small bold">3254</span>
+                                                <span class="code label-small bold">3254</span>
                                                 <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                     Norte -
                                                     Brasília -
@@ -1130,7 +1130,7 @@
                                         </div>
                                         <div class="imovel-info d-flex-column">
                                             <div class="title-container d-flex-row">
-                                                <span class="number label-small bold">3254</span>
+                                                <span class="code label-small bold">3254</span>
                                                 <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                     Norte -
                                                     Brasília -
@@ -1449,7 +1449,7 @@
                                         </div>
                                         <div class="imovel-info d-flex-column">
                                             <div class="title-container d-flex-row">
-                                                <span class="number label-small bold">3254</span>
+                                                <span class="code label-small bold">3254</span>
                                                 <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                     Norte -
                                                     Brasília -
@@ -1563,7 +1563,7 @@
                                         </div>
                                         <div class="imovel-info d-flex-column">
                                             <div class="title-container d-flex-row">
-                                                <span class="number label-small bold">3254</span>
+                                                <span class="code label-small bold">3254</span>
                                                 <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                     Norte -
                                                     Brasília -
@@ -1882,7 +1882,7 @@
                                         </div>
                                         <div class="imovel-info d-flex-column">
                                             <div class="title-container d-flex-row">
-                                                <span class="number label-small bold">3254</span>
+                                                <span class="code label-small bold">3254</span>
                                                 <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                     Norte -
                                                     Brasília -
@@ -1996,7 +1996,7 @@
                                         </div>
                                         <div class="imovel-info d-flex-column">
                                             <div class="title-container d-flex-row">
-                                                <span class="number label-small bold">3254</span>
+                                                <span class="code label-small bold">3254</span>
                                                 <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                     Norte -
                                                     Brasília -
@@ -2153,12 +2153,12 @@
                                 </div>
                                 <span class="title-large flex-grow">SQN 210 Bloco A - Asa Norte - Brasília - DF</span>
                                 <div class="actions d-flex-row">
-                                    <button class="btn btn-destructive btn-outlined btn-md">Excluir Imóvel
+                                    <button class="btn btn-destructive btn-outlined btn-icon-md">
                                         <i class="uil uil-trash"></i>
                                     </button>
 
                                     <div class="dropdown select">
-                                        <button class="btn btn-dropdown btn-accent btn-outlined">
+                                        <button class="btn btn-dropdown btn-neutral btn-outlined">
                                             <div class="btn-label btn-md">Trocar Status</div>
                                             <div class="btn-icon btn-icon-md"><i class="uil uil-angle-down"></i></div>
                                         </button>
@@ -2181,8 +2181,12 @@
                                         </ul>
                                     </div>
 
-                                    <button class="btn btn-accent btn-md">Salvar Alterações
-                                        <i class="uil uil-check"></i>
+                                    <button class="btn btn-neutral btn-outlined btn-md">
+                                        Exportar Relatório <i class="uil uil-file-download-alt"></i>
+                                    </button>
+
+                                    <button class="btn btn-neutral btn-outlined btn-md" data-edit-imovel="open">
+                                        Editar Imóvel <i class="uil uil-edit-alt"></i>
                                     </button>
                                 </div>
                                 <button data-imovel="close" class="btn btn-neutral btn-standart btn-icon-md">
@@ -2229,7 +2233,7 @@
                                     </div>
                                     <div class="imovel-info d-flex-column">
                                         <div class="title-container d-flex-row">
-                                            <span class="number label-small bold">3254</span>
+                                            <span class="code label-small bold">3254</span>
                                             <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa
                                                 Norte -
                                                 Brasília -
@@ -2323,7 +2327,7 @@
                             <!-- Info Básicas -->
                             <div class="info-content">
                                 <div class="d-flex-row gap-md">
-                                    <span class="title-small flex-grow">Ações Básicas</span>
+                                    <span class="title-small flex-grow">Ações Rápidas</span>
                                     <div class="d-flex-row">
                                         <label class="switch switch-sm">
                                             <input type="checkbox" id="switch-sm" checked />
@@ -2346,97 +2350,292 @@
                                 </div>
                             </div>
 
+                            <!-- Análise de Mercado -->
+                            <div class="info-content gap-xs bg-secondary">
+                                <div class="d-flex-row">
+                                    <i class="uil uil-robot"></i>
+                                    <span class="title-small">Análise de Mercado</span>
+                                    <span class="label-medium flex-grow neutral-text">Atualizado em 01/10/2023 <i
+                                            class="uil uil-info-circle"></i></span>
+                                </div>
+                                <span class="body-medium flex-grow">Baseado em outros anúncios da base do Portal DF
+                                    Imóveis, é provável que esse imóvel se enquadre nos parâmetros abaixo.</span>
+                                <div class="d-flex-row">
+                                    <div class="indicator bg-white cursor-default">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Tempo médio de negociação esperado</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">33 dias</span>
+                                        </div>
+                                    </div>
+                                    <div class="indicator bg-white cursor-default">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Média de valor de imóveis parecidos</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">R$ 350.000</span>
+                                        </div>
+                                    </div>
+                                    <div class="indicator bg-white cursor-default">
+                                        <div class="indic-top">
+                                            <span class="label-medium">Principal característica</span>
+                                        </div>
+                                        <div class="indic-text">
+                                            <span class="headline-medium">Localização</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Resultados do Anúncio -->
                             <div class="info-content">
                                 <div class="d-flex-row">
                                     <i class="uil uil-graph-bar"></i>
                                     <span class="title-small flex-grow">Resultados do Anúncio</span>
                                 </div>
-                                <div class="block anuncios">
-                                    <div class="d-flex-row body-medium">
-                                        <span class="block-title">Qualidade média dos anúncios</span>
-                                        <i class="uil uil-info-circle"></i>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: 75%;">
-                                            <span class="label-medium progress-value">7,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="info-block">
-                                    <div class="indicator result">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Acessos aos anúncios</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">165</span>
-                                            <span class="comparative label-small">+12%</span>
-                                        </div>
+                                <div class="d-flex-row gap-xs">
+                                    <div class="indicator gap-nano w-250 bg-white">
+                                        <span class="label-medium bold">Como melhorar a qualidade desse anúncio?</span>
+                                        <span class="body-small check"><i class="uil uil-check"></i> Foto</span>
+                                        <span class="body-small check"><i class="uil uil-check"></i> Vídeo</span>
+                                        <span class="body-small check"><i class="uil uil-check"></i> Descrição</span>
+                                        <span class="body-small neutral-dark"><i class="uil uil-minus"></i>
+                                            Características</span>
+                                        <span class="body-small neutral-dark"><i class="uil uil-minus"></i> Horário de
+                                            Visitas</span>
                                     </div>
 
-                                    <div class="indicator result">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Visitas agendadas</span>
+                                    <div class="d-flex-column w-100 gap-md justify-center">
+                                        <div class="block anuncios">
+                                            <div class="d-flex-row body-medium">
+                                                <span class="block-title">Qualidade média dos anúncios</span>
+                                                <i class="uil uil-info-circle"></i>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 75%;">
+                                                    <span class="label-medium progress-value">7,5</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">12</span>
-                                            <span class="comparative label-small">+12%</span>
-                                        </div>
-                                    </div>
+                                        <div class="info-block">
+                                            <div class="indicator result">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Acessos aos anúncios</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">165</span>
+                                                    <span class="comparative label-small">+12%</span>
+                                                </div>
+                                            </div>
 
-                                    <div class="indicator result">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Propostas recebidas</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">650</span>
-                                            <span class="comparative label-small">+12%</span>
-                                        </div>
-                                    </div>
+                                            <div class="indicator result">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Visitas agendadas</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">12</span>
+                                                    <span class="comparative label-small">+12%</span>
+                                                </div>
+                                            </div>
 
-                                    <div class="indicator result">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Propostas recebidas</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">650</span>
-                                            <span class="comparative label-small">+12%</span>
-                                        </div>
-                                    </div>
+                                            <div class="indicator result">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Propostas recebidas</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">650</span>
+                                                    <span class="comparative label-small">+12%</span>
+                                                </div>
+                                            </div>
 
-                                    <div class="indicator result">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Propostas recebidas</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">650</span>
-                                            <span class="comparative label-small">+12%</span>
-                                        </div>
-                                    </div>
+                                            <div class="indicator result">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Propostas recebidas</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">650</span>
+                                                    <span class="comparative label-small">+12%</span>
+                                                </div>
+                                            </div>
 
-                                    <div class="indicator result">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Cliques</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">39.460</span>
-                                            <span class="comparative label-small">+12%</span>
-                                        </div>
-                                    </div>
+                                            <div class="indicator result">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Propostas recebidas</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">650</span>
+                                                    <span class="comparative label-small">+12%</span>
+                                                </div>
+                                            </div>
 
-                                    <div class="indicator result">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Compartilhamentos</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">6.980</span>
-                                            <span class="comparative label-small">+12%</span>
+                                            <div class="indicator result">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Cliques</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">39.460</span>
+                                                    <span class="comparative label-small">+12%</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="indicator result">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Compartilhamentos</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">6.980</span>
+                                                    <span class="comparative label-small">+12%</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Potenciais Clientes -->
+                            <div class="info-content gap-xs">
+                                <div class="d-flex-row">
+                                    <i class="uil uil-fire"></i>
+                                    <span class="title-small flex-grow">Potenciais Clientes</span>
+
+                                </div>
+                                <span class="body-medium flex-grow">Baseado no perfil dos seus clientes e nas
+                                    características do imóvel, é provável que os leads abaixo se interessem por esse
+                                    imóvel.</span>
+                                <div class="list-clientes d-flex-column gap-nano">
+                                    <div class="client-item d-flex-row gap-lg indicator bg-white">
+                                        <div class="d-flex-row flex-grow">
+                                            <button class="btn btn-standart btn-accent btn-icon-sm"><i
+                                                    class="uil uil-link-broken"></i>
+                                            </button>
+                                            <span class="label-small code bold">3254</span>
+                                            <span class="body-large bold">Lucas Almeida dos Santos</span>
+                                            <div class="client-tag accent-color bg-secondary">
+                                                <i class="uil uil-star"></i>
+                                                <span class="label-small bold">Novo</span>
+                                            </div>
+                                        </div>
+                                        <span class="client-tag accent-color bg-secondary bold label-small">Lead</span>
+                                        <div class="item item-phone d-flex-row gap-nano">
+                                            <i class="uil uil-phone neutral-text"></i>
+                                            <span class="body-medium">61 91234-5678</span>
+                                        </div>
+                                        <div class="item item-email d-flex-row gap-nano">
+                                            <i class="uil uil-envelope neutral-text"></i>
+                                            <span class="body-medium">fulanodetal@gmail.com</span>
+                                        </div>
+                                        <div class="item item-contact d-flex-row gap-nano">
+                                            <span class="body-medium neutral-text">Último contato</span>
+                                            <span class="body-medium">05/11/2024 - 12:23</span>
+                                        </div>
+                                    </div>
+                                    <div class="client-item d-flex-row gap-lg indicator bg-white">
+                                        <div class="d-flex-row flex-grow">
+                                            <button class="btn btn-standart btn-accent btn-icon-sm"><i
+                                                    class="uil uil-link-broken"></i>
+                                            </button>
+                                            <span class="label-small code bold">3254</span>
+                                            <span class="body-large bold">Lucas Almeida dos Santos</span>
+                                            <div class="client-tag accent-color bg-secondary">
+                                                <i class="uil uil-star"></i>
+                                                <span class="label-small bold">Novo</span>
+                                            </div>
+                                        </div>
+                                        <span class="client-tag accent-color bg-secondary bold label-small">Lead</span>
+                                        <div class="item item-phone d-flex-row gap-nano">
+                                            <i class="uil uil-phone neutral-text"></i>
+                                            <span class="body-medium">61 91234-5678</span>
+                                        </div>
+                                        <div class="item item-email d-flex-row gap-nano">
+                                            <i class="uil uil-envelope neutral-text"></i>
+                                            <span class="body-medium">fulanodetal@gmail.com</span>
+                                        </div>
+                                        <div class="item item-contact d-flex-row gap-nano">
+                                            <span class="body-medium neutral-text">Último contato</span>
+                                            <span class="body-medium">05/11/2024 - 12:23</span>
+                                        </div>
+                                    </div>
+                                    <div class="client-item d-flex-row gap-lg indicator bg-white">
+                                        <div class="d-flex-row flex-grow">
+                                            <button class="btn btn-standart btn-accent btn-icon-sm"><i
+                                                    class="uil uil-link-broken"></i>
+                                            </button>
+                                            <span class="label-small code bold">3254</span>
+                                            <span class="body-large bold">Lucas Almeida dos Santos</span>
+                                            <div class="client-tag accent-color bg-secondary">
+                                                <i class="uil uil-star"></i>
+                                                <span class="label-small bold">Novo</span>
+                                            </div>
+                                        </div>
+                                        <span class="client-tag accent-color bg-secondary bold label-small">Lead</span>
+                                        <div class="item item-phone d-flex-row gap-nano">
+                                            <i class="uil uil-phone neutral-text"></i>
+                                            <span class="body-medium">61 91234-5678</span>
+                                        </div>
+                                        <div class="item item-email d-flex-row gap-nano">
+                                            <i class="uil uil-envelope neutral-text"></i>
+                                            <span class="body-medium">fulanodetal@gmail.com</span>
+                                        </div>
+                                        <div class="item item-contact d-flex-row gap-nano">
+                                            <span class="body-medium neutral-text">Último contato</span>
+                                            <span class="body-medium">05/11/2024 - 12:23</span>
+                                        </div>
+                                    </div>
+                                    <div class="client-item d-flex-row gap-lg indicator bg-white">
+                                        <div class="d-flex-row flex-grow">
+                                            <button class="btn btn-standart btn-accent btn-icon-sm"><i
+                                                    class="uil uil-link-broken"></i>
+                                            </button>
+                                            <span class="label-small code bold">3254</span>
+                                            <span class="body-large bold">Lucas Almeida dos Santos</span>
+                                            <div class="client-tag accent-color bg-secondary">
+                                                <i class="uil uil-star"></i>
+                                                <span class="label-small bold">Novo</span>
+                                            </div>
+                                        </div>
+                                        <span class="client-tag accent-color bg-secondary bold label-small">Lead</span>
+                                        <div class="item item-phone d-flex-row gap-nano">
+                                            <i class="uil uil-phone neutral-text"></i>
+                                            <span class="body-medium">61 91234-5678</span>
+                                        </div>
+                                        <div class="item item-email d-flex-row gap-nano">
+                                            <i class="uil uil-envelope neutral-text"></i>
+                                            <span class="body-medium">fulanodetal@gmail.com</span>
+                                        </div>
+                                        <div class="item item-contact d-flex-row gap-nano">
+                                            <span class="body-medium neutral-text">Último contato</span>
+                                            <span class="body-medium">05/11/2024 - 12:23</span>
+                                        </div>
+                                    </div>
+                                    <div class="client-item d-flex-row gap-lg indicator bg-white">
+                                        <div class="d-flex-row flex-grow">
+                                            <button class="btn btn-standart btn-accent btn-icon-sm"><i
+                                                    class="uil uil-link-broken"></i>
+                                            </button>
+                                            <span class="label-small code bold">3254</span>
+                                            <span class="body-large bold">Lucas Almeida dos Santos</span>
+                                            <div class="client-tag accent-color bg-secondary">
+                                                <i class="uil uil-star"></i>
+                                                <span class="label-small bold">Novo</span>
+                                            </div>
+                                        </div>
+                                        <span class="client-tag accent-color bg-secondary bold label-small">Lead</span>
+                                        <div class="item item-phone d-flex-row gap-nano">
+                                            <i class="uil uil-phone neutral-text"></i>
+                                            <span class="body-medium">61 91234-5678</span>
+                                        </div>
+                                        <div class="item item-email d-flex-row gap-nano">
+                                            <i class="uil uil-envelope neutral-text"></i>
+                                            <span class="body-medium">fulanodetal@gmail.com</span>
+                                        </div>
+                                        <div class="item item-contact d-flex-row gap-nano">
+                                            <span class="body-medium neutral-text">Último contato</span>
+                                            <span class="body-medium">05/11/2024 - 12:23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -2469,7 +2668,7 @@
                                     <i class="uil uil-angle-up"></i>
                                 </div>
                                 <div class="info-column d-flex-row">
-                                    <label class="modality-option" for="imovelPadrao">
+                                    <label class="new-options modality-option" for="imovelPadrao">
                                         <input type="checkbox" class="imovel-checkbox" id="imovelPadrao"
                                             name="imovelPadrao">
                                         <div class="modality-text d-flex-column">
@@ -2479,8 +2678,1364 @@
                                             </span>
                                         </div>
                                     </label>
-                                    <label class="modality-option" for="empreendimento">
+                                    <label class="new-options modality-option" for="empreendimento">
                                         <input type="checkbox" class="imovel-checkbox" id="empreendimento"
+                                            name="empreendimento">
+                                        <div class="modality-text d-flex-column">
+                                            <span class="body-large bold">Empreendimento</span>
+                                            <span class="body-large">
+                                                Para projetos de construtoras, como imóveis na planta, em construção
+                                                ou
+                                                recém-concluídos.
+                                            </span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Info Básicas -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-info-circle"></i>
+                                    <span class="title-small flex-grow">Informações Basicas</span>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+                                <div class="info-column d-flex-row">
+                                    <div class="input-container">
+                                        <div class="input-label">
+                                            <label class="label-large" for="email">Código de Busca
+                                                <span class="label-medium" for="email">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <div class="input-sufix">
+                                            <input type="email" id="email" class="input-field input-md body-medium"
+                                                required />
+                                        </div>
+                                        <span class="error-message label-medium">O e-mail está incorreto</span>
+                                    </div>
+
+                                    <div class="input-container">
+                                        <div class="input-label">
+                                            <label class="label-large" for="email">Negócio</label>
+                                        </div>
+                                        <div class="input-options input-md">
+                                            <div class="option">
+                                                <input type="checkbox" class="imovel-checkbox" id="venda" name="venda">
+                                                <label class="body-medium" for="venda">Venda</label>
+                                            </div>
+                                            <div class="option">
+                                                <input type="checkbox" class="imovel-checkbox" id="aluguel"
+                                                    name="aluguel">
+                                                <label class="body-medium" for="aluguel">Aluguel</label>
+                                            </div>
+                                            <div class="option">
+                                                <input type="checkbox" class="imovel-checkbox" id="temporada"
+                                                    name="temporada">
+                                                <label class="body-medium" for="temporada">Temporada</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="tipo">Tipo</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="tipo" class="custom-select body-medium input-md">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="subtipo">Subtipo</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="tipo" class="custom-select body-medium input-md">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-column d-flex-row">
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="tipo">Status do Imóvel</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="tipo" class="custom-select body-medium input-md">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="tipo">Proprietário
+                                                <span class="label-medium" for="email">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="tipo" class="custom-select body-medium input-md">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="subtipo">Código
+                                                <span class="label-medium" for="email">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <div class="input-sufix">
+                                            <input type="email" id="email" class="input-field input-md body-medium"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Endereço -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-map-pin"></i>
+                                    <span class="title-small flex-grow">Endereço</span>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+                                <div class="info-column d-flex-row">
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="cep">CEP</label>
+                                        </div>
+                                        <div class="input-sufix">
+                                            <input type="text" id="cep" class="input-field input-md body-medium"
+                                                required placeholder="Informe o CEP" />
+                                        </div>
+                                        <span class="error-message label-medium">O e-mail está incorreto</span>
+                                    </div>
+                                </div>
+                                <div class="info-column d-flex-row">
+                                    <div class="info-column d-flex-column gap-md adress-content">
+                                        <div class="input-container w-100">
+                                            <div class="input-label">
+                                                <label class="label-large" for="cep">CEP</label>
+                                            </div>
+                                            <div class="input-sufix">
+                                                <input type="text" id="cep" class="input-field input-md body-medium"
+                                                    required placeholder="Informe o CEP" value="73588-022" />
+                                            </div>
+                                            <span class="error-message label-medium">O e-mail está incorreto</span>
+                                        </div>
+
+                                        <div class="list-info">
+                                            <span class="label-large neutral-text">Informações</span>
+                                            <div class="line"></div>
+                                            <div class="list-item d-flex-column">
+                                                <span class="body-medium">Logradouro</span>
+                                                <span class="title-small">SQN 209 Bloco G</span>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="list-item d-flex-column">
+                                                <span class="body-medium">Bairro</span>
+                                                <span class="title-small">Asa Norte</span>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="list-item d-flex-column">
+                                                <span class="body-medium">Cidade</span>
+                                                <span class="title-small">Brasília</span>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="list-item d-flex-column">
+                                                <span class="body-medium">UF</span>
+                                                <span class="title-small">Distrito Federal</span>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="list-item d-flex-column">
+                                                <span class="body-medium">País</span>
+                                                <span class="title-small">Brasil</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info-column d-flex-column gap-md adress-content">
+                                        <div class="input-container w-100">
+                                            <div class="input-label">
+                                                <label class="label-large" for="condominio">Condomínio
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                        name="exibir">
+                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-sufix">
+                                                <input type="text" id="condominio"
+                                                    class="input-field input-md body-medium" required />
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                        <div class="input-container w-100">
+                                            <div class="input-label">
+                                                <label class="label-large" for="numero">Numero
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                        name="exibir">
+                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-sufix">
+                                                <input type="text" id="numero" class="input-field input-md body-medium"
+                                                    required />
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                        <div class="input-container w-100">
+                                            <div class="input-label">
+                                                <label class="label-large" for="complemento">Complemento
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                        name="exibir">
+                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-sufix">
+                                                <input type="text" id="complemento"
+                                                    class="input-field input-md body-medium" required />
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                        <div class="input-container w-100">
+                                            <div class="input-label">
+                                                <label class="label-large" for="edificio">Edifício
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <div class="input-select input-sufix">
+                                                <select id="edificio" class="custom-select body-medium input-md">
+                                                    <option value="" disabled selected>Selecione</option>
+                                                    <option value="apartamento">Apartamento</option>
+                                                    <option value="casa">Casa</option>
+                                                    <option value="casa-condominio">Casa Condomínio</option>
+                                                    <option value="galpao">Galpão</option>
+                                                    <option value="garagem">Garagem</option>
+                                                    <option value="hotel-flat">Hotel Flat</option>
+                                                </select>
+                                                <i class="uil uil-angle-down"></i>
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                        <div class="input-container w-100">
+                                            <div class="input-label">
+                                                <label class="label-large" for="point">Ponto de Referência
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                        name="exibir">
+                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                                </div>
+                                            </div>
+                                            <input type="text" id="point" placeholder="Ex.: Ao lado da estação do Metrô"
+                                                class="input-field input-md body-medium" required />
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                    </div>
+                                    <div class="info-row d-flex-row map-image">
+                                        <img src="https://imagens.ebc.com.br/pJhIcWmRELuGK4wPJG6UOluuKho=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/16/antt_2.jpeg?itok=E5bl23tz"
+                                            alt="mapa">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Valores -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-dollar-sign"></i>
+                                    <span class="title-small flex-grow">Valores</span>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+
+                                <div class="info-column d-flex-column gap-xs bg-shadow">
+                                    <span class="title-small flex-grow accent-color">Valores de Venda</span>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="value">Valor de Venda
+                                                </label>
+                                            </div>
+                                            <div class="input-prefix">
+                                                <span class="body-small">R$</span>
+                                                <input type="email" id="value" class="input-field input-md body-medium"
+                                                    required />
+                                            </div>
+                                        </div>
+
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="agio">Ágio
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                        name="exibir">
+                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-prefix">
+                                                <span class="body-small">R$</span>
+                                                <input type="email" id="agio" class="input-field input-md body-medium"
+                                                    required />
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="saldo">Saldo Devedor
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                        name="exibir">
+                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-prefix">
+                                                <span class="body-small">R$</span>
+                                                <input type="email" id="saldo" class="input-field input-md body-medium"
+                                                    required />
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="saldo">Aceita Financiamento
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <div class="group-btn gp-accent">
+                                                <button class="btn btn-accent btn-md btn-standart">Sim</button>
+                                                <button class="btn btn-accent btn-md btn-standart">Não</button>
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="saldo">Aceita FGTS
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <div class="group-btn gp-accent">
+                                                <button class="btn btn-accent btn-md btn-standart">Sim</button>
+                                                <button class="btn btn-accent btn-md btn-standart">Não</button>
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="saldo">Aceita Permuta
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <div class="group-btn gp-accent">
+                                                <button class="btn btn-accent btn-md btn-standart">Sim</button>
+                                                <button class="btn btn-accent btn-md btn-standart">Não</button>
+                                            </div>
+                                            <span class="error-message label-medium">error</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="info-column d-flex-row gap-xs">
+                                    <div class="info-column d-flex-column gap-xs bg-shadow">
+                                        <span class="title-small flex-grow primary-color">Valores de Venda</span>
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="aluguel">Valor do Aluguel
+                                                </label>
+                                            </div>
+                                            <div class="input-twofix">
+                                                <span class="lf-span body-small">R$</span>
+                                                <input type="email" id="aluguel"
+                                                    class="input-field input-md body-medium" required />
+                                                <span class="rg-span body-small">mês</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info-column d-flex-column gap-xs flex-grow bg-shadow">
+                                        <span class="title-small flex-grow neutral-color">Despesas do Imóvel</span>
+                                        <div class="info-row d-flex-row">
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="aluguel">Condomínio
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-twofix">
+                                                    <span class="lf-span body-small">R$</span>
+                                                    <input type="email" id="aluguel"
+                                                        class="input-field input-md body-medium" required />
+                                                    <span class="rg-span body-small">mês</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="aluguel">IPTU
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-twofix">
+                                                    <span class="lf-span body-small">R$</span>
+                                                    <input type="email" id="aluguel"
+                                                        class="input-field input-md body-medium" required />
+                                                    <span class="rg-span body-small">mês</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Características -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-plus-circle"></i>
+                                    <span class="title-small flex-grow">Características</span>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+                                <div class="info-row d-flex-row">
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="quartos">Quartos
+                                                <span class="label-medium">(opcional)</span>
+
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="quartos" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="suites">Suítes
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="suites" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="banheiros">Banheiros
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="banheiros" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="dce">DCE
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="dce" class="input-field input-md body-medium" required
+                                            placeholder="0" />
+                                    </div>
+                                </div>
+                                <div class="info-row d-flex-row">
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="vagas">Vagas de Garagem
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="vagas" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="areaUtil">Área Util
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="areaUtil" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="areaTotal">Área Total
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="areaTotal" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="areaTerreno">Área doTerreno
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="areaTerreno" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+                                </div>
+                                <div class="info-row d-flex-row">
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="elevador">Elevador
+                                                <span class="label-medium">(opcional)</span>
+
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="elevador" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="quantidadeAndares">Quantidade de Andares
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="quantidadeAndares"
+                                            class="input-field input-md body-medium" required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="unidadesAndar">Unidades por Andar
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="unidadesAndar" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="andarUnidade">Andar por Unidade
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="number" id="andarUnidade" class="input-field input-md body-medium"
+                                            required placeholder="0" />
+                                    </div>
+                                </div>
+                                <div class="info-row d-flex-row">
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="posicaoImovel">Posição do Imovel
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="posicaoImovel" class="custom-select body-medium input-md">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="posicaoSol">Posição do Sol
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="posicaoSol" class="custom-select body-medium input-md">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container flex-two-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="diferencial">Diferencial
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <input type="text" id="diferencial" class="input-field input-md body-medium"
+                                            required placeholder="Ex.: Ótima oportunidade" />
+                                    </div>
+                                </div>
+                                <div class="info-row d-flex-row">
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="linkYoutube">Link do Vídeo do Youtube
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <input type="text" id="linkYoutube" class="input-field input-md body-medium"
+                                            required />
+                                    </div>
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="link360">Link do Vídeo 360
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <input type="text" id="link360" class="input-field input-md body-medium"
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="info-row d-flex-row">
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="detalhesImovel">Detalhes do Imóvel
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="detalhesImovel" class="custom-select body-medium input-md">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-column d-flex-column gap-xs bg-shadow">
+                                    <div class="d-flex-row">
+                                        <label class="switch switch-sm">
+                                            <input type="checkbox" id="switch-sm" checked />
+                                            <span class="slider"></span>
+                                        </label>
+                                        <span class="title-small">Imóvel Assinado</span>
+                                    </div>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="responsavelAssinatura">Responsável
+                                                    Principal pela Assinatura do Projeto
+                                                </label>
+                                            </div>
+                                            <div class="input-sufix">
+                                                <input type="text" id="responsavelAssinatura"
+                                                    class="input-field input-md body-medium" required
+                                                    placeholder="Informe o nome da(s) Empresa(s) ou do(s) Profissional(is) que assina(m) este imóvel." />
+                                                <span class="rg-span body-medium">0/100</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="descricaoAssinatura">Descrição das
+                                                    Empresas e/ou Profissionais que Assinam o Projeto
+                                                </label>
+                                            </div>
+                                            <div class="input-sufix textarea">
+                                                <textarea class="input-field body-medium" name="descricaoAssinatura"
+                                                    id="descricaoAssinatura" cols="50" rows="5"
+                                                    placeholder="Descreva aqui uma breve observação dos Projetos e os Nomes das Empresas ou Profissionais que assinam este imóvel assinado para ser exibido no Portal DFimoveis, Projetos e Nomes: Arquitetura e/ou Construção, Reforma e/ou Retrofit; Decoração; Armários e Móveis Planejados; Iluminação; Paisagismo; Outros"
+                                                    required></textarea>
+                                                <span class="rg-span body-medium">0/500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-column d-flex-column gap-xs bg-shadow">
+                                    <div class="d-flex-row">
+                                        <label class="switch switch-sm">
+                                            <input type="checkbox" id="switch-sm" checked />
+                                            <span class="slider"></span>
+                                        </label>
+                                        <span class="title-small">Imóvel Assinado</span>
+                                    </div>
+
+                                    <span class="body-small">
+                                        Imóveis Seguros são os imóveis validados com documentação completa, como
+                                        inscrição de IPTU e certidão de ônus, garantindo mais confiança e segurança
+                                        para
+                                        compradores e vendedores.
+                                    </span>
+
+                                    <div class="alert warning">
+                                        <div class="alert-text d-flex-column flex-grow gap-quark">
+                                            <span class="label-large">É de responsabilidade do Anunciante informar
+                                                corretamente o endereço completo do imóvel anunciado para
+                                                verificação do
+                                                cartório.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-column d-flex-column gap-xs flex-grow bg-neutral">
+                                        <span class="title-small flex-grow neutral-color">Informações dos
+                                            Proprietários</span>
+                                        <div class="info-row d-flex-row align-end">
+                                            <div class="input-container w-200">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="tipoDocumento">Tipo de Documento
+                                                    </label>
+                                                </div>
+                                                <div class="input-select input-sufix">
+                                                    <select id="tipoDocumento"
+                                                        class="custom-select body-medium input-md">
+                                                        <option value="" disabled selected>Selecione</option>
+                                                        <option value="apartamento">Apartamento</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa-condominio">Casa Condomínio</option>
+                                                        <option value="galpao">Galpão</option>
+                                                        <option value="garagem">Garagem</option>
+                                                        <option value="hotel-flat">Hotel Flat</option>
+                                                    </select>
+                                                    <i class="uil uil-angle-down"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="document">Documento
+                                                    </label>
+                                                </div>
+                                                <input type="text" id="document"
+                                                    class="input-field input-md body-medium" required
+                                                    placeholder="Informe o número do documento" />
+                                            </div>
+
+                                            <div class="info-actions pd-bt">
+                                                <button class="btn btn-icon-md btn-destructive btn-standart">
+                                                    <i class="uil uil-trash"></i>
+                                                </button>
+                                                <button class="btn btn-accent btn-md btn-outlined">Adicionar
+                                                    <i class="uil uil-plus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-column d-flex-column gap-xs flex-grow bg-neutral">
+                                        <span class="title-small flex-grow neutral-color">Informações do
+                                            Imóvel</span>
+                                        <div class="info-row d-flex-row">
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="cartorio">Cartório</label>
+                                                </div>
+                                                <div class="input-select input-sufix">
+                                                    <select id="cartorio" class="custom-select body-medium input-md">
+                                                        <option value="" disabled selected>Selecione</option>
+                                                        <option value="apartamento">Apartamento</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa-condominio">Casa Condomínio</option>
+                                                        <option value="galpao">Galpão</option>
+                                                        <option value="garagem">Garagem</option>
+                                                        <option value="hotel-flat">Hotel Flat</option>
+                                                    </select>
+                                                    <i class="uil uil-angle-down"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-row d-flex-row">
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="iptu">Inscrição IPTU
+                                                    </label>
+                                                </div>
+                                                <input type="text" id="iptu" class="input-field input-md body-medium"
+                                                    required />
+                                            </div>
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="corretor">Corretor Responsável
+                                                        pelo
+                                                        Imóvel </label>
+                                                </div>
+                                                <input type="text" id="corretor"
+                                                    class="input-field input-md body-medium" required />
+                                            </div>
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="celularCorretor">Celular do
+                                                        Corretor
+                                                    </label>
+                                                </div>
+                                                <input type="text" id="celularCorretor"
+                                                    class="input-field input-md body-medium" required />
+                                            </div>
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="emailCorretor">Email do Corretor
+                                                    </label>
+                                                </div>
+                                                <input type="text" id="emailCorretor"
+                                                    class="input-field input-md body-medium" required />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-column d-flex-column gap-xs flex-grow bg-neutral">
+                                        <span class="title-small flex-grow neutral-color">Certidão de Ônus</span>
+
+                                        <span class="body-small">
+                                            A Certidão de Ônus é um documento emitido pelos registros de imóveis e
+                                            informa se há alguma restrição à propriedade do imóvel. Portanto,
+                                            certifique-se que a certidão de ônus esteja atualizada.
+                                        </span>
+
+                                        <div class="info-row d-flex-row align-end">
+                                            <div class="upload-area d-flex-column align-center gap-xs" id="upload-area">
+                                                <i class="uil uil-file-plus ft-md neutral-text"></i>
+                                                <div class="action-upload d-flex-row">
+                                                    <button class="btn btn-accent btn-sm btn-outlined"
+                                                        id="select-file-button">Selecione o
+                                                        arquivo
+                                                    </button>
+                                                    <span class="label-large accent-color">ou arraste para cá</span>
+                                                </div>
+                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20MB)
+                                                </p>
+                                                <input type="file" id="file-input" class="hidden-input" multiple>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-container w-300">
+                                            <div class="input-label">
+                                                <label class="label-large" for="vencimentoOnus">Data Venc. Cert.
+                                                    Ônus
+                                                </label>
+                                            </div>
+                                            <div class="input-select input-sufix">
+                                                <select id="vencimentoOnus" class="custom-select body-medium input-md">
+                                                    <option value="" disabled selected>Selecione</option>
+                                                    <option value="apartamento">Apartamento</option>
+                                                    <option value="casa">Casa</option>
+                                                    <option value="casa-condominio">Casa Condomínio</option>
+                                                    <option value="galpao">Galpão</option>
+                                                    <option value="garagem">Garagem</option>
+                                                    <option value="hotel-flat">Hotel Flat</option>
+                                                </select>
+                                                <i class="uil uil-calender"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-column d-flex-column gap-xs flex-grow bg-neutral">
+                                        <span class="title-small flex-grow neutral-color">Certidão de Casamento
+                                            <span class="label-medium neutral-text">(opcional)</span>
+                                        </span>
+
+                                        <span class="body-small">
+                                            Somente necessária caso o estado civil dos proprietários não conste na
+                                            certidão de ônus do imóvel.
+                                        </span>
+
+                                        <div class="info-row d-flex-row align-end">
+                                            <div class="upload-area d-flex-column align-center gap-xs"
+                                                id="upload-casamento">
+                                                <i class="uil uil-file-plus ft-md neutral-text"></i>
+                                                <div class="action-upload d-flex-row">
+                                                    <button class="btn btn-accent btn-sm btn-outlined"
+                                                        id="select-casamento-button">Selecione o
+                                                        arquivo
+                                                    </button>
+                                                    <span class="label-large accent-color">ou arraste para cá</span>
+                                                </div>
+                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20MB)
+                                                </p>
+                                                <input type="file" id="casamento-input" class="hidden-input" multiple>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fotos -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-camera"></i>
+                                    <span class="title-small flex-grow">Fotos</span>
+
+                                    <div class="right-acts d-flex-row d-none">
+                                        <div class="water-mark d-flex-row">
+                                            <label class="switch switch-sm">
+                                                <input type="checkbox" checked />
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="title-small">Marca D'Água</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-destructive btn-outlined bold">Excluir
+                                            Todas</button>
+                                        <button class="btn btn-sm btn-accent btn-outlined bold">Desativar Todas</button>
+                                        <button class="btn btn-sm btn-accent bold">Ativar Todas</button>
+                                        <button class="btn btn-sm btn-primary bold" id="select-fotos-button">Adicionar
+                                            <i class="uil uil-plus"></i>
+                                        </button>
+                                    </div>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+
+                                <div class="info-column d-flex-column align-end">
+                                    <div class="d-flex-row align-end" id="upload-fotos">
+                                        <div class="upload-area d-flex-column align-center gap-xs">
+                                            <i class="uil uil-camera ft-md neutral-text"></i>
+                                            <div class="action-upload d-flex-row">
+                                                <button class="btn btn-accent btn-sm btn-outlined"
+                                                    id="select-fotos-button">Selecione o
+                                                    arquivo
+                                                </button>
+                                                <span class="label-large accent-color">ou arraste para cá</span>
+                                            </div>
+                                            <p class="label-medium neutral-text">Para uma melhor apresentação, opte por
+                                                imagens na horizontal, de melhor resolução (16:9) com até 2mb.</p>
+                                            <input type="file" id="fotos-input" class="hidden-input" multiple>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex-row gap-nano" id="fotos-content"></div>
+                                </div>
+                            </div>
+
+                            <!--  Config de Publicação -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-shop"></i>
+                                    <span class="title-small flex-grow">Configurações de Publicação</span>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+
+                                <div class="info-column d-flex-column gap-xs bg-shadow">
+                                    <img src="../assets/brand-logo.svg" alt="Logo" class="config-brand">
+
+                                    <div class="info-column d-flex-column gap-xs">
+                                        <div class="input-container w-100">
+                                            <div class="input-options input-md config-options">
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="portal"
+                                                        name="portal">
+                                                    <label class="body-medium bold" for="portal">Publicar no
+                                                        Portal</label>
+                                                </div>
+                                                <div class="divisor"></div>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="destaque"
+                                                        name="destaque">
+                                                    <i class="uil uil-bright"></i>
+                                                    <label class="body-medium" for="destaque">Super Destaque</label>
+                                                    <button class="btn btn-sm btn-outlined btn-accent">
+                                                        Solicitar Funcionalidade
+                                                        <i class="uil uil-arrow-up-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-container w-100">
+                                            <div class="input-options input-md config-options">
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="portal"
+                                                        name="portal">
+                                                    <label class="body-medium bold" for="portal">Publicar no
+                                                        Meu Site</label>
+                                                </div>
+                                                <div class="divisor"></div>
+                                                <div class="option">
+                                                    <input type="checkbox" class="imovel-checkbox" id="portal"
+                                                        name="portal">
+                                                    <label class="body-medium" for="portal">Destaque no Meu
+                                                        Site</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Info -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-star"></i>
+                                    <span class="title-small flex-grow">Informações</span>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+
+                                <div class="info-column d-flex-column gap-md">
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="descPortal">Descrição para o Portal
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="input-sufix textarea">
+                                            <textarea class="input-field body-medium" name="descricaoPortal"
+                                                id="descricaoPortal" cols="50" rows="5" placeholder="Descreva"
+                                                required></textarea>
+                                            <span class="rg-span body-medium">0/5000</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="descPortal">Descrição para o Meu Site
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                            <div class="option">
+                                                <input type="checkbox" class="imovel-checkbox" id="exibirPortal"
+                                                    name="exibirPortal">
+                                                <label class="label-medium" for="exibirPortal">Usar mesma do
+                                                    Portal</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-sufix textarea">
+                                            <textarea class="input-field body-medium" name="descricaoPortal"
+                                                id="descricaoPortal" cols="50" rows="5" placeholder="Descreva"
+                                                required></textarea>
+                                            <span class="rg-span body-medium">0/5000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Horario de Visita -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-calender"></i>
+                                    <span class="title-small flex-grow">Horários de Visitas</span>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+
+                                <div class="info-column d-flex-column gap-nano">
+                                    <div class="hour-visit info-row d-flex-row gap-xs bg-shadow">
+                                        <div class="day d-flex-row">
+                                            <label class="switch switch-sm">
+                                                <input type="checkbox" id="switch-day" />
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="title-small">Domingo</span>
+                                        </div>
+                                        <div class="hour w-100 d-flex-row align-start hidden-x">
+                                            <div class="time-content d-flex-column flex-grow">
+                                                <div class="add-time d-flex-row">
+                                                    <div class="input-container d-flex-row">
+                                                        <input type="text" id="phone"
+                                                            class="input-field input-sm body-small time-input" required
+                                                            placeholder="00:00" autocomplete="off" />
+                                                        <span class="title-small regular">às</span>
+                                                        <input type="text" id="phone"
+                                                            class="input-field input-sm body-small time-input" required
+                                                            placeholder="00:00" autocomplete="off" />
+                                                    </div>
+                                                    <button class="btn btn-accent btn-sm btn-outlined">
+                                                        <i class="uil uil-clock"></i> adicionar horário
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown select">
+                                                <div class="btn btn-dropdown btn-accent btn-standart">
+                                                    <div class="btn-label btn-md">replicar horários também em</div>
+                                                    <div class="btn-icon btn-icon-md"><i class="uil uil-angle-down"></i>
+                                                    </div>
+                                                </div>
+                                                <ul class="dropdown-group">
+                                                    <li>
+                                                        <label class="item item-sm body-medium bold" for="domingo">
+                                                            <input type="checkbox" name="domingo" id="domingo">
+                                                            Domingo
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="item item-sm body-medium" for="segunda">
+                                                            <input type="checkbox" name="segunda" id="segunda">
+                                                            Segunda-Feira
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="item item-sm body-medium" for="terca">
+                                                            <input type="checkbox" name="terca" id="terca">
+                                                            Terça-feira
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="item item-sm body-medium" for="quarta">
+                                                            <input type="checkbox" name="quarta" id="quarta">
+                                                            Quarta-feira
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="item item-sm body-medium" for="quinta">
+                                                            <input type="checkbox" name="quinta" id="quinta">
+                                                            Quinta-feira
+                                                        </label>
+                                                    </li>
+                                                    <li class="d-flex-row">
+                                                        <button
+                                                            class="btn btn-sm btn-accent btn-standart w-100">Cancelar</button>
+                                                        <button class="btn btn-sm btn-accent w-100">Aplicar</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hour-visit info-row d-flex-row gap-xs bg-shadow">
+                                        <div class="day d-flex-row">
+                                            <label class="switch switch-sm">
+                                                <input type="checkbox" id="switch-day" />
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="title-small">Segunda-Feira</span>
+                                        </div>
+                                        <div class="hour w-100 d-flex-row align-start hidden-x">
+                                            <div class="time-content d-flex-column flex-grow">
+                                                <div class="add-time d-flex-row">
+                                                    <div class="input-container d-flex-row">
+                                                        <input type="text" id="phone"
+                                                            class="input-field input-sm body-small time-input" required
+                                                            placeholder="00:00" autocomplete="off" />
+                                                        <span class="title-small regular">às</span>
+                                                        <input type="text" id="phone"
+                                                            class="input-field input-sm body-small time-input" required
+                                                            placeholder="00:00" autocomplete="off" />
+                                                    </div>
+                                                    <button class="btn btn-accent btn-sm btn-outlined">
+                                                        <i class="uil uil-clock"></i> adicionar horário
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown select">
+                                                <div class="btn btn-dropdown btn-accent btn-standart">
+                                                    <div class="btn-label btn-md">replicar horários também em</div>
+                                                    <div class="btn-icon btn-icon-md"><i class="uil uil-angle-down"></i>
+                                                    </div>
+                                                </div>
+                                                <ul class="dropdown-group">
+                                                    <li>
+                                                        <label class="item item-sm body-medium bold" for="domingo">
+                                                            <input type="checkbox" name="domingo" id="domingo">
+                                                            Domingo
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="item item-sm body-medium" for="segunda">
+                                                            <input type="checkbox" name="segunda" id="segunda">
+                                                            Segunda-Feira
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="item item-sm body-medium" for="terca">
+                                                            <input type="checkbox" name="terca" id="terca">
+                                                            Terça-feira
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="item item-sm body-medium" for="quarta">
+                                                            <input type="checkbox" name="quarta" id="quarta">
+                                                            Quarta-feira
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="item item-sm body-medium" for="quinta">
+                                                            <input type="checkbox" name="quinta" id="quinta">
+                                                            Quinta-feira
+                                                        </label>
+                                                    </li>
+                                                    <li class="d-flex-row">
+                                                        <button
+                                                            class="btn btn-sm btn-accent btn-standart w-100">Cancelar</button>
+                                                        <button class="btn btn-sm btn-accent w-100">Aplicar</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Integração Lead -->
+                            <div class="info-content disabled">
+                                <div class="info-header">
+                                    <i class="uil uil-plug"></i>
+                                    <span class="title-small flex-grow">Integração de Leads</span>
+                                    <i class="uil uil-angle-down"></i>
+                                </div>
+
+                                <div class="info-column d-flex-column gap-md">
+                                    <span class="body-small">
+                                        Centralize todos os seus contatos em um só lugar! O Integrador de Leads
+                                        organiza
+                                        automaticamente os leads de diferentes portais, permitindo respostas rápidas
+                                        e
+                                        acompanhamento eficiente. Aumente suas chances de conversão com uma gestão
+                                        prática e
+                                        centralizada!
+                                    </span>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="integradores">Integradores
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <div class="input-select input-sufix">
+                                                <select id="integradores" class="custom-select body-medium input-md">
+                                                    <option value="" disabled selected>Selecione</option>
+                                                    <option value="apartamento">Apartamento</option>
+                                                    <option value="casa">Casa</option>
+                                                    <option value="casa-condominio">Casa Condomínio</option>
+                                                    <option value="galpao">Galpão</option>
+                                                    <option value="garagem">Garagem</option>
+                                                    <option value="hotel-flat">Hotel Flat</option>
+                                                </select>
+                                                <i class="uil uil-angle-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="urlChat">URL do chat
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <input type="text" id="urlChat" class="input-field input-md body-medium"
+                                                required />
+                                            <span class="helper-text label-large neutral-pure">Ex:
+                                                https://SuaEmpresa.housecrm.com.br/chat/?empreendimento=0001&origem=dfimoveis</span>
+                                            <span class="helper-text label-large neutral-pure">Ex:
+                                                https://SuaEmpresa.bitrix24.com.br/online/chat/?emp=9999&fonte=99</span>
+                                            <span class="helper-text label-large neutral-pure">Ex:
+                                                https://SuaEmpresa.hypnobox.com.br/?controle=Atendimento&acao=index&produto=01</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-row d-flex-row">
+                                        <div class="input-container flex-grow">
+                                            <div class="input-label">
+                                                <label class="label-large" for="linkEmail">Link do E-mail
+                                                    <span class="label-medium">(opcional)</span>
+                                                </label>
+                                            </div>
+                                            <input type="text" id="linkEmail" class="input-field input-md body-medium"
+                                                required />
+                                            <span class="helper-text label-large neutral-pure">Ex:
+                                                https://SuaEmpresa.housecrm.com.br/chat/?empreendimento=0001&origem=dfimoveis</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal de Editar Imóvel -->
+                    <div class="modal edit-imovel-modal" data-edit-imovel="container">
+                        <div class="modal-header">
+                            <div class="center-modal">
+                                <span class="title-large flex-grow">Edital Imóvel 3259</span>
+                                <div class="actions d-flex-row">
+                                    <button class="btn btn-accent btn-md">Salvar e Publicar
+                                        <i class="uil uil-message"></i>
+                                    </button>
+                                </div>
+                                <button data-edit-imovel="close" class="btn btn-neutral btn-standart btn-icon-md">
+                                    <i class="uil uil-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <form class="content center-modal">
+                            <!-- Modalidade -->
+                            <div class="info-content">
+                                <div class="info-header">
+                                    <i class="uil uil-building"></i>
+                                    <span class="title-small flex-grow">Modalidade do imóvel</span>
+                                    <i class="uil uil-angle-up"></i>
+                                </div>
+                                <div class="info-column d-flex-row">
+                                    <label class="edit-options modality-option" for="imovelPadraoEdit">
+                                        <input type="checkbox" class="imovel-checkbox" id="imovelPadraoEdit"
+                                            name="imovelPadrao" checked>
+                                        <div class="modality-text d-flex-column">
+                                            <span class="body-large bold">Imóvel Padrão</span>
+                                            <span class="body-large">
+                                                Para imóveis prontos e disponíveis, já com proprietário.
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <label class="edit-options modality-option" for="empreendimentoEdit">
+                                        <input type="checkbox" class="imovel-checkbox" id="empreendimentoEdit"
                                             name="empreendimento">
                                         <div class="modality-text d-flex-column">
                                             <span class="body-large bold">Empreendimento</span>
@@ -3832,71 +5387,6 @@
 
     <script src="../js/menu.js"></script>
     <script src="../js/imoveis.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function createTimeItem(timeContent, startTime = "", endTime = "") {
-                const timeItem = document.createElement("div");
-                timeItem.classList.add("time-item", "d-flex-row");
-
-                timeItem.innerHTML = `
-            <div class="input-container d-flex-row">
-                <input type="text" class="input-field input-sm body-small time-input" required placeholder="00:00" value="${startTime}" maxlength="5" />
-                <span class="title-small regular">às</span>
-                <input type="text" class="input-field input-sm body-small time-input" required placeholder="00:00" value="${endTime}" maxlength="5" />
-            </div>
-            <button type="button" class="btn btn-destructive btn-icon-sm btn-standart remove-time">
-                <i class="uil uil-trash"></i>
-            </button>
-        `;
-
-                timeItem.querySelector(".remove-time").addEventListener("click", function () {
-                    timeItem.remove();
-                });
-
-                timeContent.insertBefore(timeItem, timeContent.querySelector(".add-time"));
-            }
-
-            function validateTimeFormat(time) {
-                return /^([0-9]\d?):[0-5]\d$/.test(time);
-            }
-
-            document.addEventListener("click", function (event) {
-                if (event.target.closest(".add-time button")) {
-                    event.preventDefault();
-                    const addTimeBtn = event.target;
-                    const timeContent = addTimeBtn.closest(".time-content");
-
-                    const inputs = timeContent.querySelectorAll(".add-time .time-input");
-                    const startTime = inputs[0].value;
-                    const endTime = inputs[1].value;
-
-                    if (!validateTimeFormat(startTime)) {
-                        inputs[0].focus();
-                        return;
-                    }
-
-                    if (!validateTimeFormat(endTime)) {
-                        inputs[1].focus();
-                        return;
-                    }
-
-                    createTimeItem(timeContent, startTime, endTime);
-
-                    inputs[0].value = "";
-                    inputs[1].value = "";
-                }
-            });
-
-            document.addEventListener("input", function (e) {
-                if (e.target.classList.contains("time-input")) {
-                    e.target.value = e.target.value.replace(/[^0-9:]/g, "");
-                    if (e.target.value.length === 2 && !e.target.value.includes(":")) {
-                        e.target.value += ":";
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

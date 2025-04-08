@@ -346,6 +346,10 @@
     font-size: var(--font-size-xxs, 14px);
 }
 
+.btn-icon-sm i {
+    font-size: var(--font-size-xs, 16px);
+}
+
 /* Grupo de Buttons */
 .group-btn {
     display: inline-flex;

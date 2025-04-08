@@ -163,7 +163,7 @@
     overflow: hidden;
 }
 
-.imovel-card .title-container .number {
+.code {
     display: flex;
     padding: var(--padding-hadron, 2px) var(--margin-quark, 4px);
     justify-content: center;
@@ -203,7 +203,7 @@
 }
 
 .imovel-card .description-container .description.selo {
-    border: var(--order-width-hairline, 1px) solid var(--color-secondary-pale, #B3C3DA);
+    border: var(--border-width-hairline, 1px) solid var(--color-secondary-pale, #B3C3DA);
     background: var(--color-secondary-tinted, #E8EEF5);
 }
 

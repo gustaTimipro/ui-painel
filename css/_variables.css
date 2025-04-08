@@ -469,6 +469,10 @@ ul {
     align-self: auto;
 }
 
+.justify-center {
+    justify-content: center !important;
+}
+
 /* Crescimento de Flex */
 .flex-grow {
     flex: 1 0 0;
@@ -493,7 +497,11 @@ ul {
 }
 
 .w-200 {
-    width: 214px;
+    width: 214px !important;
+}
+
+.w-250 {
+    width: 230px !important;
 }
 
 .w-300 {
@@ -526,6 +534,10 @@ ul {
     gap: var(--margin-md, 24px) !important;
 }
 
+.gap-lg {
+    gap: var(--margin-lg, 32px) !important;
+}
+
 /* Backgrounds */
 .bg-white {
     background: var(--color-essence-ivory, #FFF) !important;
@@ -547,13 +559,27 @@ ul {
     box-shadow: var(--shadow-level-3);
 }
 
+.bg-secondary {
+    border: 1px solid var(--color-secondary-pale, #B3C3DA) !important;
+    background: var(--color-secondary-tinted, #E8EEF5) !important;
+}
+
+.cursor-default {
+    cursor: default !important;
+}
+
 /* Colors */
-.success {
+.success,
+.check {
     color: var(--color-success-pure);
 }
 
 .neutral-text {
     color: var(--color-neutral-darker) !important;
+}
+
+.neutral-dark {
+    color: var(--color-neutral-dark) !important;
 }
 
 .neutral-pure {

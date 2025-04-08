@@ -230,6 +230,15 @@ initModal(
     false,
     '[data-cancel="container"]'
 );
+initModal(
+    '[data-edit-imovel="open"]',
+    '[data-edit-imovel="container"]',
+    '[data-edit-imovel="close"]',
+    'active',
+    false,
+    '[data-cancel="container"]'
+);
+
 
 // Modal - Alternar checkbox Padrao e Empreendimento (Adicionar)
 function initializeToggleDisable(options) {
@@ -270,8 +279,14 @@ function initializeToggleDisable(options) {
 }
 document.addEventListener("DOMContentLoaded", () => {
     initializeToggleDisable({
-        checkboxSelector: ".modality-option .imovel-checkbox",
+        checkboxSelector: ".new-options .imovel-checkbox",
         contentSelector: ".new-imovel-modal .info-content:not(:first-child)",
+        disabledClass: "disabled",
+        allowSingleSelection: true, // Apenas uma checkbox pode ser selecionada
+    });
+    initializeToggleDisable({
+        checkboxSelector: ".edit-options .imovel-checkbox",
+        contentSelector: ".edit-imovel-modal .info-content:not(:first-child)",
         disabledClass: "disabled",
         allowSingleSelection: true, // Apenas uma checkbox pode ser selecionada
     });
@@ -569,5 +584,68 @@ function switchHorarioVisita() {
         }
     });
 }
-
 switchHorarioVisita();
+
+document.addEventListener("DOMContentLoaded", function () {
+    function createTimeItem(timeContent, startTime = "", endTime = "") {
+        const timeItem = document.createElement("div");
+        timeItem.classList.add("time-item", "d-flex-row");
+
+        timeItem.innerHTML = `
+    <div class="input-container d-flex-row">
+        <input type="text" class="input-field input-sm body-small time-input" required placeholder="00:00" value="${startTime}" maxlength="5" />
+        <span class="title-small regular">às</span>
+        <input type="text" class="input-field input-sm body-small time-input" required placeholder="00:00" value="${endTime}" maxlength="5" />
+    </div>
+    <button type="button" class="btn btn-destructive btn-icon-sm btn-standart remove-time">
+        <i class="uil uil-trash"></i>
+    </button>
+`;
+
+        timeItem.querySelector(".remove-time").addEventListener("click", function () {
+            timeItem.remove();
+        });
+
+        timeContent.insertBefore(timeItem, timeContent.querySelector(".add-time"));
+    }
+
+    function validateTimeFormat(time) {
+        return /^([0-9]\d?):[0-5]\d$/.test(time);
+    }
+
+    document.addEventListener("click", function (event) {
+        if (event.target.closest(".add-time button")) {
+            event.preventDefault();
+            const addTimeBtn = event.target;
+            const timeContent = addTimeBtn.closest(".time-content");
+
+            const inputs = timeContent.querySelectorAll(".add-time .time-input");
+            const startTime = inputs[0].value;
+            const endTime = inputs[1].value;
+
+            if (!validateTimeFormat(startTime)) {
+                inputs[0].focus();
+                return;
+            }
+
+            if (!validateTimeFormat(endTime)) {
+                inputs[1].focus();
+                return;
+            }
+
+            createTimeItem(timeContent, startTime, endTime);
+
+            inputs[0].value = "";
+            inputs[1].value = "";
+        }
+    });
+
+    document.addEventListener("input", function (e) {
+        if (e.target.classList.contains("time-input")) {
+            e.target.value = e.target.value.replace(/[^0-9:]/g, "");
+            if (e.target.value.length === 2 && !e.target.value.includes(":")) {
+                e.target.value += ":";
+            }
+        }
+    });
+});
