@@ -353,6 +353,26 @@
     background: var(--color-essence-ivory, #FFF);
 }
 
+.client-item {
+    background: var(--color-essence-ivory, #FFF);
+}
+
+.client-item:hover {
+    border-radius: var(---border-radius-xs, 16px);
+    border: 1px solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-essence-ivory, #FFF);
+    cursor: pointer;
+    transform: translateY(-1px);
+    /* Shadow/Level 3 */
+    box-shadow: var(--shadow-level-3);
+}
+
+.client-item:active {
+    border: 1px solid var(--color-neutral-pale, #E5E5E5);
+    transform: scale(.99);
+    background: var(--color-neutral-pale, #E5E5E5);
+}
+
 /* Fotos - Modal Content */
 .foto-card {
     border-radius: var(--border-radius-xs, 16px);
