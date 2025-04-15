@@ -153,9 +153,9 @@ initModal(
     '[data-cancel="container"]'
 );
 initModal(
-    '[data-imovel="open"]',
-    '[data-imovel="container"]',
-    '[data-imovel="close"]',
+    '[data-cliente="open"]',
+    '[data-cliente="container"]',
+    '[data-cliente="close"]',
     'active',
     false,
     '[data-cancel="container"]'
@@ -221,105 +221,87 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Modal - Função incluir arquivo
-function createUploadArea({
-    uploadAreaId,
-    fileInputId,
-    buttonId,
-    validExtensions = ["jpg", "jpeg", "docx", "pdf"],
-    maxFileSize = 20 * 1024 * 1024, // 20MB
-    onValidFile = (file) => console.log(`Arquivo válido: ${file.name}`),
-    onInvalidFile = (file, reason) => console.log(`Arquivo inválido: ${file.name} (${reason})`),
-}) {
-    const uploadArea = document.getElementById(uploadAreaId);
-    const fileInput = document.getElementById(fileInputId);
-    const selectFileButton = document.getElementById(buttonId);
+document.addEventListener("DOMContentLoaded", function () {
+    // Para cada bloco de indicador
+    const indicators = document.querySelectorAll(".client-analisis");
 
-    if (!uploadArea || !fileInput || !selectFileButton) {
-        console.error("Upload area, file input, or button not found.");
-        return;
-    }
+    indicators.forEach(indicator => {
+        const progElements = indicator.querySelectorAll(".graph-bar .prog");
+        const textElement = indicator.querySelector(".indic-text .headline-medium");
 
-    // Abrir seletor
-    selectFileButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        fileInput.click();
-    });
+        // Define os textos para cada tipo
+        let labels = [];
 
-    // Manipular arquivo
-    fileInput.addEventListener("change", (event) => handleFiles(event.target.files));
+        const title = indicator.querySelector(".indic-top").textContent.trim();
 
-    // Drag/Drop
-    uploadArea.addEventListener("dragover", (event) => {
-        event.preventDefault();
-        uploadArea.classList.add("dragover");
-    });
-
-    uploadArea.addEventListener("dragleave", () => {
-        uploadArea.classList.remove("dragover");
-    });
-
-    uploadArea.addEventListener("drop", (event) => {
-        event.preventDefault();
-        uploadArea.classList.remove("dragover");
-        handleFiles(event.dataTransfer.files);
-    });
-
-    // Validar arquivo
-    function handleFiles(files) {
-        for (const file of files) {
-            const fileExtension = file.name.split(".").pop().toLowerCase();
-            if (!validExtensions.includes(fileExtension)) {
-                onInvalidFile(file, "Extensão inválida");
-                continue;
-            }
-            if (file.size > maxFileSize) {
-                onInvalidFile(file, "Tamanho excedido");
-                continue;
-            }
-            onValidFile(file);
+        if (title.includes("Tipo de Negócio")) {
+            labels = ["Venda", "Aluguel", "Lançamento"];
+        } else if (title.includes("Quantidade de Quartos")) {
+            labels = ["1 quarto", "2 quartos", "3+ quartos"];
+        } else if (title.includes("Tipo de Imóvel")) {
+            labels = ["Apartamento", "Condomínio", "Casa"];
+        } else if (title.includes("Bairro")) {
+            labels = ["Asa Norte", "Asa Sul", "Jardim Botânico"];
+        } else {
+            labels = ["Início", "Meio", "Fim"];
         }
-    }
-}
-createUploadArea({
-    uploadAreaId: "upload-area",
-    fileInputId: "file-input",
-    buttonId: "select-file-button",
-    validExtensions: ["jpg", "jpeg", "png", "pdf"],
-    maxFileSize: 10 * 1024 * 1024,
-    onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
-    onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
+
+        // Marca o primeiro como active ao iniciar
+        let currentIndex = 0;
+        progElements[0].classList.add("active");
+        textElement.textContent = labels[0];
+
+        progElements.forEach((prog, index) => {
+            prog.addEventListener("mouseover", () => {
+                // Remove todas as classes active
+                progElements.forEach(p => p.classList.remove("active"));
+
+                // Ativa a atual
+                prog.classList.add("active");
+
+                // Atualiza o texto
+                textElement.textContent = labels[index];
+            });
+
+            prog.addEventListener("mouseout", () => {
+                // Atualiza o índice do último hovered
+                currentIndex = index;
+
+                // Remove todas as active
+                progElements.forEach(p => p.classList.remove("active"));
+
+                // Mantém o último hovered como ativo
+                progElements[currentIndex].classList.add("active");
+                textElement.textContent = labels[currentIndex];
+            });
+        });
+    });
 });
-createUploadArea({
-    uploadAreaId: "upload-casamento",
-    fileInputId: "casamento-input",
-    buttonId: "select-casamento-button",
-    validExtensions: ["jpg", "jpeg", "png", "pdf"],
-    maxFileSize: 10 * 1024 * 1024,
-    onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
-    onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
-});
+
 
 // Modal - Abrir e fechar seções
 document.addEventListener("DOMContentLoaded", () => {
-    const infoContents = document.querySelectorAll(".new-imovel-modal .info-content");
+    const infoContents = document.querySelectorAll(".cliente-modal .toggle-content");
 
     infoContents.forEach((content) => {
+        // Garante que começa fechado
+        const elements = content.querySelectorAll(".info-toggle");
+        elements.forEach((el) => {
+            el.classList.remove("visible");
+            el.classList.add("hidden");
+            el.style.display = 'none';
+        });
+
+        // Delay para registrar os eventos
         setTimeout(() => {
             const header = content.querySelector(".info-header");
-            const rightActions = content.querySelector(".right-acts"); // Seleciona o right-acts dentro do info-header
 
             header.addEventListener("click", (event) => {
-                // Verifica se o clique ocorreu dentro do right-acts
-                if (event.target.closest(".right-acts")) {
-                    return; // Impede a execução da função de abrir/fechar seção
-                }
-
                 if (content.classList.contains("disabled")) {
                     return;
                 }
 
-                const columnsAndRows = content.querySelectorAll(".info-column, .info-row");
+                const columnsAndRows = content.querySelectorAll(".info-toggle");
 
                 columnsAndRows.forEach((element) => {
                     if (element.classList.contains("hidden")) {
@@ -328,7 +310,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             element.classList.remove('hidden');
                             element.classList.add('visible');
                         }, 10);
-
                     } else {
                         element.classList.remove("visible");
                         element.classList.add("hidden");
@@ -345,236 +326,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }, 1000);
-    });
-});
-
-// Modal - Função incluir fotos
-function createUploadFoto({
-    uploadAreaId,
-    fileInputId,
-    buttonId,
-    previewContainerId,
-    validExtensions = ["jpg", "jpeg", "png", "pdf"],
-    maxFileSize = 10 * 1024 * 1024, // 10MB
-    onValidFile = (file) => console.log(`Arquivo válido: ${file.name}`),
-    onInvalidFile = (file, reason) => console.log(`Arquivo inválido: ${file.name} (${reason})`),
-}) {
-    const uploadArea = document.getElementById(uploadAreaId);
-    const fileInput = document.getElementById(fileInputId);
-    const selectFileButtons = document.querySelectorAll(`#${buttonId}`);
-    const previewContainer = document.getElementById(previewContainerId);
-    const rightActions = document.querySelector(".right-acts");
-
-    if (!uploadArea || !fileInput || !previewContainer || !rightActions) {
-        console.error("Upload area, file input, preview container ou right actions não encontrados.");
-        return;
-    }
-
-    selectFileButtons.forEach(button => {
-        button.addEventListener("click", (event) => {
-            event.preventDefault();
-            fileInput.click();
-        });
-    });
-
-    fileInput.addEventListener("change", (event) => handleFiles(event.target.files));
-
-    uploadArea.addEventListener("dragover", (event) => {
-        event.preventDefault();
-        uploadArea.classList.add("dragover");
-    });
-
-    uploadArea.addEventListener("dragleave", () => {
-        uploadArea.classList.remove("dragover");
-    });
-
-    uploadArea.addEventListener("drop", (event) => {
-        event.preventDefault();
-        uploadArea.classList.remove("dragover");
-        handleFiles(event.dataTransfer.files);
-    });
-
-    function handleFiles(files) {
-        for (const file of files) {
-            const fileExtension = file.name.split(".").pop().toLowerCase();
-            if (!validExtensions.includes(fileExtension)) {
-                onInvalidFile(file, "Extensão inválida");
-                continue;
-            }
-            if (file.size > maxFileSize) {
-                onInvalidFile(file, "Tamanho excedido");
-                continue;
-            }
-            onValidFile(file);
-            addPreview(file);
-        }
-    }
-
-    function addPreview(file) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-            const previewElement = document.createElement("div");
-            previewElement.classList.add("foto-card", "d-flex-column");
-            previewElement.innerHTML = `
-                <div class="foto-img">
-                    <img src="${event.target.result}" alt="${file.name}">
-                </div>
-                <div class="foto-actions d-flex-row">
-                    <div class="foto-action flex-grow d-flex-row">
-                        <label class="switch switch-sm">
-                            <input type="checkbox" checked />
-                            <span class="slider"></span>
-                        </label>
-                        <span class="title-small">Ativada</span>
-                    </div>
-                    <div class="foto-action d-flex-row">
-                        <button class="btn btn-icon-sm btn-accent btn-outlined bold">
-                            <i class="uil uil-image-redo"></i>
-                        </button>
-                        <button class="btn btn-icon-sm btn-destructive btn-outlined bold remove-btn">
-                            <i class="uil uil-trash"></i>
-                        </button>
-                    </div>
-                </div>
-            `;
-            previewContainer.appendChild(previewElement);
-
-            previewElement.querySelector(".remove-btn").addEventListener("click", () => {
-                previewElement.remove();
-                checkPreviewState();
-            });
-
-            checkPreviewState();
-        };
-        reader.readAsDataURL(file);
-    }
-
-    function checkPreviewState() {
-        if (previewContainer.children.length > 0) {
-            uploadArea.classList.add("d-none");
-            rightActions.classList.remove("d-none");
-        } else {
-            uploadArea.classList.remove("d-none");
-            rightActions.classList.add("d-none");
-        }
-    }
-}
-createUploadFoto({
-    uploadAreaId: "upload-fotos",
-    fileInputId: "fotos-input",
-    buttonId: "select-fotos-button",
-    previewContainerId: "fotos-content",
-    validExtensions: ["jpg", "jpeg", "png"],
-    maxFileSize: 2 * 1024 * 1024, // 2MB
-    onValidFile: (file) => alert(`Arquivo válido: ${file.name}`),
-    onInvalidFile: (file, reason) => alert(`Arquivo inválido: ${file.name} (${reason})`),
-});
-
-// Modal - Horario Switch 
-function switchHorarioVisita() {
-    document.addEventListener('change', function (event) {
-        if (event.target.matches('.hour-visit .switch-sm input[type="checkbox"]')) {
-            const checkbox = event.target; // O checkbox clicado
-            const hourVisit = checkbox.closest('.hour-visit'); // Encontra o hour-visit correspondente
-            const hourElement = hourVisit.querySelector('.hour'); // Encontra o elemento .hour dentro do hour-visit
-
-            if (hourElement) {
-                if (checkbox.checked) {
-                    hourElement.style.display = 'flex'; // Exibe o elemento primeiro
-                    setTimeout(() => {
-                        hourElement.classList.remove('hidden-x');
-                        hourElement.classList.add('visible-x');
-                    }, 10); // Permite que a transição seja aplicada
-                } else {
-                    hourElement.classList.remove('visible-x');
-                    hourElement.classList.add('hidden-x');
-                    setTimeout(() => {
-                        hourElement.style.display = 'none'; // Oculta após a transição
-                    }, 300); // Aguarda o tempo da animação (0.3s)
-                }
-            }
-        }
-    });
-
-    document.querySelectorAll('.hour-visit .switch-sm input[type="checkbox"]').forEach(checkbox => {
-        const hourVisit = checkbox.closest('.hour-visit');
-        const hourElement = hourVisit.querySelector('.hour');
-
-        if (hourElement) {
-            if (checkbox.checked) {
-                hourElement.style.display = 'flex';
-                hourElement.classList.remove('hidden-x');
-                hourElement.classList.add('visible-x');
-            } else {
-                hourElement.classList.remove('visible-x');
-                hourElement.classList.add('hidden-x');
-                hourElement.style.display = 'none';
-            }
-        }
-    });
-}
-switchHorarioVisita();
-
-document.addEventListener("DOMContentLoaded", function () {
-    function createTimeItem(timeContent, startTime = "", endTime = "") {
-        const timeItem = document.createElement("div");
-        timeItem.classList.add("time-item", "d-flex-row");
-
-        timeItem.innerHTML = `
-    <div class="input-container d-flex-row">
-        <input type="text" class="input-field input-sm body-small time-input" required placeholder="00:00" value="${startTime}" maxlength="5" />
-        <span class="title-small regular">às</span>
-        <input type="text" class="input-field input-sm body-small time-input" required placeholder="00:00" value="${endTime}" maxlength="5" />
-    </div>
-    <button type="button" class="btn btn-destructive btn-icon-sm btn-standart remove-time">
-        <i class="uil uil-trash"></i>
-    </button>
-`;
-
-        timeItem.querySelector(".remove-time").addEventListener("click", function () {
-            timeItem.remove();
-        });
-
-        timeContent.insertBefore(timeItem, timeContent.querySelector(".add-time"));
-    }
-
-    function validateTimeFormat(time) {
-        return /^([0-9]\d?):[0-5]\d$/.test(time);
-    }
-
-    document.addEventListener("click", function (event) {
-        if (event.target.closest(".add-time button")) {
-            event.preventDefault();
-            const addTimeBtn = event.target;
-            const timeContent = addTimeBtn.closest(".time-content");
-
-            const inputs = timeContent.querySelectorAll(".add-time .time-input");
-            const startTime = inputs[0].value;
-            const endTime = inputs[1].value;
-
-            if (!validateTimeFormat(startTime)) {
-                inputs[0].focus();
-                return;
-            }
-
-            if (!validateTimeFormat(endTime)) {
-                inputs[1].focus();
-                return;
-            }
-
-            createTimeItem(timeContent, startTime, endTime);
-
-            inputs[0].value = "";
-            inputs[1].value = "";
-        }
-    });
-
-    document.addEventListener("input", function (e) {
-        if (e.target.classList.contains("time-input")) {
-            e.target.value = e.target.value.replace(/[^0-9:]/g, "");
-            if (e.target.value.length === 2 && !e.target.value.includes(":")) {
-                e.target.value += ":";
-            }
-        }
     });
 });

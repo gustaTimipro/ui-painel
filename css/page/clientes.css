@@ -114,6 +114,24 @@
 }
 
 /* Card do Imóvel */
+.indic-text {
+    display: flex;
+    align-items: center;
+    gap: var(--margin-nano, 8px);
+    align-self: stretch;
+}
+
+.indic-text .comparative {
+    display: flex;
+    padding: var(--padding-quark, 4px);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-success-pure, #29CC5F);
+    border-radius: var(--border-radius-quark, 4px);
+    background: var(--color-success-tinted, #E6F8EC);
+}
+
 .indic-graph {
     display: flex;
     align-items: center;
@@ -121,8 +139,36 @@
     width: 100%;
 }
 
-.progress-bar {
+.graph-bar {
     display: flex;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    height: 8px;
+    gap: 2px;
+    background-color: var(--color-primary-tinted);
+    border-radius: var(--border-radius-pill);
+    overflow: visible;
+    width: fit-content;
+}
+
+.graph-bar .prog {
+    height: 100%;
+    background-color: var(--color-neutral-deep);
+}
+
+.graph-bar .prog.first {
+    border-radius: 10px 0 0 10px;
+}
+
+.graph-bar .prog.last {
+    border-radius: 0 10px 10px 0;
+    background-color: var(--color-neutral-darker);
+}
+
+.graph-bar .prog.active {
+    height: 14px;
+    background-color: var(--color-secondary-pure);
 }
 
 .code {

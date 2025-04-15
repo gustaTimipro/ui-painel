@@ -50,7 +50,8 @@
     }
 }
 
-.new-imovel-modal.active {
+.new-imovel-modal.active,
+.new-client-modal.active {
     animation: slideUp 0.2s ease-out forwards;
 }
 
@@ -87,10 +88,12 @@
     cursor: pointer;
 }
 
-.info-content .info-row {
+.info-content .info-row,
+.info-content .info-toggle {
     gap: var(--margin-md, 24px);
 }
 
+.info-content.disabled .info-toggle,
 .info-content.disabled .info-row,
 .info-content.disabled .info-column {
     display: none !important;
@@ -135,7 +138,7 @@
 
 .info-content .map-image {
     height: 442px;
-    width: 100%;
+    max-width: 600px;
     overflow: hidden;
     border-radius: 16px;
 }
