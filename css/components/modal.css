@@ -40,6 +40,81 @@
     max-width: 1588px;
 }
 
+.modal .content {
+    padding: 0 var(--padding-md, 24px);
+    overflow-y: scroll;
+    padding-bottom: 82px;
+}
+
+/* Item de Indicação */
+.indicator {
+    display: flex;
+    width: 100%;
+    padding: var(--padding-xs, 16px);
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--margin-xs, 16px);
+    transition: all .2s ease;
+    border-radius: var(--border-radius-xs, 16px);
+    border: var(--border-width-hairline, 1px) solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-neutral-tinted, #FFF);
+}
+
+.indicator.result {
+    cursor: pointer;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* Barra de Progresso */
+.block {
+    display: flex;
+    padding: var(--padding-nano, 8px) var(--padding-xs, 16px);
+    align-items: center;
+    gap: var(--margin-md, 24px);
+    align-self: stretch;
+    border-radius: var(--border-radius-xs, 16px);
+    border: 1px solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-essence-ivory, #FFF);
+    box-shadow: var(--shadow-level-3);
+}
+
+.block i {
+    color: var(--color-neutral-dark);
+}
+
+.progress-bar {
+    flex-grow: 1;
+    position: relative;
+    height: 8px;
+    background-color: var(--color-primary-tinted);
+    border-radius: var(--border-radius-pill);
+    overflow: visible;
+    width: fit-content;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    background-color: var(--color-primary-pure);
+    border-radius: 6px;
+    position: relative;
+}
+
+.progress .progress-value {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: var(--border-radius-nano);
+    box-shadow: var(--shadow-level-3);
+    padding: var(--padding-quark, 4px);
+    gap: var(--margin-quark, 4px);
+    color: var(--color-primary-pure);
+    border: 1px solid var(--color-primary-pure);
+}
+
+/* Animação de Subir ao Aparecer */
 @keyframes slideUp {
     from {
         top: 100%;
@@ -55,12 +130,7 @@
     animation: slideUp 0.2s ease-out forwards;
 }
 
-.modal .content {
-    padding: 0 var(--padding-md, 24px);
-    overflow-y: scroll;
-    padding-bottom: 82px;
-}
-
+/* Container de Info */
 .info-content {
     display: flex;
     padding: var(--padding-xs, 16px);
@@ -99,7 +169,7 @@
     display: none !important;
 }
 
-.new-imovel-modal .adress-content {
+.info-content .adress-content {
     width: 100%;
     justify-content: space-between;
     max-width: 298px;
@@ -181,6 +251,32 @@
     width: 100%;
 }
 
+.info-content .info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+.info-content .info-block .indicator.result {
+    cursor: default;
+}
+
+.info-content .info-block .indicator.result:hover {
+    border: 1px solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-neutral-tinted, #FAFAFA);
+    box-shadow: none;
+    transform: none;
+}
+
+.info-content .info-block .indicator.result:active {
+    transform: none;
+    background: var(--color-neutral-tinted, #FAFAFA);
+}
+
+/* Modal de Cancelamento */
 .cancel-modal {
     background: rgb(41 41 41 / 80%);
 
@@ -228,20 +324,21 @@
     top: -35px;
 }
 
-.imovel-card.first:hover {
+/* Modal de Imóvel */
+.imovel-modal .imovel-card:hover {
     background: var(--color-essence-ivory, #FFF);
     box-shadow: none;
     cursor: default;
     transform: none;
 }
 
-.imovel-card.first:active {
+.imovel-modal .imovel-card:active {
     transform: none;
     background: var(--color-essence-ivory, #FFF);
     ;
 }
 
-.imovel-card.first .avatar-number {
+.imovel-modal .imovel-card .avatar-number {
     border-radius: var(--border-radius-nano, 8px);
     border: var(--border-width-hairline, 1px) solid var(--color-primary-light, #87B896);
     background: var(--color-primary-pale, #B8D6C1);
@@ -249,131 +346,6 @@
     z-index: 100;
     position: relative;
     right: -15px;
-}
-
-/* Barra de progresso */
-.block {
-    display: flex;
-    padding: var(--padding-nano, 8px) var(--padding-xs, 16px);
-    align-items: center;
-    gap: var(--margin-md, 24px);
-    align-self: stretch;
-    border-radius: var(--border-radius-xs, 16px);
-    border: 1px solid var(--color-neutral-pale, #E5E5E5);
-    background: var(--color-essence-ivory, #FFF);
-
-    /* Shadow/Level 3 */
-    box-shadow: var(--shadow-level-3);
-}
-
-.block i {
-    color: var(--color-neutral-dark);
-}
-
-.progress-bar {
-    flex-grow: 1;
-    position: relative;
-    height: 8px;
-    background-color: var(--color-primary-tinted);
-    border-radius: var(--border-radius-pill);
-    overflow: visible;
-    width: fit-content;
-}
-
-.progress {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
-    background-color: var(--color-primary-pure);
-    border-radius: 6px;
-    position: relative;
-}
-
-.progress .progress-value {
-    display: inline-block;
-    background-color: #fff;
-    border-radius: var(--border-radius-nano);
-    box-shadow: var(--shadow-level-3);
-    padding: var(--padding-quark, 4px);
-    gap: var(--margin-quark, 4px);
-    color: var(--color-primary-pure);
-    border: 1px solid var(--color-primary-pure);
-}
-
-.info-block {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    align-self: stretch;
-    width: 100%;
-    height: 100%;
-}
-
-.info-block .indicator.result {
-    cursor: default;
-}
-
-.info-block .indicator.result:hover {
-    border: 1px solid var(--color-neutral-pale, #E5E5E5);
-    background: var(--color-neutral-tinted, #FAFAFA);
-    box-shadow: none;
-    transform: none;
-}
-
-.info-block .indicator.result:active {
-    transform: none;
-
-    background: var(--color-neutral-tinted, #FAFAFA);
-}
-
-.indicator {
-    display: flex;
-    width: 100%;
-    padding: var(--padding-xs, 16px);
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--margin-xs, 16px);
-    transition: all .2s ease;
-    border-radius: var(--border-radius-xs, 16px);
-    border: var(--border-width-hairline, 1px) solid var(--color-neutral-pale, #E5E5E5);
-    background: var(--color-neutral-tinted, #FFF);
-}
-
-.indicator.result {
-    cursor: pointer;
-    height: 100%;
-    justify-content: space-between;
-}
-
-.client-tag {
-    display: flex;
-    padding: var(--padding-hadron, 2px) var(--margin-quark, 4px);
-    align-items: center;
-    gap: var(--margin-quark, 4px);
-    border-radius: var(--border-radius-quark, 4px);
-    border: var(--border-width-hairline, 1px) solid var(--color-neutral-pale, #E5E5E5);
-    background: var(--color-essence-ivory, #FFF);
-}
-
-.client-item {
-    background: var(--color-essence-ivory, #FFF);
-}
-
-.client-item:hover {
-    border-radius: var(---border-radius-xs, 16px);
-    border: 1px solid var(--color-neutral-pale, #E5E5E5);
-    background: var(--color-essence-ivory, #FFF);
-    cursor: pointer;
-    transform: translateY(-1px);
-    /* Shadow/Level 3 */
-    box-shadow: var(--shadow-level-3);
-}
-
-.client-item:active {
-    border: 1px solid var(--color-neutral-pale, #E5E5E5);
-    transform: scale(.99);
-    background: var(--color-neutral-pale, #E5E5E5);
 }
 
 /* Fotos - Modal Content */
@@ -439,4 +411,35 @@
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: auto;
+}
+
+/* Modal do Cliente */
+.client-tag {
+    display: flex;
+    padding: var(--padding-hadron, 2px) var(--margin-quark, 4px);
+    align-items: center;
+    gap: var(--margin-quark, 4px);
+    border-radius: var(--border-radius-quark, 4px);
+    border: var(--border-width-hairline, 1px) solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-essence-ivory, #FFF);
+}
+
+.client-item {
+    background: var(--color-essence-ivory, #FFF);
+}
+
+.client-item:hover {
+    border-radius: var(---border-radius-xs, 16px);
+    border: 1px solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-essence-ivory, #FFF);
+    cursor: pointer;
+    transform: translateY(-1px);
+    /* Shadow/Level 3 */
+    box-shadow: var(--shadow-level-3);
+}
+
+.client-item:active {
+    border: 1px solid var(--color-neutral-pale, #E5E5E5);
+    transform: scale(.99);
+    background: var(--color-neutral-pale, #E5E5E5);
 }

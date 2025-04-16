@@ -163,18 +163,6 @@
     overflow: hidden;
 }
 
-.code {
-    display: flex;
-    padding: var(--padding-hadron, 2px) var(--margin-quark, 4px);
-    justify-content: center;
-    align-items: center;
-    gap: var(--margin-quark, 4px);
-
-    border-radius: var(--border-radius-quark, 4px);
-    border: var(--border-width-hairline, 1px) solid var(--color-neutral-pale, #E5E5E5);
-    background: var(--color-neutral-tinted, #FAFAFA);
-}
-
 .imovel-card .price-container .price {
     display: flex;
     padding: var(--margin-quark, 4px);
@@ -250,6 +238,19 @@
     gap: var(--margin-quark, 4px);
     color: var(--color-primary-pure);
     border: 1px solid var(--color-primary-pure);
+}
+
+/* Code Item */
+.code {
+    display: flex;
+    padding: var(--padding-hadron, 2px) var(--margin-quark, 4px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--margin-quark, 4px);
+
+    border-radius: var(--border-radius-quark, 4px);
+    border: var(--border-width-hairline, 1px) solid var(--color-neutral-pale, #E5E5E5);
+    background: var(--color-neutral-tinted, #FAFAFA);
 }
 
 /* Empty */

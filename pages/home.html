@@ -31,10 +31,10 @@
                         <i class="uil uil-dashboard"></i>
                         <span>Painel</span>
                     </a>
-                    <a href="home-empty.html" class="menu-item simple label-large">
+                    <!-- <a href="home-empty.html" class="menu-item simple label-large">
                         <i class="uil uil-dashboard"></i>
                         <span>Painel Vazio</span>
-                    </a>
+                    </a> -->
                     <div class="menu-item-group">
                         <div class="menu-item primary label-large">
                             <i class="uil uil-building"></i>
@@ -48,6 +48,9 @@
                             <div class="menu-item secondary label-large">
                                 <span>Qualidade dos Anúncios</span>
                             </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Exportações</span>
+                            </div>
                         </div>
                     </div>
                     <div class="menu-item-group">
@@ -60,17 +63,14 @@
                             <a href="clientes.html" class="menu-item secondary label-large">
                                 <span>Clientes</span>
                             </a>
-                            <div class="menu-item secondary label-large">
-                                <span>Atendimentos</span>
-                            </div>
+                            <a href="mensagens.html" class="menu-item secondary label-large">
+                                <span>Mensagens</span>
+                            </a>
                             <div class="menu-item secondary label-large">
                                 <span>Visitas</span>
                             </div>
                             <div class="menu-item secondary label-large">
-                                <span>Negociações</span>
-                            </div>
-                            <div class="menu-item secondary label-large">
-                                <span>Integração de Clientes</span>
+                                <span>Tarefas</span>
                             </div>
                         </div>
                     </div>
@@ -150,12 +150,65 @@
             <div class="content">
                 <!-- Menu Superior -->
                 <div class="header-content">
-                    <div class="input-container search-bar">
-                        <div class="input-sufix">
-                            <input type="email" id="email" placeholder="Busque um imóvel, cliente ou código"
+                    <div class="input-container search-bar dropdown">
+                        <div class="input-sufix btn-dropdown">
+                            <input type="text" id="barra-de-pesquisa" placeholder="Busque um imóvel, cliente ou código"
                                 class="input-field input-lg body-medium" required />
                             <i class="uil uil-search"></i>
                         </div>
+                        <ul id="resultado-pesquisa" class="dropdown-group search-result">
+                            <li class="search-result-item">
+                                <a href="/Imoveis/Detalhes/1122738">
+                                    <div class="ellipse-text body-small neutral-pure text-width">1122738</div>
+                                    <div class="ellipse-text body-medium accent-color text-width bold">Imóvel</div>
+                                    <div class="d-flex-row flex-grow">
+                                        <div class="avatar large avatar-img">
+                                            <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                alt="SCES Trecho 4 - ASA SUL - DF - 70200004"
+                                                onerror="this.onerror=null;this.src='/Content/img/sem-foto-icone.jpg';">
+                                        </div>
+                                        <span class="body-medium ellipse-text">SCES Trecho 4 - ASA SUL - DF -
+                                            70200004</span>
+                                        <span class="search-type label-small bold aluguel-class">Aluguel</span>
+                                    </div>
+                                    <i class="uil uil-arrow-right ft-sm neutral-pure"></i>
+                                </a>
+                            </li>
+                            <li class="search-result-item">
+                                <a href="/Imoveis/Detalhes/112062">
+                                    <div class="ellipse-text body-small neutral-pure text-width">112062</div>
+                                    <div class="ellipse-text body-medium accent-color text-width bold">Imóvel</div>
+                                    <div class="d-flex-row flex-grow">
+                                        <div class="avatar large avatar-img">
+                                            <img src="https://prdportal.blob.core.windows.net/fotos/112062/bb0f1cb9a796d0e1904be58b793f3e0c.jpg"
+                                                alt="SHIS QI 16 - LAGO SUL - DF - 71640200"
+                                                onerror="this.onerror=null;this.src='/Content/img/sem-foto-icone.jpg';">
+                                        </div>
+                                        <span class="body-medium ellipse-text">SHIS QI 16 - LAGO SUL - DF -
+                                            71640200</span>
+                                        <span class="search-type label-small bold venda-class">Venda</span>
+                                    </div>
+                                    <i class="uil uil-arrow-right ft-sm neutral-pure"></i>
+                                </a>
+                            </li>
+                            <li class="search-result-item">
+                                <a href="/Imoveis/Detalhes/112055">
+                                    <div class="ellipse-text body-small neutral-pure text-width">112055</div>
+                                    <div class="ellipse-text body-medium accent-color text-width bold">Imóvel</div>
+                                    <div class="d-flex-row flex-grow">
+                                        <div class="avatar large avatar-img">
+                                            <img src="https://prdportal.blob.core.windows.net/fotos/112055/2936e5a1901279cd210e8e3f62c6ef21.jpg"
+                                                alt="SQS 306 BLOCO F - ASA SUL - DF - 70353060"
+                                                onerror="this.onerror=null;this.src='/Content/img/sem-foto-icone.jpg';">
+                                        </div>
+                                        <span class="body-medium ellipse-text">SQS 306 BLOCO F - ASA SUL - DF -
+                                            70353060</span>
+                                        <span class="search-type label-small bold venda-class">Venda</span>
+                                    </div>
+                                    <i class="uil uil-arrow-right ft-sm neutral-pure"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="notify-icon dropdown">
                         <button class="btn btn-dropdown btn-accent btn-outlined">

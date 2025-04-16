@@ -17,10 +17,6 @@
     gap: var(--padding-xs, 16px);
 }
 
-.group-btn.action-imovel i {
-    font-size: var(--font-size-sm);
-}
-
 /* Filtros */
 .filter-group {
     display: flex;
@@ -70,10 +66,6 @@
 }
 
 /* Container dos Imoveis */
-.tabs-container {
-    height: 100%;
-}
-
 .table {
     display: none;
     flex-direction: column;
