@@ -285,7 +285,7 @@ ul {
 
 .body-small {
     font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-xxs);
+    font-size: var(--font-size-xxxs);
     line-height: var(--line-height-sm);
 }
 
@@ -414,6 +414,7 @@ ul {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
+    line-clamp: 1;
     overflow: hidden;
     text-align: start;
     text-overflow: ellipsis;
@@ -427,9 +428,9 @@ ul {
 }
 
 .divisor {
-    background: rgba(0, 0, 0, 0.32);
+    background: var(--color-neutral-pale, #E5E5E5);
     width: 1px;
-    height: 100%;
+    align-self: stretch;
 }
 
 /* Flex Elements */
@@ -586,6 +587,10 @@ ul {
     color: var(--color-neutral-pure) !important;
 }
 
+.neutral-color {
+    color: var(--color-essence-charcoal, #000000);
+}
+
 .accent-color {
     color: var(--color-secondary-pure, #163867);
 }
@@ -594,8 +599,8 @@ ul {
     color: var(--color-primary-pure, #186531);
 }
 
-.neutral-color {
-    color: var(--color-essence-charcoal, #000000);
+.warning-pure {
+    color: var(--color-warning-pure, #FF8A00);
 }
 
 /* Visivel e escondido */

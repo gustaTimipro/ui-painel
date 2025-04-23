@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="stylesheet" href="../css/page/mensagens.css">
+    <link rel="stylesheet" href="../css/components/modal.css">
+</head>
+
+<body>
+    <main class="main empty">
+        <div class="container">
+            <!-- Menu Lateral -->
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="menu-brand">
+                        <img src="../assets/brand-logo.svg" alt="Logo">
+                    </div>
+                    <button class="btn btn-icon-md btn-accent btn-standart">
+                        <i class="uil uil-angle-double-left"></i>
+                    </button>
+                </div>
+
+                <div class="menu-items">
+                    <a href="home.html" class="menu-item simple label-large">
+                        <i class="uil uil-dashboard"></i>
+                        <span>Painel</span>
+                    </a>
+                    <!-- <a href="home-empty.html" class="menu-item simple label-large">
+                        <i class="uil uil-dashboard"></i>
+                        <span>Painel Vazio</span>
+                    </a> -->
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-building"></i>
+                            <span>Imóveis</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <a href="imoveis.html" class="menu-item secondary label-large">
+                                <span>Meus Imóveis</span>
+                            </a>
+                            <div class="menu-item secondary label-large">
+                                <span>Qualidade dos Anúncios</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Exportações</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large active">
+                            <i class="uil uil-users-alt"></i>
+                            <span>Relacionamento</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group active">
+                            <a href="clientes.html" class="menu-item secondary label-large">
+                                <span>Clientes</span>
+                            </a>
+                            <a href="mensagens.html" class="menu-item secondary label-large active">
+                                <span>Mensagens</span>
+                            </a>
+                            <div class="menu-item secondary label-large">
+                                <span>Visitas</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Tarefas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-file-graph"></i>
+                        <span>Relatórios</span>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-robot"></i>
+                        <span>Análise de Mercado</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-briefcase-alt"></i>
+                            <span>Minha Imobiliária</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <div class="menu-item secondary label-large">
+                                <span>Site</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Corretores</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Funcionários</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Faturas</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Integração com Portais</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Sobre minha Imobiliária</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-group">
+                        <div class="menu-item primary label-large">
+                            <i class="uil uil-question-circle"></i>
+                            <span>Suporte</span>
+                            <i class="uil uil-angle-down d-colapse"></i>
+                        </div>
+                        <div class="menu-group">
+                            <div class="menu-item secondary label-large">
+                                <span>Falar com Suporte</span>
+                            </div>
+                            <div class="menu-item secondary label-large">
+                                <span>Ajuda</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item simple label-large">
+                        <i class="uil uil-user-square"></i>
+                        <span>Meu Perfil</span>
+                    </div>
+                </div>
+
+                <div class="menu-bottom menu-items">
+                    <a href="login.html" class="menu-item simple label-large">
+                        <i class="uil uil-signout"></i>
+                        <span>Fazer logout</span>
+                    </a>
+                    <div class="version">
+                        <div class="version-brand">
+                            <img src="../assets/timipro-brand.svg" alt="Logo">
+                        </div>
+                        <p class="label-medium">Powered by <a href="#" class="link">TimiPro</a> © Todos os direitos
+                            reservados 2017 - 2024
+                            Versão 2.108</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <!-- Menu Superior -->
+                <div class="header-content">
+                    <div class="input-container search-bar dropdown">
+                        <div class="input-sufix btn-dropdown">
+                            <input type="text" id="barra-de-pesquisa" placeholder="Busque um imóvel, cliente ou código"
+                                class="input-field input-lg body-medium" required />
+                            <i class="uil uil-search"></i>
+                        </div>
+                        <ul id="resultado-pesquisa" class="dropdown-group search-result">
+                            <li class="search-result-item">
+                                <a href="/Imoveis/Detalhes/1122738">
+                                    <div class="ellipse-text body-small neutral-pure text-width">1122738</div>
+                                    <div class="ellipse-text body-medium accent-color text-width bold">Imóvel</div>
+                                    <div class="d-flex-row flex-grow">
+                                        <div class="avatar large avatar-img">
+                                            <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                alt="SCES Trecho 4 - ASA SUL - DF - 70200004"
+                                                onerror="this.onerror=null;this.src='/Content/img/sem-foto-icone.jpg';">
+                                        </div>
+                                        <span class="body-medium ellipse-text">SCES Trecho 4 - ASA SUL - DF -
+                                            70200004</span>
+                                        <span class="search-type label-small bold aluguel-class">Aluguel</span>
+                                    </div>
+                                    <i class="uil uil-arrow-right ft-sm neutral-pure"></i>
+                                </a>
+                            </li>
+                            <li class="search-result-item">
+                                <a href="/Imoveis/Detalhes/112062">
+                                    <div class="ellipse-text body-small neutral-pure text-width">112062</div>
+                                    <div class="ellipse-text body-medium accent-color text-width bold">Imóvel</div>
+                                    <div class="d-flex-row flex-grow">
+                                        <div class="avatar large avatar-img">
+                                            <img src="https://prdportal.blob.core.windows.net/fotos/112062/bb0f1cb9a796d0e1904be58b793f3e0c.jpg"
+                                                alt="SHIS QI 16 - LAGO SUL - DF - 71640200"
+                                                onerror="this.onerror=null;this.src='/Content/img/sem-foto-icone.jpg';">
+                                        </div>
+                                        <span class="body-medium ellipse-text">SHIS QI 16 - LAGO SUL - DF -
+                                            71640200</span>
+                                        <span class="search-type label-small bold venda-class">Venda</span>
+                                    </div>
+                                    <i class="uil uil-arrow-right ft-sm neutral-pure"></i>
+                                </a>
+                            </li>
+                            <li class="search-result-item">
+                                <a href="/Imoveis/Detalhes/112055">
+                                    <div class="ellipse-text body-small neutral-pure text-width">112055</div>
+                                    <div class="ellipse-text body-medium accent-color text-width bold">Imóvel</div>
+                                    <div class="d-flex-row flex-grow">
+                                        <div class="avatar large avatar-img">
+                                            <img src="https://prdportal.blob.core.windows.net/fotos/112055/2936e5a1901279cd210e8e3f62c6ef21.jpg"
+                                                alt="SQS 306 BLOCO F - ASA SUL - DF - 70353060"
+                                                onerror="this.onerror=null;this.src='/Content/img/sem-foto-icone.jpg';">
+                                        </div>
+                                        <span class="body-medium ellipse-text">SQS 306 BLOCO F - ASA SUL - DF -
+                                            70353060</span>
+                                        <span class="search-type label-small bold venda-class">Venda</span>
+                                    </div>
+                                    <i class="uil uil-arrow-right ft-sm neutral-pure"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="notify-icon dropdown">
+                        <button class="btn btn-dropdown btn-accent btn-outlined">
+                            <i class="uil uil-bell"></i>
+                        </button>
+                        <ul class="dropdown-group notify-result">
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Visita</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Cliente</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Imóvel</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Visita</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Cliente</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="item item-sm body-medium" href="#">
+                                    <span class="result-id bold">Imóvel</span>
+                                    <span class="result-title ellipse-text">DF - Brasília - Asa Norte - SQN 209 Bloco
+                                        G</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conteúdo do Centro -->
+                <div class="middle-content">
+                    <!-- Header Titulo -->
+                    <div class="header-main">
+                        <h2 class="flex-grow title-large">Mensagens</h2>
+                    </div>
+
+                    <!-- Filtros Imóveis -->
+                    <div class="filter-group">
+                        <div class="input-container flex-grow">
+                            <div class="input-sufix">
+                                <input type="text" placeholder="Comece a Buscar" id="filterInput"
+                                    class="input-field input-sm body-medium" required />
+                                <i class="uil uil-search"></i>
+                            </div>
+                        </div>
+
+                        <div class="dropdown select">
+                            <button class="btn btn-dropdown btn-accent btn-outlined">
+                                <div class="btn-label btn-md">Todos os Negócios</div>
+                                <div class="btn-icon btn-icon-md"><i class="uil uil-angle-down"></i></div>
+                            </button>
+                            <ul class="dropdown-group">
+                                <li>
+                                    <label class="item item-sm body-medium bold" for="filterTodos">
+                                        <input type="checkbox" name="filterTodos" id="filterTodos">
+                                        Todos os Negócios
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="item item-sm body-medium" for="filterVenda">
+                                        <input type="checkbox" name="filterVenda" id="filterVenda">
+                                        Venda
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="item item-sm body-medium" for="filterAluguel">
+                                        <input type="checkbox" name="filterAluguel" id="filterAluguel">
+                                        Aluguel
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Container das Mensagens -->
+                    <div class="table table-mensagens d-flex-row gap-md">
+                        <div class="list-chats d-flex-column">
+                            <div class="item-chat favorite">
+                                <i class="bx bxs-star warning-pure"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                            <div class="item-chat favorite">
+                                <i class="bx bxs-star warning-pure"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                            <div class="item-chat">
+                                <i class="uil uil-star neutral-text"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                            <div class="item-chat active">
+                                <i class="uil uil-star neutral-text"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                            <div class="item-chat">
+                                <i class="uil uil-star neutral-text"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                            <div class="item-chat">
+                                <i class="uil uil-star neutral-text"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                            <div class="item-chat">
+                                <i class="uil uil-star neutral-text"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                            <div class="item-chat">
+                                <i class="uil uil-star neutral-text"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                            <div class="item-chat">
+                                <i class="uil uil-star neutral-text"></i>
+                                <div class="avatar medium avatar-img">
+                                    <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                        alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                </div>
+                                <div class="d-flex-column flex-grow">
+                                    <div class="d-flex-row">
+                                        <span class="code label-small bold">3254</span>
+                                        <span class="adress body-large bold ellipse-text">SQN 210 Bloco A - Asa Norte -
+                                            Brasília - DF</span>
+                                    </div>
+                                    <span class="chat-name label-large">Lucas Almeida</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-content flex-grow">
+                            <div class="chat-header d-flex-column gap-xs">
+                                <div class="chat-detail d-flex-row gap-xs">
+                                    <i class="uil uil-star neutral-text ft-md"></i>
+                                    <div class="infos d-flex-column flex-grow">
+                                        <span class="title-small accent-color">Lucas Almeida dos Santos</span>
+                                        <div class="d-flex-row">
+                                            <span class="code label-small bold">3254</span>
+                                            <span class="adress body-small bold ellipse-text">SQN 210 Bloco A - Asa
+                                                Norte -
+                                                Brasília - DF</span>
+                                        </div>
+                                        <div class="d-flex-row">
+                                            <div class="price label-large">
+                                                <span class="tipo">Venda</span>
+                                                <span class="price-item bold">R$ 500.000,00</span>
+                                            </div>
+                                            <div class="description">
+                                                <i class="uil uil-bed"></i>
+                                                <span class="label-small bold">3</span>
+                                            </div>
+                                            <div class="description">
+                                                <i class="uil uil-car"></i>
+                                                <span class="label-small bold">3</span>
+                                            </div>
+                                            <div class="description">
+                                                <i class="uil uil-expand-alt"></i>
+                                                <span class="label-small bold">250,00m²</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="divisor"></div>
+                                    <div class="infos d-flex-column">
+                                        <div class="item body-small d-flex-row">
+                                            <span class="neutral-text">Relação com o Imóvel</span>
+                                            <span
+                                                class="client-tag accent-color bg-secondary bold label-small">Lead</span>
+                                        </div>
+                                        <div class="item body-small d-flex-row">
+                                            <span class="neutral-text">Estágio de Negociação</span>
+                                            <span class="item-result bold">Proposta</span>
+                                        </div>
+                                        <div class="item body-small d-flex-row">
+                                            <span class="neutral-text">Corretor</span>
+                                            <span class="item-result bold">João da Silva</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-actions d-flex-row">
+                                    <button class="btn btn-accent btn-outlined btn-sm flex-grow">
+                                        Agendar Visita
+                                    </button>
+
+                                    <button class="btn btn-accent btn-outlined btn-sm flex-grow">
+                                        Registrar Proposta
+                                    </button>
+
+                                    <button class="btn btn-destructive btn-outlined btn-sm flex-grow">
+                                        Excluir Conversa
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/mensagens.js"></script>
+</body>
+
+</html>
