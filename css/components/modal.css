@@ -276,10 +276,84 @@
     background: var(--color-neutral-tinted, #FAFAFA);
 }
 
+.center-modal {
+    background: rgb(41 41 41 / 80%);
+}
+
+.center-modal .modal-container {
+    border-radius: var(--border-radius-xs, 16px);
+    background: var(--color-essence-ivory, #FFF);
+    max-width: 448px;
+    width: 100%;
+    padding: var(--padding-huge, 64px) var(--padding-md, 24px) var(--padding-md, 24px) var(--padding-md, 24px);
+    position: relative;
+    box-shadow: var(--shadow-level-3);
+}
+
+.center-modal .header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-xs, 16px);
+    align-items: center;
+    text-align: center;
+}
+
+.center-modal .header-icon {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    padding: var(--padding-nano, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--margin-nano, 8px);
+    position: absolute;
+    top: -35px;
+    border-radius: var(--border-radius-xs, 16px);
+    background: var(--color-error-tinted, #FBE8E6);
+
+    box-shadow: var(--shadow-level-3);
+}
+
+.center-modal .scroll-modal {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Largura do scrollbar */
+.center-modal .scroll-modal::-webkit-scrollbar {
+    width: 6px;
+    height: 12px;
+}
+
+/* Fundo da trilha */
+.center-modal .scroll-modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Parte arrastável */
+.center-modal .scroll-modal::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Quando o mouse passa por cima do thumb */
+.center-modal .scroll-modal::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Canto entre os scrolls (em tabelas, por exemplo) */
+.center-modal .scroll-modal::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+}
+
+.center-modal .header-icon i {
+    color: var(--color-error-pure, #D44333);
+}
+
 /* Modal de Cancelamento */
 .cancel-modal {
     background: rgb(41 41 41 / 80%);
-
 }
 
 .cancel-modal .modal-container {
@@ -308,7 +382,8 @@
     justify-content: center;
     align-items: center;
     gap: var(--margin-nano, 8px);
-
+    position: absolute;
+    top: -35px;
     border-radius: var(--border-radius-xs, 16px);
     background: var(--color-error-tinted, #FBE8E6);
 
@@ -317,11 +392,6 @@
 
 .cancel-modal .header-icon i {
     color: var(--color-error-pure, #D44333);
-}
-
-.cancel-modal .header-icon {
-    position: absolute;
-    top: -35px;
 }
 
 /* Modal de Imóvel */

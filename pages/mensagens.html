@@ -446,7 +446,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chat-content flex-grow">
+                        <div class="chat-content flex-grow d-flex-column gap-none">
                             <div class="chat-header d-flex-column gap-xs">
                                 <div class="chat-detail d-flex-row gap-xs">
                                     <i class="uil uil-star neutral-text ft-md"></i>
@@ -495,11 +495,13 @@
                                     </div>
                                 </div>
                                 <div class="chat-actions d-flex-row">
-                                    <button class="btn btn-accent btn-outlined btn-sm flex-grow">
+                                    <button data-agendar-visita="open"
+                                        class="btn btn-accent btn-outlined btn-sm flex-grow">
                                         Agendar Visita
                                     </button>
 
-                                    <button class="btn btn-accent btn-outlined btn-sm flex-grow">
+                                    <button data-registrar-proposta="open"
+                                        class="btn btn-accent btn-outlined btn-sm flex-grow">
                                         Registrar Proposta
                                     </button>
 
@@ -508,6 +510,261 @@
                                     </button>
                                 </div>
                             </div>
+                            <div class="chat-messages flex-grow" id="chat-messages">
+                                <div class="message">
+                                    <span class="body-medium info-message">
+                                        Olá! Gostaria de mais informações sobre esse imóvel
+                                    </span>
+                                    <span class="label-small neutral-text hour-message">10/10/2024 - 14:00</span>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <div class="input-sufix btn-dropdown">
+                                    <input type="text" id="barra-de-envio-chat" placeholder="Escreva uma mensagem"
+                                        class="input-field input-lg body-medium" required />
+                                    <button class="btn btn-accent btn-icon-md" id="send-button">
+                                        <i class='bx bx-send white-color'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Agendar Visita -->
+                    <div class="modal center-modal" data-agendar-visita="container">
+                        <div class="modal-container center-container gap-xs align-self d-flex-column">
+                            <div class="header">
+                                <div class="header-icon">
+                                    <i class="uil uil-calender title-large"></i>
+                                </div>
+                                <div class="header-text d-flex-column">
+                                    <h2 class="headline-small bold">Agendar Visita</h2>
+                                </div>
+                            </div>
+                            <form action="" class="form w-100 d-flex-column gap-md">
+                                <div class="d-flex-column gap-md scroll-modal">
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="agendar-imovel">Imóvel</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="agendar-imovel" class="custom-select body-medium input-lg">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="agendar-corretor">Corretor</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="agendar-corretor" class="custom-select body-medium input-lg">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="agendar-cliente">Cliente</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="agendar-cliente" class="custom-select body-medium input-lg">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="agendar-date">Data</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="agendar-date" class="custom-select body-medium input-lg">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="numero">Horário
+                                            </label>
+                                        </div>
+                                        <div class="input-sufix">
+                                            <input type="text" id="numero" class="input-field input-lg body-medium"
+                                                required />
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex-column">
+                                    <button class="btn btn-lg btn-accent bold">Agendar Visita
+                                    </button>
+                                    <button class="btn btn-lg btn-accent btn-outlined" data-agendar-visita="close">
+                                        Cancelar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Modal Remarcar -->
+                    <div class="modal center-modal" data-registrar-proposta="container">
+                        <div class="modal-container center-container gap-xs align-self d-flex-column">
+                            <div class="header">
+                                <div class="header-icon">
+                                    <i class="uil uil-calender title-large"></i>
+                                </div>
+                                <div class="header-text d-flex-column">
+                                    <h2 class="headline-small bold">Registrar Proposta</h2>
+                                </div>
+                            </div>
+                            <form action="" class="form w-100 d-flex-column gap-md">
+                                <div class="d-flex-column gap-md scroll-modal">
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="remarcar-cliente">Cliente</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="remarcar-cliente" class="custom-select body-medium input-lg">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="agendar-cliente">Responsavel</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="agendar-cliente" class="custom-select body-medium input-lg">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="agendar-cliente">Imóvel Relacionado</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="agendar-cliente" class="custom-select body-medium input-lg">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+
+                                    <div class="input-container w-100">
+                                        <div class="input-label">
+                                            <label class="label-large" for="agendar-cliente">Tipo de Negócio</label>
+                                        </div>
+                                        <div class="input-select input-sufix">
+                                            <select id="agendar-cliente" class="custom-select body-medium input-lg">
+                                                <option value="" disabled selected>Selecione</option>
+                                                <option value="apartamento">Apartamento</option>
+                                                <option value="casa">Casa</option>
+                                                <option value="casa-condominio">Casa Condomínio</option>
+                                                <option value="galpao">Galpão</option>
+                                                <option value="garagem">Garagem</option>
+                                                <option value="hotel-flat">Hotel Flat</option>
+                                            </select>
+                                            <i class="uil uil-angle-down"></i>
+                                        </div>
+                                        <span class="error-message label-medium">error</span>
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="value">Valor
+                                            </label>
+                                        </div>
+                                        <div class="input-prefix">
+                                            <span class="body-small">R$</span>
+                                            <input type="email" id="value" class="input-field input-md body-medium"
+                                                required />
+                                        </div>
+                                    </div>
+
+                                    <div class="input-container flex-grow">
+                                        <div class="input-label">
+                                            <label class="label-large" for="descricaoAssinatura">Observação
+                                                <span class="label-medium">(opcional)</span>
+                                            </label>
+                                        </div>
+                                        <div class="input-sufix textarea">
+                                            <textarea class="input-field body-medium" name="descricaoAssinatura"
+                                                id="descricaoAssinatura" cols="50" rows="5" placeholder="Observações"
+                                                required></textarea>
+                                            <span class="rg-span body-medium">0/500</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex-column">
+                                    <button class="btn btn-lg btn-accent bold">Remarcar
+                                    </button>
+                                    <button class="btn btn-lg btn-accent btn-outlined" data-registrar-proposta="close">
+                                        Cancelar
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

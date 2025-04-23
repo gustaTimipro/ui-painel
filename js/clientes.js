@@ -328,3 +328,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
     });
 });
+
+
+// Tabs para Clientes
+function configurarBotoesDeGrupoComTabs(groupSelector, btnClass, contentSelector, activeClass) {
+    const groupContainers = document.querySelectorAll(groupSelector);
+    const tabContents = document.querySelectorAll(contentSelector);
+
+    groupContainers.forEach((group) => {
+        const buttons = group.querySelectorAll('button');
+
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                buttons.forEach((btn) => btn.classList.add(btnClass));
+
+                button.classList.remove(btnClass);
+
+                tabContents.forEach((content, contentIndex) => {
+                    if (contentIndex === index) {
+                        content.classList.add(activeClass);
+                    } else {
+                        content.classList.remove(activeClass);
+                    }
+                });
+            });
+        });
+    });
+}
+configurarBotoesDeGrupoComTabs('.action-clientes', 'btn-standart', '.tabs-container > .table', 'active');

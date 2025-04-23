@@ -791,7 +791,7 @@
 
                         <div class="content center-modal">
                             <!-- Tabs para Navegação -->
-                            <div class="group-btn gp-accent tabs-imovel">
+                            <div class="group-btn gp-accent action-clientes">
                                 <button class="btn btn-accent btn-md">
                                     <i class="uil uil-user"></i>Informações
                                 </button>
@@ -815,772 +815,1033 @@
                                 </button>
                             </div>
 
-                            <!-- Análise de Cliente -->
-                            <div class="info-content gap-xs bg-secondary">
-                                <div class="d-flex-row">
-                                    <i class="uil uil-robot"></i>
-                                    <span class="title-small">Análise de Mercado</span>
-                                    <span class="label-medium flex-grow neutral-text">Atualizado em 01/10/2023 <i
-                                            class="uil uil-info-circle"></i></span>
-                                </div>
-                                <span class="body-medium flex-grow">É provável que Lucas esteja buscando imóveis com os
-                                    parâmetros abaixo.</span>
-                                <div class="d-flex-row">
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Tipo de Negócio</span>
+                            <!-- Lista de Tabs -->
+                            <div class="tabs-container w-100">
+                                <!-- Container de Informações -->
+                                <div class="table table-client-info active">
+                                    <!-- Análise de Cliente -->
+                                    <div class="info-content gap-xs bg-secondary">
+                                        <div class="d-flex-row">
+                                            <i class="uil uil-robot"></i>
+                                            <span class="title-small">Análise de Mercado</span>
+                                            <span class="label-medium flex-grow neutral-text">Atualizado em 01/10/2023
+                                                <i class="uil uil-info-circle"></i></span>
                                         </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">Venda</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Média de valor</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">R$ 2.000.000</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Quantidade de Quartos</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">2 quartos</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Tipo</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">Apartamento</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Bairro</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">Asa Norte</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Dados -->
-                            <div class="info-content">
-                                <div class="d-flex-row">
-                                    <i class="uil uil-house-user"></i>
-                                    <span class="title-small flex-grow">Dados</span>
-                                </div>
-                                <div class="d-flex-column gap-xs">
-                                    <div class="d-flex-row gap-xs">
-                                        <div class="item body-medium d-flex-row align-center gap-nano flex-grow">
-                                            <span class="item-label neutral-text">
-                                                <i class="uil uil-envelope"></i>
-                                                E-mail
-                                            </span>
-                                            <span class="item-result bold">lucasalmeida@gmail.com</span>
-                                        </div>
-                                        <div class="item body-medium d-flex-row align-center gap-nano  flex-grow">
-                                            <span class="item-label neutral-text">
-                                                <i class="uil uil-phone"></i>
-                                                Telefone
-                                            </span>
-                                            <span class="item-result bold">61 91234-5678</span>
-                                            <a href="#" class="success">
-                                                <i class="uil uil-whatsapp"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex-row gap-xs">
-                                        <div class="item body-medium d-flex-row align-center gap-nano flex-grow">
-                                            <span class="item-label neutral-text">
-                                                <i class="uil uil-play-circle"></i>
-                                                Primeiro acesso no Portal em
-                                            </span>
-                                            <span class="item-result bold">06/11/2024 - 10:10:47</span>
-                                        </div>
-                                        <div class="item body-medium d-flex-row align-center gap-nano flex-grow">
-                                            <span class="item-label neutral-text">
-                                                <i class="uil uil-calender"></i>
-                                                Último Acesso no Portal em
-                                            </span>
-                                            <span class="item-result bold">06/11/2024 - 10:10:47</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Comportamento -->
-                            <div class="info-content gap-xs">
-                                <div class="d-flex-row flex-grow">
-                                    <i class="uil uil-map-pin"></i>
-                                    <span class="title-small">Comportamento</span>
-                                </div>
-                                <span class="body-medium flex-grow">Os parâmetros abaixo são números totais do cliente
-                                    no Portal DF Imóveis, incluindo suas interações com outros anunciantes.</span>
-                                <div class="d-flex-row">
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Imóveis visitados</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">10</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Contatos por e-mail</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">0</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Contatos por telefone</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">2</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Contatos por WhatsApp</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">4</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Visitas Agendadas</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">5</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Propostas Enviadas</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">8</span>
-                                        </div>
-                                    </div>
-                                    <div class="indicator bg-white cursor-default">
-                                        <div class="indic-top">
-                                            <span class="label-medium">Anunciantes</span>
-                                        </div>
-                                        <div class="indic-text">
-                                            <span class="headline-medium">2</span>
-                                            <span class="comparative label-small">voce e +1</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Cadastro -->
-                            <div class="info-content toggle-content">
-                                <div class="info-header">
-                                    <i class="uil uil-chat-bubble-user"></i>
-                                    <span class="title-small flex-grow">Cadastro</span>
-                                    <i class="uil uil-angle-down"></i>
-                                </div>
-                                <div class="info-toggle d-flex-row">
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="nome">Nome</label>
-                                        </div>
-                                        <div class="input-sufix">
-                                            <input type="nome" id="nome" class="input-field input-md body-medium"
-                                                required />
-                                        </div>
-                                        <span class="error-message label-medium">O nome está incorreto</span>
-                                    </div>
-
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="sobrenome">Sobrenome</label>
-                                        </div>
-                                        <div class="input-sufix">
-                                            <input type="sobrenome" id="sobrenome"
-                                                class="input-field input-md body-medium" required />
-                                        </div>
-                                        <span class="error-message label-medium">O sobrenome está incorreto</span>
-                                    </div>
-
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="email">E-mail</label>
-                                        </div>
-                                        <div class="input-sufix">
-                                            <input type="email" id="email" class="input-field input-md body-medium"
-                                                required />
-                                        </div>
-                                        <span class="error-message label-medium">O email está incorreto</span>
-                                    </div>
-
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="telefone">Telefone
-                                                <span class="label-medium" for="telefone">(opcional)</span>
-                                            </label>
-                                            <div class="option">
-                                                <input type="checkbox" class="imovel-checkbox" id="telefoneWhats"
-                                                    name="telefoneWhats">
-                                                <label class="label-medium" for="telefoneWhats">Whatsapp</label>
-                                            </div>
-                                        </div>
-                                        <div class="input-sufix">
-                                            <input type="telefone" id="telefone"
-                                                class="input-field input-md body-medium" required />
-                                        </div>
-                                        <span class="error-message label-medium">O telefone está incorreto</span>
-                                    </div>
-                                </div>
-                                <div class="info-toggle d-flex-row">
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="dataDeNascimento">Data de Nascimento
-                                                <span class="label-medium" for="telefone">(opcional)</span>
-                                            </label>
-                                        </div>
-                                        <div class="input-sufix">
-                                            <input type="dataDeNascimento" id="dataDeNascimento"
-                                                class="input-field input-md body-medium" required />
-                                        </div>
-                                        <span class="error-message label-medium">O dataDeNascimento está
-                                            incorreto</span>
-                                    </div>
-
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="estadoCivil">Estado Civil
-                                                <span class="label-medium" for="telefone">(opcional)</span>
-                                            </label>
-                                        </div>
-                                        <div class="input-select input-sufix">
-                                            <select id="estadoCivil" class="custom-select body-medium input-md">
-                                                <option value="" disabled selected>Selecione</option>
-                                                <option value="apartamento">Apartamento</option>
-                                                <option value="casa">Casa</option>
-                                                <option value="casa-condominio">Casa Condomínio</option>
-                                                <option value="galpao">Galpão</option>
-                                                <option value="garagem">Garagem</option>
-                                                <option value="hotel-flat">Hotel Flat</option>
-                                            </select>
-                                            <i class="uil uil-angle-down"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="rendaFamiliar">Renda Familiar
-                                                <span class="label-medium" for="telefone">(opcional)</span>
-                                            </label>
-                                        </div>
-                                        <div class="input-sufix">
-                                            <input type="rendaFamiliar" id="rendaFamiliar"
-                                                class="input-field input-md body-medium" required />
-                                        </div>
-                                        <span class="error-message label-medium">O rendaFamiliar está incorreto</span>
-                                    </div>
-
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="profissao">Profissão
-                                                <span class="label-medium" for="profissao">(opcional)</span>
-                                            </label>
-                                        </div>
-                                        <div class="input-select input-sufix">
-                                            <select id="profissao" class="custom-select body-medium input-md">
-                                                <option value="" disabled selected>Selecione</option>
-                                                <option value="apartamento">Apartamento</option>
-                                                <option value="casa">Casa</option>
-                                                <option value="casa-condominio">Casa Condomínio</option>
-                                                <option value="galpao">Galpão</option>
-                                                <option value="garagem">Garagem</option>
-                                                <option value="hotel-flat">Hotel Flat</option>
-                                            </select>
-                                            <i class="uil uil-angle-down"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-toggle d-flex-row">
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="sexo">Sexo
-                                                <span class="label-medium" for="sexo">(opcional)</span>
-                                            </label>
-                                        </div>
-                                        <div class="input-select input-sufix">
-                                            <select id="sexo" class="custom-select body-medium input-md">
-                                                <option value="" disabled selected>Selecione</option>
-                                                <option value="apartamento">Apartamento</option>
-                                                <option value="casa">Casa</option>
-                                                <option value="casa-condominio">Casa Condomínio</option>
-                                                <option value="galpao">Galpão</option>
-                                                <option value="garagem">Garagem</option>
-                                                <option value="hotel-flat">Hotel Flat</option>
-                                            </select>
-                                            <i class="uil uil-angle-down"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="comoChegou">Como chegou até nós?
-                                                <span class="label-medium" for="comoChegou">(opcional)</span>
-                                            </label>
-                                        </div>
-                                        <div class="input-select input-sufix">
-                                            <select id="comoChegou" class="custom-select body-medium input-md">
-                                                <option value="" disabled selected>Selecione</option>
-                                                <option value="apartamento">Apartamento</option>
-                                                <option value="casa">Casa</option>
-                                                <option value="casa-condominio">Casa Condomínio</option>
-                                                <option value="galpao">Galpão</option>
-                                                <option value="garagem">Garagem</option>
-                                                <option value="hotel-flat">Hotel Flat</option>
-                                            </select>
-                                            <i class="uil uil-angle-down"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="input-container flex-two-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="perfil">Perfil</label>
-                                        </div>
-                                        <div class="input-options input-md">
-                                            <div class="option">
-                                                <input type="checkbox" class="imovel-checkbox" id="locatario"
-                                                    name="locatario">
-                                                <label class="body-medium" for="locatario">Locatário</label>
-                                            </div>
-                                            <div class="option">
-                                                <input type="checkbox" class="imovel-checkbox" id="comprador"
-                                                    name="comprador">
-                                                <label class="body-medium" for="comprador">Comprador</label>
-                                            </div>
-                                            <div class="option">
-                                                <input type="checkbox" class="imovel-checkbox" id="proprietario"
-                                                    name="proprietario">
-                                                <label class="body-medium" for="proprietario">Proprietário</label>
-                                            </div>
-                                            <div class="option">
-                                                <input type="checkbox" class="imovel-checkbox" id="lead" name="lead">
-                                                <label class="body-medium" for="lead">Lead</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-toggle d-flex-column gap-md">
-                                    <div class="input-container w-100">
-                                        <div class="input-label">
-                                            <label class="label-large" for="motivoProcura">Motivo da Procura
-                                                <span class="label-medium">(opcional)</span>
-                                            </label>
-                                        </div>
-
-                                        <div class="input-sufix textarea">
-                                            <textarea class="input-field body-medium" name="motivoProcura"
-                                                id="motivoProcura" cols="50" rows="5"
-                                                placeholder="Descreva o motivo pela qual provura imóvel"
-                                                required></textarea>
-                                            <span class="rg-span body-medium">0/5000</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="input-container w-100">
-                                        <div class="input-label">
-                                            <label class="label-large" for="outrasObs">Outras observações
-                                                <span class="label-medium">(opcional)</span>
-                                            </label>
-                                        </div>
-
-                                        <div class="input-sufix textarea">
-                                            <textarea class="input-field body-medium" name="outrasObs" id="outrasObs"
-                                                cols="50" rows="5"
-                                                placeholder="Descreva alguma informação importante sobre o cliente"
-                                                required></textarea>
-                                            <span class="rg-span body-medium">0/5000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Endereço -->
-                            <div class="info-content toggle-content">
-                                <div class="info-header">
-                                    <i class="uil uil-map-pin"></i>
-                                    <span class="title-small flex-grow">Endereço</span>
-                                    <i class="uil uil-angle-down"></i>
-                                </div>
-                                <div class="info-toggle d-flex-row">
-                                    <div class="input-container w-100">
-                                        <div class="input-label">
-                                            <label class="label-large" for="cep">CEP</label>
-                                        </div>
-                                        <div class="input-sufix">
-                                            <input type="text" id="cep" class="input-field input-md body-medium"
-                                                required placeholder="Informe o CEP" />
-                                        </div>
-                                        <span class="error-message label-medium">O e-mail está incorreto</span>
-                                    </div>
-                                </div>
-                                <div class="info-toggle d-flex-row">
-                                    <div class="info-column d-flex-column gap-md adress-content flex-grow">
-                                        <div class="input-container w-100">
-                                            <div class="input-label">
-                                                <label class="label-large" for="cep">CEP</label>
-                                            </div>
-                                            <div class="input-sufix">
-                                                <input type="text" id="cep" class="input-field input-md body-medium"
-                                                    required placeholder="Informe o CEP" value="73588-022" />
-                                            </div>
-                                            <span class="error-message label-medium">O e-mail está incorreto</span>
-                                        </div>
-
-                                        <div class="list-info">
-                                            <span class="label-large neutral-text">Informações</span>
-                                            <div class="line"></div>
-                                            <div class="list-item d-flex-column">
-                                                <span class="body-medium">Logradouro</span>
-                                                <span class="title-small">SQN 209 Bloco G</span>
-                                            </div>
-                                            <div class="line"></div>
-                                            <div class="list-item d-flex-column">
-                                                <span class="body-medium">Bairro</span>
-                                                <span class="title-small">Asa Norte</span>
-                                            </div>
-                                            <div class="line"></div>
-                                            <div class="list-item d-flex-column">
-                                                <span class="body-medium">Cidade</span>
-                                                <span class="title-small">Brasília</span>
-                                            </div>
-                                            <div class="line"></div>
-                                            <div class="list-item d-flex-column">
-                                                <span class="body-medium">UF</span>
-                                                <span class="title-small">Distrito Federal</span>
-                                            </div>
-                                            <div class="line"></div>
-                                            <div class="list-item d-flex-column">
-                                                <span class="body-medium">País</span>
-                                                <span class="title-small">Brasil</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="info-column d-flex-column gap-md adress-content flex-grow">
-                                        <div class="input-container w-100">
-                                            <div class="input-label">
-                                                <label class="label-large" for="condominio">Condomínio
-                                                    <span class="label-medium">(opcional)</span>
-                                                </label>
-                                                <div class="option">
-                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
-                                                        name="exibir">
-                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                        <span class="body-medium flex-grow">É provável que Lucas esteja buscando imóveis
+                                            com os
+                                            parâmetros abaixo.</span>
+                                        <div class="d-flex-row">
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Tipo de Negócio</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">Venda</span>
                                                 </div>
                                             </div>
-                                            <div class="input-sufix">
-                                                <input type="text" id="condominio"
-                                                    class="input-field input-md body-medium" required />
-                                            </div>
-                                            <span class="error-message label-medium">error</span>
-                                        </div>
-                                        <div class="input-container w-100">
-                                            <div class="input-label">
-                                                <label class="label-large" for="numero">Numero
-                                                    <span class="label-medium">(opcional)</span>
-                                                </label>
-                                                <div class="option">
-                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
-                                                        name="exibir">
-                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Média de valor</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">R$ 2.000.000</span>
                                                 </div>
                                             </div>
-                                            <div class="input-sufix">
-                                                <input type="text" id="numero" class="input-field input-md body-medium"
-                                                    required />
-                                            </div>
-                                            <span class="error-message label-medium">error</span>
-                                        </div>
-                                        <div class="input-container w-100">
-                                            <div class="input-label">
-                                                <label class="label-large" for="complemento">Complemento
-                                                    <span class="label-medium">(opcional)</span>
-                                                </label>
-                                                <div class="option">
-                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
-                                                        name="exibir">
-                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Quantidade de Quartos</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">2 quartos</span>
                                                 </div>
                                             </div>
-                                            <div class="input-sufix">
-                                                <input type="text" id="complemento"
-                                                    class="input-field input-md body-medium" required />
-                                            </div>
-                                            <span class="error-message label-medium">error</span>
-                                        </div>
-                                        <div class="input-container w-100">
-                                            <div class="input-label">
-                                                <label class="label-large" for="edificio">Edifício
-                                                    <span class="label-medium">(opcional)</span>
-                                                </label>
-                                            </div>
-                                            <div class="input-select input-sufix">
-                                                <select id="edificio" class="custom-select body-medium input-md">
-                                                    <option value="" disabled selected>Selecione</option>
-                                                    <option value="apartamento">Apartamento</option>
-                                                    <option value="casa">Casa</option>
-                                                    <option value="casa-condominio">Casa Condomínio</option>
-                                                    <option value="galpao">Galpão</option>
-                                                    <option value="garagem">Garagem</option>
-                                                    <option value="hotel-flat">Hotel Flat</option>
-                                                </select>
-                                                <i class="uil uil-angle-down"></i>
-                                            </div>
-                                            <span class="error-message label-medium">error</span>
-                                        </div>
-                                        <div class="input-container w-100">
-                                            <div class="input-label">
-                                                <label class="label-large" for="point">Ponto de Referência
-                                                    <span class="label-medium">(opcional)</span>
-                                                </label>
-                                                <div class="option">
-                                                    <input type="checkbox" class="imovel-checkbox" id="exibir"
-                                                        name="exibir">
-                                                    <label class="label-medium" for="exibir">Exibir</label>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Tipo</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">Apartamento</span>
                                                 </div>
                                             </div>
-                                            <input type="text" id="point" placeholder="Ex.: Ao lado da estação do Metrô"
-                                                class="input-field input-md body-medium" required />
-                                            <span class="error-message label-medium">error</span>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Bairro</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">Asa Norte</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="info-row d-flex-row map-image">
-                                        <img src="https://imagens.ebc.com.br/pJhIcWmRELuGK4wPJG6UOluuKho=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/16/antt_2.jpeg?itok=E5bl23tz"
-                                            alt="mapa">
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Dados Bancários -->
-                            <div class="info-content toggle-content">
-                                <div class="info-header">
-                                    <i class="uil uil-dollar-sign"></i>
-                                    <span class="title-small flex-grow">Dados Bancários</span>
-                                    <i class="uil uil-angle-down"></i>
-                                </div>
-                                <div class="info-toggle d-flex-row">
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="instituicaoBanc">Instituição Bancária
-                                                <span class="label-medium">(opcional)</span>
-                                            </label>
+                                    <!-- Dados -->
+                                    <div class="info-content">
+                                        <div class="d-flex-row">
+                                            <i class="uil uil-house-user"></i>
+                                            <span class="title-small flex-grow">Dados</span>
                                         </div>
-                                        <div class="input-select input-sufix">
-                                            <select id="instituicaoBanc" class="custom-select body-medium input-md">
-                                                <option value="" disabled selected>Selecione</option>
-                                                <option value="apartamento">Apartamento</option>
-                                                <option value="casa">Casa</option>
-                                                <option value="casa-condominio">Casa Condomínio</option>
-                                                <option value="galpao">Galpão</option>
-                                                <option value="garagem">Garagem</option>
-                                                <option value="hotel-flat">Hotel Flat</option>
-                                            </select>
+                                        <div class="d-flex-column gap-xs">
+                                            <div class="d-flex-row gap-xs">
+                                                <div
+                                                    class="item body-medium d-flex-row align-center gap-nano flex-grow">
+                                                    <span class="item-label neutral-text">
+                                                        <i class="uil uil-envelope"></i>
+                                                        E-mail
+                                                    </span>
+                                                    <span class="item-result bold">lucasalmeida@gmail.com</span>
+                                                </div>
+                                                <div
+                                                    class="item body-medium d-flex-row align-center gap-nano  flex-grow">
+                                                    <span class="item-label neutral-text">
+                                                        <i class="uil uil-phone"></i>
+                                                        Telefone
+                                                    </span>
+                                                    <span class="item-result bold">61 91234-5678</span>
+                                                    <a href="#" class="success">
+                                                        <i class="uil uil-whatsapp"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex-row gap-xs">
+                                                <div
+                                                    class="item body-medium d-flex-row align-center gap-nano flex-grow">
+                                                    <span class="item-label neutral-text">
+                                                        <i class="uil uil-play-circle"></i>
+                                                        Primeiro acesso no Portal em
+                                                    </span>
+                                                    <span class="item-result bold">06/11/2024 - 10:10:47</span>
+                                                </div>
+                                                <div
+                                                    class="item body-medium d-flex-row align-center gap-nano flex-grow">
+                                                    <span class="item-label neutral-text">
+                                                        <i class="uil uil-calender"></i>
+                                                        Último Acesso no Portal em
+                                                    </span>
+                                                    <span class="item-result bold">06/11/2024 - 10:10:47</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comportamento -->
+                                    <div class="info-content gap-xs">
+                                        <div class="d-flex-row flex-grow">
+                                            <i class="uil uil-map-pin"></i>
+                                            <span class="title-small">Comportamento</span>
+                                        </div>
+                                        <span class="body-medium flex-grow">Os parâmetros abaixo são números totais do
+                                            cliente
+                                            no Portal DF Imóveis, incluindo suas interações com outros
+                                            anunciantes.</span>
+                                        <div class="d-flex-row">
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Imóveis visitados</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">10</span>
+                                                </div>
+                                            </div>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Contatos por e-mail</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">0</span>
+                                                </div>
+                                            </div>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Contatos por telefone</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Contatos por WhatsApp</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">4</span>
+                                                </div>
+                                            </div>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Visitas Agendadas</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">5</span>
+                                                </div>
+                                            </div>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Propostas Enviadas</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">8</span>
+                                                </div>
+                                            </div>
+                                            <div class="indicator bg-white cursor-default">
+                                                <div class="indic-top">
+                                                    <span class="label-medium">Anunciantes</span>
+                                                </div>
+                                                <div class="indic-text">
+                                                    <span class="headline-medium">2</span>
+                                                    <span class="comparative label-small">voce e +1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cadastro -->
+                                    <div class="info-content toggle-content">
+                                        <div class="info-header">
+                                            <i class="uil uil-chat-bubble-user"></i>
+                                            <span class="title-small flex-grow">Cadastro</span>
                                             <i class="uil uil-angle-down"></i>
                                         </div>
+                                        <div class="info-toggle d-flex-row">
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="nome">Nome</label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="nome" id="nome"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O nome está incorreto</span>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="sobrenome">Sobrenome</label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="sobrenome" id="sobrenome"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O sobrenome está
+                                                    incorreto</span>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="email">E-mail</label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="email" id="email"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O email está incorreto</span>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="telefone">Telefone
+                                                        <span class="label-medium" for="telefone">(opcional)</span>
+                                                    </label>
+                                                    <div class="option">
+                                                        <input type="checkbox" class="imovel-checkbox"
+                                                            id="telefoneWhats" name="telefoneWhats">
+                                                        <label class="label-medium" for="telefoneWhats">Whatsapp</label>
+                                                    </div>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="telefone" id="telefone"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O telefone está
+                                                    incorreto</span>
+                                            </div>
+                                        </div>
+                                        <div class="info-toggle d-flex-row">
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="dataDeNascimento">Data de Nascimento
+                                                        <span class="label-medium" for="telefone">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="dataDeNascimento" id="dataDeNascimento"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O dataDeNascimento está
+                                                    incorreto</span>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="estadoCivil">Estado Civil
+                                                        <span class="label-medium" for="telefone">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-select input-sufix">
+                                                    <select id="estadoCivil" class="custom-select body-medium input-md">
+                                                        <option value="" disabled selected>Selecione</option>
+                                                        <option value="apartamento">Apartamento</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa-condominio">Casa Condomínio</option>
+                                                        <option value="galpao">Galpão</option>
+                                                        <option value="garagem">Garagem</option>
+                                                        <option value="hotel-flat">Hotel Flat</option>
+                                                    </select>
+                                                    <i class="uil uil-angle-down"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="rendaFamiliar">Renda Familiar
+                                                        <span class="label-medium" for="telefone">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="rendaFamiliar" id="rendaFamiliar"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O rendaFamiliar está
+                                                    incorreto</span>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="profissao">Profissão
+                                                        <span class="label-medium" for="profissao">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-select input-sufix">
+                                                    <select id="profissao" class="custom-select body-medium input-md">
+                                                        <option value="" disabled selected>Selecione</option>
+                                                        <option value="apartamento">Apartamento</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa-condominio">Casa Condomínio</option>
+                                                        <option value="galpao">Galpão</option>
+                                                        <option value="garagem">Garagem</option>
+                                                        <option value="hotel-flat">Hotel Flat</option>
+                                                    </select>
+                                                    <i class="uil uil-angle-down"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-toggle d-flex-row">
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="sexo">Sexo
+                                                        <span class="label-medium" for="sexo">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-select input-sufix">
+                                                    <select id="sexo" class="custom-select body-medium input-md">
+                                                        <option value="" disabled selected>Selecione</option>
+                                                        <option value="apartamento">Apartamento</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa-condominio">Casa Condomínio</option>
+                                                        <option value="galpao">Galpão</option>
+                                                        <option value="garagem">Garagem</option>
+                                                        <option value="hotel-flat">Hotel Flat</option>
+                                                    </select>
+                                                    <i class="uil uil-angle-down"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="comoChegou">Como chegou até nós?
+                                                        <span class="label-medium" for="comoChegou">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-select input-sufix">
+                                                    <select id="comoChegou" class="custom-select body-medium input-md">
+                                                        <option value="" disabled selected>Selecione</option>
+                                                        <option value="apartamento">Apartamento</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa-condominio">Casa Condomínio</option>
+                                                        <option value="galpao">Galpão</option>
+                                                        <option value="garagem">Garagem</option>
+                                                        <option value="hotel-flat">Hotel Flat</option>
+                                                    </select>
+                                                    <i class="uil uil-angle-down"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-container flex-two-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="perfil">Perfil</label>
+                                                </div>
+                                                <div class="input-options input-md">
+                                                    <div class="option">
+                                                        <input type="checkbox" class="imovel-checkbox" id="locatario"
+                                                            name="locatario">
+                                                        <label class="body-medium" for="locatario">Locatário</label>
+                                                    </div>
+                                                    <div class="option">
+                                                        <input type="checkbox" class="imovel-checkbox" id="comprador"
+                                                            name="comprador">
+                                                        <label class="body-medium" for="comprador">Comprador</label>
+                                                    </div>
+                                                    <div class="option">
+                                                        <input type="checkbox" class="imovel-checkbox" id="proprietario"
+                                                            name="proprietario">
+                                                        <label class="body-medium"
+                                                            for="proprietario">Proprietário</label>
+                                                    </div>
+                                                    <div class="option">
+                                                        <input type="checkbox" class="imovel-checkbox" id="lead"
+                                                            name="lead">
+                                                        <label class="body-medium" for="lead">Lead</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-toggle d-flex-column gap-md">
+                                            <div class="input-container w-100">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="motivoProcura">Motivo da Procura
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="input-sufix textarea">
+                                                    <textarea class="input-field body-medium" name="motivoProcura"
+                                                        id="motivoProcura" cols="50" rows="5"
+                                                        placeholder="Descreva o motivo pela qual provura imóvel"
+                                                        required></textarea>
+                                                    <span class="rg-span body-medium">0/5000</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-container w-100">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="outrasObs">Outras observações
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="input-sufix textarea">
+                                                    <textarea class="input-field body-medium" name="outrasObs"
+                                                        id="outrasObs" cols="50" rows="5"
+                                                        placeholder="Descreva alguma informação importante sobre o cliente"
+                                                        required></textarea>
+                                                    <span class="rg-span body-medium">0/5000</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="tipoDeConta">Tipo de Conta
-                                                <span class="label-medium">(opcional)</span>
-                                            </label>
-                                        </div>
-                                        <div class="input-select input-sufix">
-                                            <select id="tipoDeConta" class="custom-select body-medium input-md">
-                                                <option value="" disabled selected>Selecione</option>
-                                                <option value="apartamento">Apartamento</option>
-                                                <option value="casa">Casa</option>
-                                                <option value="casa-condominio">Casa Condomínio</option>
-                                                <option value="galpao">Galpão</option>
-                                                <option value="garagem">Garagem</option>
-                                                <option value="hotel-flat">Hotel Flat</option>
-                                            </select>
+                                    <!-- Endereço -->
+                                    <div class="info-content toggle-content">
+                                        <div class="info-header">
+                                            <i class="uil uil-map-pin"></i>
+                                            <span class="title-small flex-grow">Endereço</span>
                                             <i class="uil uil-angle-down"></i>
                                         </div>
+                                        <div class="info-toggle d-flex-row">
+                                            <div class="input-container w-100">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="cep">CEP</label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="text" id="cep" class="input-field input-md body-medium"
+                                                        required placeholder="Informe o CEP" />
+                                                </div>
+                                                <span class="error-message label-medium">O e-mail está incorreto</span>
+                                            </div>
+                                        </div>
+                                        <div class="info-toggle d-flex-row">
+                                            <div class="info-column d-flex-column gap-md adress-content flex-grow">
+                                                <div class="input-container w-100">
+                                                    <div class="input-label">
+                                                        <label class="label-large" for="cep">CEP</label>
+                                                    </div>
+                                                    <div class="input-sufix">
+                                                        <input type="text" id="cep"
+                                                            class="input-field input-md body-medium" required
+                                                            placeholder="Informe o CEP" value="73588-022" />
+                                                    </div>
+                                                    <span class="error-message label-medium">O e-mail está
+                                                        incorreto</span>
+                                                </div>
+
+                                                <div class="list-info">
+                                                    <span class="label-large neutral-text">Informações</span>
+                                                    <div class="line"></div>
+                                                    <div class="list-item d-flex-column">
+                                                        <span class="body-medium">Logradouro</span>
+                                                        <span class="title-small">SQN 209 Bloco G</span>
+                                                    </div>
+                                                    <div class="line"></div>
+                                                    <div class="list-item d-flex-column">
+                                                        <span class="body-medium">Bairro</span>
+                                                        <span class="title-small">Asa Norte</span>
+                                                    </div>
+                                                    <div class="line"></div>
+                                                    <div class="list-item d-flex-column">
+                                                        <span class="body-medium">Cidade</span>
+                                                        <span class="title-small">Brasília</span>
+                                                    </div>
+                                                    <div class="line"></div>
+                                                    <div class="list-item d-flex-column">
+                                                        <span class="body-medium">UF</span>
+                                                        <span class="title-small">Distrito Federal</span>
+                                                    </div>
+                                                    <div class="line"></div>
+                                                    <div class="list-item d-flex-column">
+                                                        <span class="body-medium">País</span>
+                                                        <span class="title-small">Brasil</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info-column d-flex-column gap-md adress-content flex-grow">
+                                                <div class="input-container w-100">
+                                                    <div class="input-label">
+                                                        <label class="label-large" for="condominio">Condomínio
+                                                            <span class="label-medium">(opcional)</span>
+                                                        </label>
+                                                        <div class="option">
+                                                            <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                                name="exibir">
+                                                            <label class="label-medium" for="exibir">Exibir</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-sufix">
+                                                        <input type="text" id="condominio"
+                                                            class="input-field input-md body-medium" required />
+                                                    </div>
+                                                    <span class="error-message label-medium">error</span>
+                                                </div>
+                                                <div class="input-container w-100">
+                                                    <div class="input-label">
+                                                        <label class="label-large" for="numero">Numero
+                                                            <span class="label-medium">(opcional)</span>
+                                                        </label>
+                                                        <div class="option">
+                                                            <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                                name="exibir">
+                                                            <label class="label-medium" for="exibir">Exibir</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-sufix">
+                                                        <input type="text" id="numero"
+                                                            class="input-field input-md body-medium" required />
+                                                    </div>
+                                                    <span class="error-message label-medium">error</span>
+                                                </div>
+                                                <div class="input-container w-100">
+                                                    <div class="input-label">
+                                                        <label class="label-large" for="complemento">Complemento
+                                                            <span class="label-medium">(opcional)</span>
+                                                        </label>
+                                                        <div class="option">
+                                                            <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                                name="exibir">
+                                                            <label class="label-medium" for="exibir">Exibir</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-sufix">
+                                                        <input type="text" id="complemento"
+                                                            class="input-field input-md body-medium" required />
+                                                    </div>
+                                                    <span class="error-message label-medium">error</span>
+                                                </div>
+                                                <div class="input-container w-100">
+                                                    <div class="input-label">
+                                                        <label class="label-large" for="edificio">Edifício
+                                                            <span class="label-medium">(opcional)</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="input-select input-sufix">
+                                                        <select id="edificio"
+                                                            class="custom-select body-medium input-md">
+                                                            <option value="" disabled selected>Selecione</option>
+                                                            <option value="apartamento">Apartamento</option>
+                                                            <option value="casa">Casa</option>
+                                                            <option value="casa-condominio">Casa Condomínio</option>
+                                                            <option value="galpao">Galpão</option>
+                                                            <option value="garagem">Garagem</option>
+                                                            <option value="hotel-flat">Hotel Flat</option>
+                                                        </select>
+                                                        <i class="uil uil-angle-down"></i>
+                                                    </div>
+                                                    <span class="error-message label-medium">error</span>
+                                                </div>
+                                                <div class="input-container w-100">
+                                                    <div class="input-label">
+                                                        <label class="label-large" for="point">Ponto de Referência
+                                                            <span class="label-medium">(opcional)</span>
+                                                        </label>
+                                                        <div class="option">
+                                                            <input type="checkbox" class="imovel-checkbox" id="exibir"
+                                                                name="exibir">
+                                                            <label class="label-medium" for="exibir">Exibir</label>
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" id="point"
+                                                        placeholder="Ex.: Ao lado da estação do Metrô"
+                                                        class="input-field input-md body-medium" required />
+                                                    <span class="error-message label-medium">error</span>
+                                                </div>
+                                            </div>
+                                            <div class="info-row d-flex-row map-image">
+                                                <img src="https://imagens.ebc.com.br/pJhIcWmRELuGK4wPJG6UOluuKho=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/16/antt_2.jpeg?itok=E5bl23tz"
+                                                    alt="mapa">
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="agency">Agência
-                                                <span class="label-medium">(opcional)</span>
-                                            </label>
+                                    <!-- Dados Bancários -->
+                                    <div class="info-content toggle-content">
+                                        <div class="info-header">
+                                            <i class="uil uil-dollar-sign"></i>
+                                            <span class="title-small flex-grow">Dados Bancários</span>
+                                            <i class="uil uil-angle-down"></i>
                                         </div>
-                                        <div class="input-sufix">
-                                            <input type="text" id="agency" class="input-field input-md body-medium"
-                                                required />
+                                        <div class="info-toggle d-flex-row">
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="instituicaoBanc">Instituição
+                                                        Bancária
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-select input-sufix">
+                                                    <select id="instituicaoBanc"
+                                                        class="custom-select body-medium input-md">
+                                                        <option value="" disabled selected>Selecione</option>
+                                                        <option value="apartamento">Apartamento</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa-condominio">Casa Condomínio</option>
+                                                        <option value="galpao">Galpão</option>
+                                                        <option value="garagem">Garagem</option>
+                                                        <option value="hotel-flat">Hotel Flat</option>
+                                                    </select>
+                                                    <i class="uil uil-angle-down"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="tipoDeConta">Tipo de Conta
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-select input-sufix">
+                                                    <select id="tipoDeConta" class="custom-select body-medium input-md">
+                                                        <option value="" disabled selected>Selecione</option>
+                                                        <option value="apartamento">Apartamento</option>
+                                                        <option value="casa">Casa</option>
+                                                        <option value="casa-condominio">Casa Condomínio</option>
+                                                        <option value="galpao">Galpão</option>
+                                                        <option value="garagem">Garagem</option>
+                                                        <option value="hotel-flat">Hotel Flat</option>
+                                                    </select>
+                                                    <i class="uil uil-angle-down"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="agency">Agência
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="text" id="agency"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O nome está incorreto</span>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="conta">Conta
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="text" id="conta"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O nome está incorreto</span>
+                                            </div>
+
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="DigitoConta">dígito da Conta
+                                                        <span class="label-medium">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="text" id="DigitoConta"
+                                                        class="input-field input-md body-medium" required />
+                                                </div>
+                                                <span class="error-message label-medium">O nome está incorreto</span>
+                                            </div>
                                         </div>
-                                        <span class="error-message label-medium">O nome está incorreto</span>
+                                        <div class="info-toggle d-flex-row">
+                                            <div class="input-container flex-grow">
+                                                <div class="input-label">
+                                                    <label class="label-large" for="pix">Chave PIX
+                                                        <span class="label-medium" for="telefone">(opcional)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-sufix">
+                                                    <input type="text" id="pix" class="input-field input-md body-medium"
+                                                        required />
+                                                </div>
+                                                <span class="error-message label-medium">O dataDeNascimento está
+                                                    incorreto</span>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="conta">Conta
-                                                <span class="label-medium">(opcional)</span>
-                                            </label>
+                                    <!-- Arquivos -->
+                                    <div class="info-content toggle-content">
+                                        <div class="info-header">
+                                            <i class="uil uil-folder"></i>
+                                            <span class="title-small flex-grow">Arquivos</span>
+                                            <i class="uil uil-angle-down"></i>
                                         </div>
-                                        <div class="input-sufix">
-                                            <input type="text" id="conta" class="input-field input-md body-medium"
-                                                required />
-                                        </div>
-                                        <span class="error-message label-medium">O nome está incorreto</span>
-                                    </div>
 
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="DigitoConta">dígito da Conta
-                                                <span class="label-medium">(opcional)</span>
-                                            </label>
+                                        <div class="info-toggle d-flex-column align-end">
+                                            <div class="upload-area d-flex-column align-center gap-xs">
+                                                <i class="uil uil-file-plus ft-md neutral-text"></i>
+                                                <div class="action-upload d-flex-row">
+                                                    <button class="btn btn-accent btn-sm btn-outlined"
+                                                        id="select-fotos-button">Selecione o
+                                                        arquivo
+                                                    </button>
+                                                    <span class="label-large accent-color">ou arraste para cá</span>
+                                                </div>
+                                                <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20mb)</p>
+                                                <input type="file" id="fotos-input" class="hidden-input" multiple>
+                                            </div>
+
+                                            <div class="d-flex-column gap-nano">
+                                                <div class="d-flex-row gap-lg indicator bg-white">
+                                                    <div class="d-flex-row flex-grow">
+                                                        <span class="body-large">Contrato Assinado.pdf</span>
+                                                    </div>
+                                                    <div class="item item-contact d-flex-row gap-nano">
+                                                        <span class="body-medium neutral-text">Data da Inclusão</span>
+                                                        <span class="body-medium">05/11/2024 - 12:23</span>
+                                                    </div>
+                                                    <div class="item item-contact d-flex-row gap-nano">
+                                                        <span class="body-medium neutral-text">Incluído por</span>
+                                                        <span class="body-medium">Maria Fernandes</span>
+                                                    </div>
+                                                    <div class="actions d-flex-row">
+                                                        <button class="btn btn-destructive btn-outlined btn-md">
+                                                            Excluir <i class="uil uil-trash"></i>
+                                                        </button>
+
+                                                        <button class="btn btn-accent btn-outlined btn-md">
+                                                            Baixar <i class="uil uil-cloud-download"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex-row gap-lg indicator bg-white">
+                                                    <div class="d-flex-row flex-grow">
+                                                        <span class="body-large">RG.pdf</span>
+                                                    </div>
+                                                    <div class="item item-contact d-flex-row gap-nano">
+                                                        <span class="body-medium neutral-text">Data da Inclusão</span>
+                                                        <span class="body-medium">05/11/2024 - 12:23</span>
+                                                    </div>
+                                                    <div class="item item-contact d-flex-row gap-nano">
+                                                        <span class="body-medium neutral-text">Incluído por</span>
+                                                        <span class="body-medium">Maria</span>
+                                                    </div>
+                                                    <div class="actions d-flex-row">
+                                                        <button class="btn btn-destructive btn-outlined btn-md">
+                                                            Excluir <i class="uil uil-trash"></i>
+                                                        </button>
+
+                                                        <button class="btn btn-accent btn-outlined btn-md">
+                                                            Baixar <i class="uil uil-cloud-download"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex-row gap-lg indicator bg-white">
+                                                    <div class="d-flex-row flex-grow">
+                                                        <span class="body-large">CPF.pdf</span>
+                                                    </div>
+                                                    <div class="item item-contact d-flex-row gap-nano">
+                                                        <span class="body-medium neutral-text">Data da Inclusão</span>
+                                                        <span class="body-medium">05/11/2024 - 12:23</span>
+                                                    </div>
+                                                    <div class="item item-contact d-flex-row gap-nano">
+                                                        <span class="body-medium neutral-text">Incluído por</span>
+                                                        <span class="body-medium">Jonah Rex</span>
+                                                    </div>
+                                                    <div class="actions d-flex-row">
+                                                        <button class="btn btn-destructive btn-outlined btn-md">
+                                                            Excluir <i class="uil uil-trash"></i>
+                                                        </button>
+
+                                                        <button class="btn btn-accent btn-outlined btn-md">
+                                                            Baixar <i class="uil uil-cloud-download"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex-row gap-lg indicator bg-white">
+                                                    <div class="d-flex-row flex-grow">
+                                                        <span class="body-large">Imposto de Renda.pdf</span>
+                                                    </div>
+                                                    <div class="item item-contact d-flex-row gap-nano">
+                                                        <span class="body-medium neutral-text">Data da Inclusão</span>
+                                                        <span class="body-medium">05/11/2024 - 12:23</span>
+                                                    </div>
+                                                    <div class="item item-contact d-flex-row gap-nano">
+                                                        <span class="body-medium neutral-text">Incluído por</span>
+                                                        <span class="body-medium">Nath Heywood</span>
+                                                    </div>
+                                                    <div class="actions d-flex-row">
+                                                        <button class="btn btn-destructive btn-outlined btn-md">
+                                                            Excluir <i class="uil uil-trash"></i>
+                                                        </button>
+
+                                                        <button class="btn btn-accent btn-outlined btn-md">
+                                                            Baixar <i class="uil uil-cloud-download"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="input-sufix">
-                                            <input type="text" id="DigitoConta" class="input-field input-md body-medium"
-                                                required />
-                                        </div>
-                                        <span class="error-message label-medium">O nome está incorreto</span>
                                     </div>
                                 </div>
-                                <div class="info-toggle d-flex-row">
-                                    <div class="input-container flex-grow">
-                                        <div class="input-label">
-                                            <label class="label-large" for="pix">Chave PIX
-                                                <span class="label-medium" for="telefone">(opcional)</span>
-                                            </label>
+
+                                <!-- Container dos Imóveis -->
+                                <div class="table table-imoveis"></div>
+
+                                <!-- Container das Mensagens -->
+                                <div class="table table-mensagens d-flex-row gap-md">
+                                    <div class="list-chats d-flex-column">
+                                        <div class="item-chat favorite">
+                                            <i class="bx bxs-star warning-pure"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
                                         </div>
-                                        <div class="input-sufix">
-                                            <input type="text" id="pix" class="input-field input-md body-medium"
-                                                required />
+                                        <div class="item-chat favorite">
+                                            <i class="bx bxs-star warning-pure"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
                                         </div>
-                                        <span class="error-message label-medium">O dataDeNascimento está
-                                            incorreto</span>
+                                        <div class="item-chat">
+                                            <i class="uil uil-star neutral-text"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-chat active">
+                                            <i class="uil uil-star neutral-text"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-chat">
+                                            <i class="uil uil-star neutral-text"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-chat">
+                                            <i class="uil uil-star neutral-text"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-chat">
+                                            <i class="uil uil-star neutral-text"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-chat">
+                                            <i class="uil uil-star neutral-text"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-chat">
+                                            <i class="uil uil-star neutral-text"></i>
+                                            <div class="avatar medium avatar-img">
+                                                <img src="https://prdportal.blob.core.windows.net/fotos/1122738/f4542d4fcc275b50cdf00253a9fe9d7c.jpeg"
+                                                    alt="SCES Trecho 4 - ASA SUL - DF - 70200004">
+                                            </div>
+                                            <div class="d-flex-column flex-grow">
+                                                <div class="d-flex-row">
+                                                    <span class="code label-small bold">3254</span>
+                                                    <span class="adress body-large bold ellipse-text">SQN 210 Bloco A -
+                                                        Asa Norte -
+                                                        Brasília - DF</span>
+                                                </div>
+                                                <span class="chat-name label-large">Lucas Almeida</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Arquivos -->
-                            <div class="info-content toggle-content">
-                                <div class="info-header">
-                                    <i class="uil uil-folder"></i>
-                                    <span class="title-small flex-grow">Arquivos</span>
-                                    <i class="uil uil-angle-down"></i>
-                                </div>
-
-                                <div class="info-toggle d-flex-column align-end">
-                                    <div class="upload-area d-flex-column align-center gap-xs">
-                                        <i class="uil uil-file-plus ft-md neutral-text"></i>
-                                        <div class="action-upload d-flex-row">
-                                            <button class="btn btn-accent btn-sm btn-outlined"
-                                                id="select-fotos-button">Selecione o
-                                                arquivo
-                                            </button>
-                                            <span class="label-large accent-color">ou arraste para cá</span>
-                                        </div>
-                                        <p class="label-medium neutral-text">.jpg, .docx, .pdf (até 20mb)</p>
-                                        <input type="file" id="fotos-input" class="hidden-input" multiple>
-                                    </div>
-
-                                    <div class="d-flex-column gap-nano">
-                                        <div class="d-flex-row gap-lg indicator bg-white">
-                                            <div class="d-flex-row flex-grow">
-                                                <span class="body-large">Contrato Assinado.pdf</span>
+                                    <div class="chat-content flex-grow d-flex-column gap-none">
+                                        <div class="chat-header d-flex-column gap-xs">
+                                            <div class="chat-detail d-flex-row gap-xs">
+                                                <i class="uil uil-star neutral-text ft-md"></i>
+                                                <div class="infos d-flex-column flex-grow">
+                                                    <span class="title-small accent-color">Lucas Almeida dos
+                                                        Santos</span>
+                                                    <div class="d-flex-row">
+                                                        <span class="code label-small bold">3254</span>
+                                                        <span class="adress body-small bold ellipse-text">SQN 210 Bloco
+                                                            A - Asa
+                                                            Norte -
+                                                            Brasília - DF</span>
+                                                    </div>
+                                                    <div class="d-flex-row">
+                                                        <div class="price label-large">
+                                                            <span class="tipo">Venda</span>
+                                                            <span class="price-item bold">R$ 500.000,00</span>
+                                                        </div>
+                                                        <div class="description">
+                                                            <i class="uil uil-bed"></i>
+                                                            <span class="label-small bold">3</span>
+                                                        </div>
+                                                        <div class="description">
+                                                            <i class="uil uil-car"></i>
+                                                            <span class="label-small bold">3</span>
+                                                        </div>
+                                                        <div class="description">
+                                                            <i class="uil uil-expand-alt"></i>
+                                                            <span class="label-small bold">250,00m²</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="divisor"></div>
+                                                <div class="infos d-flex-column">
+                                                    <div class="item body-small d-flex-row">
+                                                        <span class="neutral-text">Relação com o Imóvel</span>
+                                                        <span
+                                                            class="client-tag accent-color bg-secondary bold label-small">Lead</span>
+                                                    </div>
+                                                    <div class="item body-small d-flex-row">
+                                                        <span class="neutral-text">Estágio de Negociação</span>
+                                                        <span class="item-result bold">Proposta</span>
+                                                    </div>
+                                                    <div class="item body-small d-flex-row">
+                                                        <span class="neutral-text">Corretor</span>
+                                                        <span class="item-result bold">João da Silva</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="item item-contact d-flex-row gap-nano">
-                                                <span class="body-medium neutral-text">Data da Inclusão</span>
-                                                <span class="body-medium">05/11/2024 - 12:23</span>
-                                            </div>
-                                            <div class="item item-contact d-flex-row gap-nano">
-                                                <span class="body-medium neutral-text">Incluído por</span>
-                                                <span class="body-medium">Maria Fernandes</span>
-                                            </div>
-                                            <div class="actions d-flex-row">
-                                                <button class="btn btn-destructive btn-outlined btn-md">
-                                                    Excluir <i class="uil uil-trash"></i>
+                                            <div class="chat-actions d-flex-row">
+                                                <button class="btn btn-accent btn-outlined btn-sm flex-grow">
+                                                    Agendar Visita
                                                 </button>
 
-                                                <button class="btn btn-accent btn-outlined btn-md">
-                                                    Baixar <i class="uil uil-cloud-download"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex-row gap-lg indicator bg-white">
-                                            <div class="d-flex-row flex-grow">
-                                                <span class="body-large">RG.pdf</span>
-                                            </div>
-                                            <div class="item item-contact d-flex-row gap-nano">
-                                                <span class="body-medium neutral-text">Data da Inclusão</span>
-                                                <span class="body-medium">05/11/2024 - 12:23</span>
-                                            </div>
-                                            <div class="item item-contact d-flex-row gap-nano">
-                                                <span class="body-medium neutral-text">Incluído por</span>
-                                                <span class="body-medium">Maria</span>
-                                            </div>
-                                            <div class="actions d-flex-row">
-                                                <button class="btn btn-destructive btn-outlined btn-md">
-                                                    Excluir <i class="uil uil-trash"></i>
+                                                <button class="btn btn-accent btn-outlined btn-sm flex-grow">
+                                                    Registrar Proposta
                                                 </button>
 
-                                                <button class="btn btn-accent btn-outlined btn-md">
-                                                    Baixar <i class="uil uil-cloud-download"></i>
+                                                <button class="btn btn-destructive btn-outlined btn-sm flex-grow">
+                                                    Excluir Conversa
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="d-flex-row gap-lg indicator bg-white">
-                                            <div class="d-flex-row flex-grow">
-                                                <span class="body-large">CPF.pdf</span>
-                                            </div>
-                                            <div class="item item-contact d-flex-row gap-nano">
-                                                <span class="body-medium neutral-text">Data da Inclusão</span>
-                                                <span class="body-medium">05/11/2024 - 12:23</span>
-                                            </div>
-                                            <div class="item item-contact d-flex-row gap-nano">
-                                                <span class="body-medium neutral-text">Incluído por</span>
-                                                <span class="body-medium">Jonah Rex</span>
-                                            </div>
-                                            <div class="actions d-flex-row">
-                                                <button class="btn btn-destructive btn-outlined btn-md">
-                                                    Excluir <i class="uil uil-trash"></i>
-                                                </button>
-
-                                                <button class="btn btn-accent btn-outlined btn-md">
-                                                    Baixar <i class="uil uil-cloud-download"></i>
-                                                </button>
+                                        <div class="chat-messages flex-grow" id="chat-messages">
+                                            <div class="message">
+                                                <span class="body-medium info-message">
+                                                    Olá! Gostaria de mais informações sobre esse imóvel
+                                                </span>
+                                                <span class="label-small neutral-text hour-message">10/10/2024 -
+                                                    14:00</span>
                                             </div>
                                         </div>
-                                        <div class="d-flex-row gap-lg indicator bg-white">
-                                            <div class="d-flex-row flex-grow">
-                                                <span class="body-large">Imposto de Renda.pdf</span>
-                                            </div>
-                                            <div class="item item-contact d-flex-row gap-nano">
-                                                <span class="body-medium neutral-text">Data da Inclusão</span>
-                                                <span class="body-medium">05/11/2024 - 12:23</span>
-                                            </div>
-                                            <div class="item item-contact d-flex-row gap-nano">
-                                                <span class="body-medium neutral-text">Incluído por</span>
-                                                <span class="body-medium">Nath Heywood</span>
-                                            </div>
-                                            <div class="actions d-flex-row">
-                                                <button class="btn btn-destructive btn-outlined btn-md">
-                                                    Excluir <i class="uil uil-trash"></i>
-                                                </button>
-
-                                                <button class="btn btn-accent btn-outlined btn-md">
-                                                    Baixar <i class="uil uil-cloud-download"></i>
+                                        <div class="chat-input">
+                                            <div class="input-sufix btn-dropdown">
+                                                <input type="text" id="barra-de-envio-chat"
+                                                    placeholder="Escreva uma mensagem"
+                                                    class="input-field input-lg body-medium" required />
+                                                <button class="btn btn-accent btn-icon-md" id="send-button">
+                                                    <i class='bx bx-send white-color'></i>
                                                 </button>
                                             </div>
                                         </div>

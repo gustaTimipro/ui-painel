@@ -603,6 +603,10 @@ ul {
     color: var(--color-warning-pure, #FF8A00);
 }
 
+.white-color {
+    color: var(--color-essence-ivory, #fff) !important;
+}
+
 /* Visivel e escondido */
 .hidden {
     opacity: 0;
