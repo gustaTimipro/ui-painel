@@ -11,6 +11,76 @@
 
     <link rel="stylesheet" href="../css/page/clientes.css">
     <link rel="stylesheet" href="../css/components/modal.css">
+
+    <style>
+        .calendar-wrapper {
+            position: relative;
+        }
+
+        .calendar-input {
+            cursor: pointer;
+        }
+
+        .calendar-popup {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            z-index: 999;
+            margin-top: 0.5rem;
+            display: none;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .calendar-header select {
+            padding: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .calendar-days,
+        .calendar-dates {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+        }
+
+        .calendar-days div {
+            font-weight: bold;
+            padding-bottom: 0.5rem;
+        }
+
+        .calendar-dates div {
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .calendar-dates div:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .calendar-dates .selected {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -1056,19 +1126,24 @@
                                             </div>
                                         </div>
                                         <div class="info-toggle d-flex-row">
-                                            <div class="input-container flex-grow">
+                                            <div class="input-container flex-grow calendar-wrapper">
                                                 <div class="input-label">
-                                                    <label class="label-large" for="dataDeNascimento">Data de Nascimento
-                                                        <span class="label-medium" for="telefone">(opcional)</span>
+                                                    <label class="label-large" for="dataDeNascimento">
+                                                        Data de Nascimento
+                                                        <span class="label-medium">(opcional)</span>
                                                     </label>
                                                 </div>
                                                 <div class="input-sufix">
-                                                    <input type="dataDeNascimento" id="dataDeNascimento"
-                                                        class="input-field input-md body-medium" required />
+                                                    <input type="text" id="dataDeNascimento"
+                                                        class="calendar-input input-field input-md body-medium"
+                                                        placeholder="Selecionar data" readonly />
+                                                    <div class="calendar-popup"></div>
                                                 </div>
-                                                <span class="error-message label-medium">O dataDeNascimento está
-                                                    incorreto</span>
+                                                <span class="error-message label-medium" style="display: none;">A data
+                                                    de nascimento está incorreta</span>
                                             </div>
+
+
 
                                             <div class="input-container flex-grow">
                                                 <div class="input-label">
@@ -2129,6 +2204,120 @@
 
     <script src="../js/menu.js"></script>
     <script src="../js/clientes.js"></script>
+
+    <script>
+        document.querySelectorAll('.calendar-wrapper').forEach(wrapper => {
+            const input = wrapper.querySelector('.calendar-input');
+            const popup = wrapper.querySelector('.calendar-popup');
+
+            let selectedDate = null;
+            let currentDate = new Date();
+
+            const years = Array.from({ length: 101 }, (_, i) => new Date().getFullYear() - 100 + i);
+            const months = [
+                "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+            ];
+
+            function buildCalendarStructure() {
+                popup.innerHTML = `
+                    <div class="calendar-header">
+                        <select class="calendar-month"></select>
+                        <select class="calendar-year"></select>
+                    </div>
+                    <div class="calendar-days">
+                        <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+                    </div>
+                    <div class="calendar-dates"></div>
+                `;
+
+                const monthSelect = popup.querySelector('.calendar-month');
+                const yearSelect = popup.querySelector('.calendar-year');
+
+                months.forEach((m, i) => {
+                    const opt = document.createElement("option");
+                    opt.value = i;
+                    opt.textContent = m;
+                    monthSelect.appendChild(opt);
+                });
+
+                years.forEach((y) => {
+                    const opt = document.createElement("option");
+                    opt.value = y;
+                    opt.textContent = y;
+                    yearSelect.appendChild(opt);
+                });
+
+                monthSelect.value = currentDate.getMonth();
+                yearSelect.value = currentDate.getFullYear();
+
+                monthSelect.addEventListener('change', () => {
+                    currentDate.setMonth(monthSelect.value);
+                    renderCalendar(currentDate);
+                });
+
+                yearSelect.addEventListener('change', () => {
+                    currentDate.setFullYear(yearSelect.value);
+                    renderCalendar(currentDate);
+                });
+            }
+
+            function renderCalendar(date) {
+                const calendarDates = popup.querySelector('.calendar-dates');
+                const monthSelect = popup.querySelector('.calendar-month');
+                const yearSelect = popup.querySelector('.calendar-year');
+
+                calendarDates.innerHTML = "";
+                const year = date.getFullYear();
+                const month = date.getMonth();
+                const firstDay = new Date(year, month, 1).getDay();
+                const lastDate = new Date(year, month + 1, 0).getDate();
+
+                monthSelect.value = month;
+                yearSelect.value = year;
+
+                for (let i = 0; i < firstDay; i++) {
+                    calendarDates.appendChild(document.createElement("div"));
+                }
+
+                for (let d = 1; d <= lastDate; d++) {
+                    const cell = document.createElement("div");
+                    cell.textContent = d;
+
+                    if (
+                        selectedDate &&
+                        selectedDate.getDate() === d &&
+                        selectedDate.getMonth() === month &&
+                        selectedDate.getFullYear() === year
+                    ) {
+                        cell.classList.add("selected");
+                    }
+
+                    cell.addEventListener("click", () => {
+                        selectedDate = new Date(year, month, d);
+                        input.value = selectedDate.toISOString().split("T")[0];
+                        popup.style.display = "none";
+                        renderCalendar(date);
+                    });
+
+                    calendarDates.appendChild(cell);
+                }
+            }
+
+            input.addEventListener("click", () => {
+                popup.style.display = popup.style.display === "block" ? "none" : "block";
+                buildCalendarStructure();
+                renderCalendar(currentDate);
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!wrapper.contains(e.target)) {
+                    popup.style.display = "none";
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
